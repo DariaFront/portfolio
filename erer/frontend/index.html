@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>практика js</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__menu">
+        <img class="header__logo" src="img/logo.svg" alt="logotip">
+        <input class="header__input" type="text" placeholder="Введите запрос" id="search">
+      </div>
+    </div>
+  </header>
+  <section class="clients-table" id="screen">
+    <div class="container">
+      <h2 class="title">
+        Клиенты
+      </h2>
+      <div class="clients__div">
+      <table class="clients__table">
+        <thead class="table__head">
+          <tr class="table__tr">
+            <th class="clients__th" id="id"><button class="th-id btn-reset up">ID</button></th>
+            <th class="clients__th" id="fio"><button class="th-fio btn-reset th-fio-up">Фамилия Имя Отчество</button>
+            </th>
+            <th class="clients__th" id="data"><button class="th-data up btn-reset">Дата и время<br>создания</button>
+            </th>
+            <th class="clients__th" id="change"><button class="th-changes up btn-reset">Последние<br>изменения</button>
+            </th>
+            <th class="clients__th" id="contact"><button class="th-contact btn-reset">Контакты</button></th>
+            <th class="clients__th" id="actions"><button class="th-actions btn-reset">Действия</button></th>
+          </tr>
+        </thead>
+        <tbody id="table" class="table__body">
+          <tr id="preloader" class="table__tr">
+            <td colspan="6" class="tr__preloader">
+              <div class="preloader">
+                <div class="load__elem">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M2 20C2 29.941 10.059 38 20 38C29.941 38 38 29.941 38 20C38 10.059 29.941 2 20 2C17.6755 2 15.454 2.4405 13.414 3.243"
+                      stroke="#9873FF" stroke-width="4" stroke-miterlimit="10" stroke-linecap="round" />
+                  </svg>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+      </div>
+      <button class="clients__btn btn-reset" id="open">
+        Добавить клиента
+      </button>
+    </div>
+  </section>
+  <script defer src="https://unpkg.com/popper.js@1"></script>
+  <script defer src="https://unpkg.com/tippy.js@5"></script>
+  <script defer type="module" src="main.js"></script>
+
+</body>
+
+</html>
