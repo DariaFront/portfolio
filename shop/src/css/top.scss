@@ -1,0 +1,431 @@
+.top {
+    padding: 67px 0 35px 0;
+
+    &__title-big {
+        margin-bottom: 23px;
+    }
+
+    &__grid {
+        display: grid;
+        flex-wrap: wrap;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 29px 32px;
+    }
+
+    &__item {
+        justify-self: center;
+        border-radius: 10px;
+        background-color: var(--lightgrey);
+        max-width: 624px;
+        width: 100%;
+        background-position: 0px 119px;
+        background-repeat: no-repeat;
+
+    }
+
+    &__aticle {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        flex-grow: 0;
+        padding: 30px 30px 32px 30px;
+        height: 100%;
+
+    }
+
+    &__block {
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        max-width: 100%;
+        flex-wrap: wrap;
+        margin: 0 0 14px 0;
+        padding: 0;
+        gap: 30px;
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--darkgrey);
+
+        &-top {
+            display: flex;
+            flex-direction: row;
+            max-width: 100%;
+            flex-wrap: nowrap;
+            margin: 0 0 14px 0;
+            padding: 0;
+            gap: 30px;
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--darkgrey);
+        }
+    }
+
+    &__title {
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+        font-weight: 400;
+        color: var(--black);
+    }
+
+    &__btn {
+        position: relative;
+        padding: 3px 30px 1px 0;
+        padding-right: 30px;
+        border-radius: 10px;
+        width: 113px;
+        height: 22px;
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--purpur);
+        background-repeat: no-repeat;
+        background-position: 84px 0px;
+        background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_27983_709)'%3E%3Cpath d='M9.625 7.5625L13.0625 11L9.625 14.4375' stroke='%23A65CF0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='11' cy='11' r='10' stroke='%23A65CF0' stroke-width='2'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_27983_709'%3E%3Crect width='22' height='22' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+        outline: none;
+        transition: color var(--time);
+        transition-property: background-image, color;
+        transition-duration: var(--time);
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 83px;
+            height: 30px;
+            top: -5px;
+            left: 0px;
+            border-bottom: 2px solid transparent;
+            transition: border-color var(--time);
+
+        }
+
+        &-arrow {
+            display: none;
+        }
+    }
+
+    &__link {
+        position: relative;
+        outline: none;
+        transition: color var(--time);
+        z-index: 1002;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: calc(100% + 10px);
+            height: 24px;
+            top: -2px;
+            left: -5px;
+            padding: 5px 10px;
+            z-index: -6;
+            background-color: transparent;
+            transition: background-color var(--time);
+        }
+    }
+}
+
+.sofa {
+    grid-column: 1/7;
+    max-width: 624px;
+    width: 100%;
+    background-image: url(../image/12-1924.webp);
+    min-height: 515px;
+    height: 100%;
+    background-size: 83%;
+}
+
+.armchiar {
+    grid-column: 7/13;
+    max-width: 624px;
+    width: 100%;
+    background-image: url(../image/13-1924.webp);
+    min-height: 515px;
+    height: 100%;
+    background-size: 83%;
+}
+
+.bad {
+    grid-column: 1/5;
+    max-width: 405px;
+    width: 100%;
+    background-image: url(../image/14-1924.webp);
+    min-height: 405px;
+    height: 100%;
+    background-size: 75%;
+}
+
+.pedestal {
+    grid-column: 5/9;
+    max-width: 405px;
+    width: 100%;
+    background-image: url(../image/15-1924.webp);
+    min-height: 405px;
+    height: 100%;
+    background-size: 81%;
+}
+
+.chiar {
+    grid-column: 9/13;
+    max-width: 405px;
+    width: 100%;
+    background-image: url(../image/16-1924.webp);
+    min-height: 405px;
+    height: 100%;
+    background-size: 64%;
+}
+
+@media (max-width: 1080px) {
+    .top {
+        &__grid {
+            grid-template-columns: repeat(9, 1fr);
+            gap: 29px 32px;
+        }
+
+        &__list {
+            margin-bottom: 17px;
+        }
+    }
+
+    .sofa {
+        order: 0;
+        grid-column: 1/7;
+        min-height: 514px;
+        height: 100%;
+        background-size: 83%;
+        background-position: 0px 123px;
+    }
+
+    .armchiar {
+        order: 1;
+        grid-column: 4/7;
+        background-image: url(../image/13-1024.webp);
+        min-height: 514px;
+        height: 100%;
+        background-size: 88%;
+        background-position: 0px 129px;
+    }
+
+    .bad {
+        order: 0;
+        grid-column: 7/10;
+        background-image: url(../image/14-1024.webp);
+        min-height: 514px;
+        height: 100%;
+        background-size: 100%;
+        background-position: 0px 130px;
+    }
+
+    .pedestal {
+        order: 0;
+        grid-column: 1/4;
+        background-image: url(../image/15-1024.webp);
+        min-height: 514px;
+        height: 100%;
+        background-size: 85%;
+        background-position: 0px 130px;
+    }
+
+    .chiar {
+        order: 1;
+        grid-column: 7/10;
+        background-image: url(../image/16-1024.webp);
+        min-height: 514px;
+        height: 100%;
+        background-size: 89%;
+        background-position: 0px 129px;
+    }
+}
+
+@media (max-width: 1018px) {
+    .top {
+        &__grid {
+            grid-template-columns: repeat(6, 1fr);
+        }
+    }
+
+    .sofa {
+        grid-column: 1/7;
+        background-image: url(../image/12-1924.webp);
+        background-size: 83%;
+        max-width: 100%;
+        background-position: 0px 123px;
+    }
+
+    .armchiar {
+        order: 1;
+        grid-column: 4/7;
+        background-image: url(../image/13-768.webp);
+        max-width: 100%;
+        background-size: 88%;
+        background-position: 0px 129px;
+    }
+
+    .bad {
+        order: 0;
+        grid-column: 1/4;
+        background-image: url(../image/14-768.webp);
+        max-width: 100%;
+        background-size: 100%;
+        background-position: 0px 130px;
+    }
+
+    .pedestal {
+        order: 1;
+        grid-column: 1/4;
+        background-image: url(../image/15-768.webp);
+        max-width: 100%;
+        background-size: 85%;
+        background-position: 0px 130px;
+    }
+
+    .chiar {
+        order: 1;
+        grid-column: 4/7;
+        background-image: url(../image/16-1024.webp);
+        max-width: 100%;
+        background-size: 89%;
+        background-position: 0px 129px;
+    }
+}
+
+@media (max-width: 760px) {
+    .top {
+        padding-top: 33px;
+
+        &__btn {
+            display: none;
+
+            &-arrow {
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 5px;
+                padding-top: 22px;
+                width: 22px;
+                height: 22px;
+                background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_27983_709)'%3E%3Cpath d='M9.625 7.5625L13.0625 11L9.625 14.4375' stroke='%23A65CF0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='11' cy='11' r='10' stroke='%23A65CF0' stroke-width='2'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_27983_709'%3E%3Crect width='22' height='22' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+                outline: none;
+                transition: background-image var(--time);
+            }
+        }
+
+        &__grid {
+            gap: 32px 14px;
+        }
+
+        &__list {
+            flex-direction: column;
+            font-size: 10px;
+            gap: 0px;
+            margin-bottom: 8px;
+
+            &-top {
+                margin-bottom: 18px;
+                gap: 20px;
+            }
+
+        }
+
+        &__title-big {
+            margin-bottom: 25px;
+        }
+
+        &__title {
+            padding: 3px 0;
+            font-size: 16px;
+            line-height: 15px;
+            margin-right: 5px;
+
+            &-mobil {
+                font-size: 23px;
+            }
+        }
+
+        &__aticle {
+            padding: 16px;
+
+            &-mobil {
+                padding: 30px;
+            }
+        }
+
+        &__link {
+            ::before {
+                height: 12px;
+                top: 1px;
+                left: -5px;
+                padding: 2px 10px;
+            }
+        }
+    }
+
+    .sofa {
+        background-size: 100%;
+        max-width: 100%;
+        background-position: 0px 104px;
+        min-height: 332px;
+        height: 100%;
+    }
+
+    .armchiar {
+        max-width: 100%;
+        background-size: 70%;
+        background-position: 0px 85px;
+        min-height: 206px;
+        height: 100%;
+    }
+
+    .bad {
+        max-width: 100%;
+        background-size: 100%;
+        background-position: 0px 85px;
+        min-height: 206px;
+        height: 100%;
+    }
+
+    .pedestal {
+        max-width: 100%;
+        background-size: 66%;
+        background-position: 0px 103px;
+        min-height: 206px;
+        height: 100%;
+    }
+
+    .chiar {
+        max-width: 100%;
+        background-size: 50%;
+        background-position: 0px 85px;
+        min-height: 206px;
+        height: 100%;
+    }
+}
+
+@media (max-width: 395px) {
+    .sofa {
+        background-image: url(../image/12-320.webp);
+
+    }
+
+    .armchiar {
+        background-image: url(../image/13-320.webp);
+        background-size: 100%;
+    }
+
+    .bad {
+        background-image: url(../image/14-320.webp);
+    }
+
+    .pedestal {
+        background-image: url(../image/15-320.webp);
+        background-size: 100%;
+    }
+
+    .chiar {
+        background-image: url(../image/16-320.webp);
+        background-size: 100%;
+    }
+}

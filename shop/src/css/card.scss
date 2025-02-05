@@ -1,0 +1,141 @@
+.card {
+    &__item {
+        justify-self: center;
+        max-width: 380px;
+        width: 100%;
+    }
+
+    &__aticle {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        flex-grow: 0;
+        padding: 28px 10px 34px;
+        min-height: 420px;
+        height: 100%;
+        border-radius: 10px;
+        background-color: var(--lightgrey);
+    }
+
+    &__img {
+        display: flex;
+        align-self: center;
+        align-items: flex-end;
+        min-height: 30px;
+        height: 163px;
+       &-pic{
+           margin: auto;
+        } 
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 14px 17px 0 17px;
+        align-self: start;
+        width: 100%;
+        min-height: 189px;
+
+        &-text {
+            margin-bottom: 28px;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+        font-weight: 400;
+        color: var(--black);
+    }
+
+    &__span {
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+        font-weight: 400;
+        color: var(--black);
+    }
+
+    &__text {
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--darkgrey);
+        margin-bottom: 24px;
+    }
+
+    &__btn {
+        display: block;
+        max-width: 128px;
+        padding: 15px 33px;
+        border-radius: 10px;
+    }
+
+    &__label {
+        position: absolute;
+        content: "";
+        padding-left: 46px;
+        top: 30px;
+        left: 0px;
+        width: 79px;
+        color: var(--orange);
+        font-size: 16px;
+        font-weight: 700;
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: 29px 0px;
+        background-image: url(../image/star.svg);
+    }
+
+}
+
+@media (max-width: 539px) {
+    .card {
+        &__title {
+            font-size: 16px;
+            line-height: 23px;
+        }
+
+        &__img {
+            height: 61px;
+        }
+
+        &__aticle {
+            padding: 30px 0px 16px 0;
+            min-height: 275px;
+        }
+
+        &__block{
+            min-height: 172px;
+            &-text {
+                margin-bottom: 18px;
+            }
+        }
+
+        &__text {
+            margin-bottom: 18px;
+            
+        }
+
+        &__span {
+            font-size: 16px;
+        }
+
+        &__btn {
+            max-width: 106px;
+            padding: 8px 23px;
+        }
+
+        &__label {
+            padding-left: 13px;
+            top: 16px;
+            font-size: 13px;
+            background-position: 15px 0;
+        }
+    }
+
+}

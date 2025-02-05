@@ -1,0 +1,442 @@
+.product {
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 70px 32px;
+        margin-bottom: 74px;
+    }
+
+    &__img {
+        grid-column: 1/7;
+        margin-top: 13px;
+
+    }
+
+    &__description {
+        grid-column: 1/7;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &-title {
+            margin-bottom: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--black);
+        }
+
+        &-text {
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 25px;
+            color: var(--black);
+        }
+
+        &-img {
+            padding-top: 19%;
+            width: 526px;
+            height: 113px;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: contain;
+            background-image: url(../image/mechanizm.png);
+        }
+    }
+
+    &__main {
+        position: relative;
+        grid-column: 7/13;
+
+        &-title {
+            margin: 36px 0 4px 0;
+            font-size: 24px;
+            font-weight: 400;
+            color: var(--black);
+        }
+
+        &-span {
+            margin-bottom: 26px;
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--darkgrey);
+        }
+
+        &-text {
+            margin-bottom: 22px;
+            font-size: 36px;
+            font-weight: 400;
+            color: var(--black);
+        }
+
+        &-button {
+            display: block;
+            margin-bottom: 14px;
+            max-width: 230px;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 16px 33px;
+            border-radius: 10px;
+            color: var(--white);
+        }
+
+        &-btn {
+            margin-left: 30px;
+            margin-bottom: 41px;
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--purpur);
+            position: relative;
+            outline: none;
+            transition: color var(--time);
+            z-index: 1021;
+    
+            &::before {
+                content: "";
+                position: absolute;
+                width: calc(100% + 10px);
+                height: 24px;
+                top: -2px;
+                left: -5px;
+                padding: 5px 10px;
+                z-index: -21;
+                background-color: transparent;
+                transition: background-color var(--time);
+            }
+        }
+
+        &-label {
+            position: absolute;
+            padding-left: 22px;
+            top: 14px;
+            font-size: 16px;
+            color: var(--orange);
+            background-position: 0;
+            background-repeat: no-repeat;
+            background-image: url("data:image/svg+xml,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.2257 5.28193L10.5089 4.59758L8.40032 0.330127C8.34273 0.213287 8.24799 0.118702 8.13095 0.0612089C7.83742 -0.0834504 7.48074 0.037099 7.33398 0.330127L5.22543 4.59758L0.508622 5.28193C0.378579 5.30047 0.259684 5.36167 0.168654 5.45441C0.0586046 5.56733 -0.00203778 5.71924 5.22879e-05 5.87678C0.00214235 6.03431 0.0667938 6.18457 0.179801 6.29454L3.59248 9.61614L2.78622 14.3064C2.76731 14.4156 2.7794 14.5278 2.82113 14.6304C2.86285 14.733 2.93253 14.8218 3.02228 14.8869C3.11202 14.952 3.21823 14.9906 3.32886 14.9985C3.4395 15.0064 3.55013 14.9831 3.64821 14.9314L7.86715 12.717L12.0861 14.9314C12.2013 14.9926 12.335 15.013 12.4632 14.9908C12.7865 14.9352 13.0038 14.6291 12.9481 14.3064L12.1418 9.61614L15.5545 6.29454C15.6474 6.20367 15.7087 6.08497 15.7273 5.95515C15.7774 5.63059 15.5508 5.33015 15.2257 5.28193Z' fill='%23FF862F'/%3E%3C/svg%3E%0A");
+        }
+    }
+
+    &__option {
+        grid-column: 7/13;
+
+        &-list {
+            margin-top: 5px;
+        }
+
+        &-item {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            min-height: 25px;
+        }
+
+        &-property {
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--darkgrey);
+        }
+
+        &-meaning {
+            width: 296px;
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--black);
+        }
+
+        &-dotted {
+            flex: 1 0;
+            border-bottom: 2px dotted var(--darkgrey);
+            height: 1em;
+            margin: 0 .4em;
+        }
+
+    }
+
+    &__card {
+        grid-column: 1/13;
+        margin: 9px 0 0px;
+
+        &-title {
+            margin-bottom: 24px;
+            font-size: 24px;
+            font-weight: 400;
+            color: var(--black);
+        }
+
+        &-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0 32px;
+        }
+
+    }
+}
+
+@media (max-width: 1200px) {
+    .product {
+        &__grid {
+            grid-template-columns: repeat(9, 1fr);
+            margin-bottom: 71px;
+            gap: 41px 32px;
+        }
+
+        &__img {
+            grid-column: 1/6;
+            margin-top: 21px;
+        }
+
+        &__description {
+            grid-column: 1/6;
+
+            &-img {
+                padding-top: 19%;
+                width: 514px;
+                height: 119px;
+            }
+        }
+
+        &__main {
+            grid-column: 6/10;
+
+            &-title {
+                margin: 22px 0 4px 0;
+            }
+
+            &-label {
+                top: 0px;
+            }
+        }
+
+        &__option {
+            grid-column: 6/10;
+
+            &-list {
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+
+
+            &-meaning {
+                width: 216px;
+            }
+
+
+        }
+
+        &__card {
+            grid-column: 1/10;
+            margin: 21px 0 0;
+
+            &-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+
+            }
+
+        }
+    }
+
+    .hiden {
+        display: none;
+    }
+}
+
+@media (max-width: 1018px) {
+    .product {
+        &__grid {
+            grid-template-columns: repeat(6, 1fr);
+            margin-bottom: 67px;
+            gap: 32px 32px;
+        }
+
+        &__img {
+            grid-column: 1/7;
+            margin-top: 0px;
+            min-height: 295px
+        }
+
+        &__description {
+            grid-column: 1/6;
+
+            &-block {
+                min-height: 215px;
+            }
+
+            &-img {
+                padding-top: 9%;
+                width: 514px;
+                width: 100%;
+            }
+        }
+
+        &__main {
+            grid-column: 1/7;
+
+            &-btn {
+                margin-bottom: 51px;
+            }
+
+            &-label {
+                top: 0px;
+            }
+        }
+
+        &__option {
+            grid-column: 1/7;
+
+            &-list {
+                margin-top: -4px;
+                margin-bottom: 0px;
+            }
+
+
+            &-meaning {
+                width: 216px;
+            }
+
+
+        }
+
+        &__card {
+            grid-column: 1/7;
+            margin: 0;
+
+            &-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+        }
+    }
+
+    .hiden-last {
+        display: none;
+    }
+
+}
+
+@media (max-width: 539px) {
+    .product {
+        &__grid {
+            grid-template-columns: repeat(6, 1fr);
+            margin-bottom: 70px;
+            gap: 15px 32px;
+        }
+
+        &__img {
+            grid-column: 1/7;
+            margin-top: 16px;
+            width: 100%;
+            min-height: 30px;
+        }
+
+        &__description {
+            grid-column: 1/6;
+
+            &-block {
+                margin-bottom: 12px;
+            }
+
+            &-img {
+                padding-top: 9%;
+                width: 296px;
+                height: 98px;
+                background-position: 0px 12px;
+                background-image: url(../image/mechanizm-320.png);
+
+            }
+        }
+
+        &__main {
+            grid-column: 1/7;
+
+            &-title {
+                margin: 22px 0 9px;
+                font-size: 16px;
+
+            }
+
+            &-span {
+                margin-bottom: 18px;
+                line-height: 14px;
+            }
+
+            &-text {
+                margin-bottom: 17px;
+                font-size: 24px;
+
+            }
+
+            &-button {
+                display: block;
+                margin-bottom: 14px;
+                max-width: 300px;
+                width: 100%;
+                text-align: center;
+            }
+
+            &-btn {
+                margin-left: 63px;
+                margin-bottom: 16px;
+            }
+
+        }
+
+        &__option {
+            grid-column: 1/7;
+
+            &-list {
+                margin-top: -4px;
+                margin-bottom: 0px;
+            }
+
+            &-meaning {
+                width: 216px;
+            }
+        }
+
+        &__card {
+            grid-column: 1/7;
+            margin: 48px 0 0;
+
+            &-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0 15px;
+
+            }
+        }
+    }
+
+    .hiden-last {
+        display: none;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .product__option {
+        &-item {
+            display: flex;
+            justify-content: flex-start;
+            width: 100%;
+            min-height: 41px;
+            flex-direction: column;
+        }
+
+        &-dotted {
+            display: none;
+        }
+
+        &-property {
+            font-size: 10px;
+            line-height: 15px;
+        }
+
+        &-meaning {
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,252 @@
+.special {
+    padding: 67px 0 41px 0;
+
+    &__title-big{
+        margin-bottom: 23px;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+    }
+
+    &__item {
+        justify-self: center;
+        max-width: 380px;
+        width: 100%;
+
+        &-big {
+            max-width: 624px;
+            grid-column: 2/4;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: "";
+                bottom: 30px;
+                right: 30px;
+                padding: 150px 295px 0 0;
+                background-position: bottom 0 right 0;
+                background-repeat: no-repeat;
+                background-image: url(../image/sofa.png);
+                z-index: 1000;
+            }
+        }
+    }
+
+    &__aticle {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        flex-grow: 0;
+        padding: 30px;
+        min-height: 510px;
+        height: 100%;
+        border-radius: 10px;
+        background-color: var(--lightgrey);
+    }
+
+    &__img {
+        align-self: center;
+        align-content: flex-end;
+        height: 257px;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        padding-top: 14px;
+        align-self: start;
+        width: 100%;
+
+        &-text {
+            margin-bottom: 24px;
+        }
+
+        &-prise {
+            margin-bottom: 24px;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+        font-weight: 400;
+        color: var(--black);
+    }
+
+    &__span {
+        margin: 0;
+        padding: 0;
+        font-size: 24px;
+        font-weight: 400;
+        color: var(--black);
+    }
+
+    &__text-red {
+        margin: 0;
+        padding: 0;
+        margin-right: 22px;
+        font-size: 18px;
+        font-weight: 400;
+        color: var(--orange);
+    }
+
+    &__text-grey {
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--darkgrey);
+        text-decoration: line-through;
+    }
+
+    &__btn {
+        padding: 15px 33px;
+        width: 128px;
+        border-radius: 10px;
+            }
+
+    &__label {
+        position: absolute;
+        content: "";
+        padding: 9px 15px 7px 18px;
+        top: 31px;
+        left: 0px;
+        width: 92px;
+        height: 34px;
+        color: var(--white);
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+        background-image: url(../image/bg.png);
+    }
+
+    &__hiden {
+        display: none;
+
+        &-add {
+            display: block;
+        }
+    }
+
+}
+
+@media (max-width: 1220px) {
+    .special {
+        padding: 70px 0 35px;
+        &__grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &__aticle {
+            min-height: 510px;
+        }
+
+        &__img {
+            height: 255px;
+        }
+
+        &__item {
+
+            &-big {
+                grid-column: 2/3;
+                width: 100%;
+                justify-self: center;
+
+                &::after {
+                    display: none;
+                }
+            }
+        }
+
+        &__text-red {
+            margin-right: 26px;
+        }
+
+        &__label {
+            top: 30px;
+        }
+
+        &__btn {
+            padding: 16px 35px;
+        }
+    }
+}
+
+@media (max-width: 1018px) {
+
+    .special {
+
+        padding-top: 70px;
+
+        &__title-big{
+            margin-bottom: 23px;
+        }
+
+        &__grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &__hiden {
+            display: none;
+
+            &-add {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 704px) {
+
+    .special {
+        padding-top: 35px;
+        padding-bottom: 33px;
+
+        &__title-big{
+            margin-bottom: 24px;
+            line-height: 26px;
+        }
+
+        &__aticle {
+            min-height: 500px;
+        }
+
+        &__grid {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 26px;
+        }
+
+        &__item {
+            &-big {
+                max-width: 380px;
+                width: 100%;
+                grid-column: 1/2;
+            }
+        }
+
+        &__block {
+
+            &-text {
+                margin-bottom: 25px;
+            }
+
+            &-prise {
+                margin-bottom: 25px;
+            }
+        }
+
+        &__hiden {
+            display: block;
+
+            &-add {
+                display: block;
+            }
+        }
+    }
+}
