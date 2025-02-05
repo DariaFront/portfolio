@@ -1,0 +1,13 @@
+.list {
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.list__item {
+  list-style: none;
+  height: 250px;
+  width: calc((100% - (20px * 3)) / 4);
+}

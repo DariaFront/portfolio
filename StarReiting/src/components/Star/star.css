@@ -1,0 +1,12 @@
+.star-box {
+    margin-top: auto;
+  }
+  
+  .star {
+    margin: 0;
+    width: 20px;
+    cursor: pointer;
+    color: #E74A2A;
+    stroke: #E74A2A;
+  }
+  
