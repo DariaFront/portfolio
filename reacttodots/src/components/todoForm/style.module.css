@@ -1,0 +1,30 @@
+.form{
+    display: flex;    
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    font-size: 21px;
+    font-weight: 400;
+    color: #666;    
+}
+
+.input{
+    padding: 10px 15px;
+    width: 90%;
+    height: 30px;
+    border: 1px solid #999;    
+}
+
+.btn{
+    color: #fff;
+     border: 1px solid #999;
+     background-color: #86a6e0;
+     transition-property: background-color, color;
+     transition-duration: 0.3s;
+}
+
+.btn:hover{
+    color: #fff;
+    background-color: #5716d1;
+}
+
