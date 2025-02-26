@@ -1,14 +1,16 @@
 import React from "react";
 import s from "./style.module.css"
-import { Todo } from "../../hooks/useTodo"
+import { Todo, Todos } from "../../hooks/useTodo"
 
-type formProps = {
+type formProps<Todo> = {
     todo: Todo,
-    saveTodo: Function,
-    setTodo: Function
+    saveTodo: any,
+    setTodos: any,
+    setTodo: any,
+    todos: any
 }
 
-const TodoForm = (props: formProps) => {
+const TodoForm = (props: formProps<Todo>) => {
     return (
         <form className={s.form}
             onSubmit={(e) => {

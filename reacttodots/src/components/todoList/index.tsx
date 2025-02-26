@@ -2,18 +2,19 @@ import React from "react";
 import TodoItem from "../todoItem";
 import { PropsTodo } from "../todoItem"
 import s from "./style.module.css"
-import { Todo } from "../../hooks/useTodo"
+import { Todos } from "../../hooks/useTodo"
+import { SetStateAction, Dispatch } from "react"
 
 
 type PropsItems = Array<PropsTodo>
 
 type PropsList = {
     list: PropsItems,
-    deleteTodo: Function,
-    toggleTodo: Function,
+    deleteTodo: any,
+    toggleTodo: any,
     saveTodo: Function,
     setTodo: Function,
-    setTodos: Function,
+    setTodos: any,
 }
 
 const TodoList = ({ list, deleteTodo, toggleTodo }: PropsList) => {

@@ -10,7 +10,7 @@ const App = () => {
 
   return (
     <div className="container">
-      <TodoListTitle title={'Список дел'} />
+      <TodoListTitle title={"Список дел"} />
       <TodoForm saveTodo={saveTodo} todo={todo} todos={todos} setTodo={setTodo} setTodos={setTodos} />
       <TodoList deleteTodo={deleteTodo} toggleTodo={toggleTodo} list={copytodos} />
 
