@@ -60,7 +60,7 @@ const App = () => {
 
 
       <p >{count} осталось выполнить</p>
-      <button onClick={() => clearReady(todos)}>очистить</button>
+      <button onClick={() => clearReady(todos)}>очистить готовые</button>
     </div>
   );
 }
