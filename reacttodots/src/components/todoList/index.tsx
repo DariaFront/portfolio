@@ -1,6 +1,6 @@
 import TodoItem from "../todoItem";
 import s from "./style.module.css"
-import { Todo } from "../../hooks/useTodo"
+import { Todo } from "../../types/types"
 
 type PropsList = {
     list: any,

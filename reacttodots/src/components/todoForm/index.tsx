@@ -1,15 +1,7 @@
 import s from "./style.module.css"
-// import { Todo } from "../../hooks/useTodo"
 
-type formProps = {
-    todo: any,
-    saveTodo: any,
-    setTodos: any,
-    setTodo: any,
-    todos: any
-}
 
-const TodoForm = (props: formProps) => {
+const TodoForm = (props: any) => {
     return (
         <form className={s.form}
             onSubmit={(e) => {

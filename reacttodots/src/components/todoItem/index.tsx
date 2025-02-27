@@ -1,8 +1,6 @@
 import React from "react";
 import s from "./style.module.css"
 
-
-
 export type PropsTodo = {
     value: string,
     id: number,

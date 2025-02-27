@@ -1,9 +1,9 @@
 import TodoForm from "./components/todoForm";
 import TodoListTitle from "./components/todoTitle";
 import TodoList from "./components/todoList";
-import { Todos } from "./hooks/useTodo"
+import { Todos } from "./types/types"
 import { useState } from "react";
-import { Todo } from "./hooks/useTodo"
+import { Todo } from "./types/types"
 
 const App = () => {
 
@@ -20,11 +20,11 @@ const App = () => {
   }
 
   const deleteTodo = (key: number): void => {
-    setTodos(todos.filter((i, index) => index !== key));
+    setTodos(todos.filter((item, index) => index !== key));
   }
 
   const toggleTodo = (key: number): void => {
-    setTodos(todos.map((e, index) => index === key ? { ...e, status: !e.status } : { ...e }))
+    setTodos(todos.map((item, index) => index === key ? { ...item, status: !item.status } : { ...item }))
   }
 
   const [done, setDone] = useState('')
@@ -43,8 +43,11 @@ const App = () => {
     default:
       break;
   }
+  let count: number = (todos.filter(item => item.status === false)).length;
 
-
+  const clearReady = (todos: Todos): void => {
+    setTodos(todos.filter(item => item.status === false))
+  }
   return (
     <div className="container">
       <TodoListTitle title={"Список дел"} />
@@ -54,6 +57,10 @@ const App = () => {
       <button onClick={() => setDone("all")}>All</button>
       <button onClick={() => setDone("active")}>Active</button>
       <button onClick={() => setDone("ready")}>Ready</button>
+
+
+      <p >{count} осталось выполнить</p>
+      <button onClick={() => clearReady(todos)}>очистить</button>
     </div>
   );
 }
