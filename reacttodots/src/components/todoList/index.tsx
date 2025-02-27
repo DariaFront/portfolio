@@ -1,26 +1,19 @@
-import React from "react";
 import TodoItem from "../todoItem";
-import { PropsTodo } from "../todoItem"
 import s from "./style.module.css"
-import { Todos } from "../../hooks/useTodo"
-import { SetStateAction, Dispatch } from "react"
-
-
-type PropsItems = Array<PropsTodo>
+import { Todo } from "../../hooks/useTodo"
 
 type PropsList = {
-    list: PropsItems,
-    deleteTodo: any,
-    toggleTodo: any,
-    saveTodo: Function,
-    setTodo: Function,
-    setTodos: any,
+    list: any,
+    deleteTodo: Function | any,
+    toggleTodo: Function | any,
+
 }
 
 const TodoList = ({ list, deleteTodo, toggleTodo }: PropsList) => {
+
     return (
         <div className={s.list}>
-            {list.map((item, index) => {
+            {list.map((item: Todo, index: number) => {
                 return (
                     <TodoItem
                         toggleTodo={toggleTodo}
@@ -34,6 +27,8 @@ const TodoList = ({ list, deleteTodo, toggleTodo }: PropsList) => {
             })}
         </div>
     );
-};
+}
+
+
 
 export default TodoList;

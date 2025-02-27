@@ -1,27 +1,26 @@
-import React from "react";
 import s from "./style.module.css"
-import { Todo, Todos } from "../../hooks/useTodo"
+// import { Todo } from "../../hooks/useTodo"
 
-type formProps<Todo> = {
-    todo: Todo,
+type formProps = {
+    todo: any,
     saveTodo: any,
     setTodos: any,
     setTodo: any,
     todos: any
 }
 
-const TodoForm = (props: formProps<Todo>) => {
+const TodoForm = (props: formProps) => {
     return (
         <form className={s.form}
             onSubmit={(e) => {
                 e.preventDefault();
-                props.saveTodo(props.todo.value);
+                props.saveTodo(props.todo);
                 props.setTodo("")
             }}
         >
             <input
                 className={s.input}
-                value={props.todo.value}
+                value={props.todo}
                 onChange={(e) => props.setTodo(e.target.value)}
                 placeholder="Введите название дела"
             />
