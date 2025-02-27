@@ -1,9 +1,24 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('есть кнопка', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+  const buttonAdd = screen.getByText("Добавить дело");
+  expect(buttonAdd).toBeDefined();
+
+});
+
+test('есть заголовок', () => {
+  render(<App />);
+
+  const title = screen.getByText("Список дел");
+  expect(title).toBeDefined();
+});
+
+test('есть инпут', () => {
+  render(<App />);
+
+  const input = screen.getByPlaceholderText("Введите название дела");
+  expect(input).toBeDefined();
 });
