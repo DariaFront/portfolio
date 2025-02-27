@@ -18,3 +18,21 @@ code {
   width: 100%;
   flex-direction: column;
 }
+
+.all{
+  color: #333333;
+}
+
+.active{
+  color: #d61818;
+}
+
+.ready{
+  color: #0b9c1e;
+}
+
+.clean{
+  color: #ffffff;
+}
+
+.count{}

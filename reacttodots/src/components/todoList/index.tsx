@@ -12,7 +12,7 @@ type PropsList = {
 const TodoList = ({ list, deleteTodo, toggleTodo }: PropsList) => {
 
     return (
-        <div className={s.list}>
+        <ul className={s.list}>
             {list.map((item: Todo, index: number) => {
                 return (
                     <TodoItem
@@ -25,7 +25,7 @@ const TodoList = ({ list, deleteTodo, toggleTodo }: PropsList) => {
                     />
                 );
             })}
-        </div>
+        </ul>
     );
 }
 

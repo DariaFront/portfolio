@@ -3,6 +3,15 @@
     margin-left: 10px;  
 }
 
+input:checked + p{
+    color:#d11693;
+   text-decoration: line-through; 
+}
+
+input:checked{
+    color:#d11693;
+}
+
 .wrap{
     display: flex;
     padding: 10px 15px;

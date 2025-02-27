@@ -12,17 +12,15 @@ export type PropsTodo = {
 const TodoItem = ({ value, deleteTodo, toggleTodo, id, status }: PropsTodo) => {
 
     return (
-        <div className={s.wrap}>
+        <li className={s.wrap}>
             <div className={s.groop}>
                 <input type={"checkbox"} checked={status}
                     readOnly={true}
                     onClick={() => toggleTodo(id)} ></input>
-                <p className={s.title} style={status ? { textDecoration: "line-through" } : { textDecoration: "none" }}>{value}</p>
+                <p className={s.title} >{value}</p>
             </div>
-
             <button onClick={() => deleteTodo(id)} className={s.btnDelete}>Удалить</button>
-
-        </div>
+        </li>
     );
 };
 

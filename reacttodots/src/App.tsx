@@ -54,13 +54,13 @@ const App = () => {
       <TodoForm saveTodo={saveTodo} todos={todos} setTodo={setTodo} setTodos={setTodos} todo={todo} />
       <TodoList deleteTodo={deleteTodo} toggleTodo={toggleTodo} list={copytodos} />
 
-      <button onClick={() => setDone("all")}>All</button>
-      <button onClick={() => setDone("active")}>Active</button>
-      <button onClick={() => setDone("ready")}>Ready</button>
+      <button className="all" onClick={() => setDone("all")}>All</button>
+      <button className="active" onClick={() => setDone("active")}>Active</button>
+      <button className="ready" onClick={() => setDone("ready")}>Ready</button>
 
 
-      <p >{count} осталось выполнить</p>
-      <button onClick={() => clearReady(todos)}>очистить готовые</button>
+      <p className="count">{count} осталось выполнить</p>
+      <button className="clean" onClick={() => clearReady(todos)}>очистить готовые</button>
     </div>
   );
 }
