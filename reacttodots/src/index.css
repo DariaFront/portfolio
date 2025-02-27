@@ -19,20 +19,36 @@ code {
   flex-direction: column;
 }
 
-.all{
+.btnGroop{
+  display: flex;
+  gap: 30px;
+  width: 100%;
+}
+.all,
+.active,
+.ready,
+.clean
+{
+  width: 100px;
+  background-color: #f5f5f5;
+  color: #8f8f8f;
+  border-radius: 5px;
+  border: none;
+}
+
+.all:hover,
+.active:hover,
+.ready:hover,
+.clean:hover
+{
+  width: 100px;
+  background-color: #86a6e0;
   color: #333333;
+  border-radius: 5px;
+  border: none;
 }
 
-.active{
-  color: #d61818;
+.count{
+  color: #86a6e0;
 }
 
-.ready{
-  color: #0b9c1e;
-}
-
-.clean{
-  color: #ffffff;
-}
-
-.count{}

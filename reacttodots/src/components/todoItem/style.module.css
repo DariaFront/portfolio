@@ -2,14 +2,18 @@
     display: inline-block;  
     margin-left: 10px;  
 }
+.chek {
+    width: 20px;
+    height: 20px;
+}
 
 input:checked + p{
-    color:#d11693;
+    color:#86a6e0;
    text-decoration: line-through; 
 }
 
 input:checked{
-    color:#d11693;
+    color:#86a6e0;
 }
 
 .wrap{

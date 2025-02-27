@@ -1,5 +1,6 @@
-.title{
+.title{    
     display: block;
+    text-align:center;
     margin: 40px 0 20px;
     padding: 0;
     font-size: 30px;
