@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'TTFirsNeueRegular';
+  src: url('TTFirsNeueRegular.woff');
+  src: local('TT Firs Neue Regular'), local('TTFirsNeueRegular'),
+      url('../fonts/TTFirsNeueRegular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TTFirsNeueMedium';
+  src: url('TTFirsNeueMedium.woff');
+  src: local('TT Firs Neue Medium'), local('TTFirsNeueMedium'),
+      url('../fonts/TTFirsNeueMedium.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TTFirsNeueBold';
+  src: url('TTFirsNeueBold.woff');
+  src: local('TT Firs Neue Bold'), local('TTFirsNeueBold'),
+      url('../fonts/TTFirsNeueBold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* roboto-regular - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-v30-cyrillic_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* roboto-700 - cyrillic_latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/roboto-v30-cyrillic_latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+

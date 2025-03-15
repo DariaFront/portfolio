@@ -1,0 +1,107 @@
+.feedback {
+    padding: 20px 0;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    &__title {
+        margin: 0;
+        padding: 0 0 20px 0;
+        font-size: 24px;
+        color: var(--turquoise);
+
+        &-main {
+            margin: 0;
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+    }
+
+    &__text {
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+    }
+
+    &__img {
+        margin-bottom: 15px;
+        align-self: center;
+        width: 80px;
+        height: 80px;
+        border-radius: 40px;
+        background-size: cover;
+        background-color: rgb(136, 175, 162);
+    }
+
+    &__hide {
+        display: none;
+    }
+
+}
+
+.one {
+    background-image: url(../image/banny.png);
+}
+
+// .two {
+//     background-image: url(../image/banny.png);
+// }
+
+// .three {
+//     background-image: url(../image/banny.png);
+// }
+
+// .four {
+//     background-image: url(../image/banny.png);
+// }
+
+@media (min-width: 540px) {
+    .feedback {
+        padding: 40px 0;
+
+        &__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 30px;
+        }
+
+        &__hide {
+            display: flex;
+        }
+    }
+}
+
+@media (min-width: 760px) {
+    .feedback {
+        padding: 40px 0;
+
+        &__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            gap: 30px;
+        }
+
+        &__hide {
+            display: none;
+        }
+&__title {
+    padding-bottom: 40px;
+    font-size: 40px;
+}
+        &__text {
+            font-size: 16px;
+        }
+    }
+}

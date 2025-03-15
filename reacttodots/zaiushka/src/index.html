@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preload" href="fonts/roboto-v30-cyrillic_latin-700.woff2" as="font">
+  <link rel="preload" href="fonts/roboto-v30-cyrillic_latin-regular.woff2" as="font">
+
+  <link rel="preload" href="fonts/TTFirsNeueBold.woff" as="font">
+  <link rel="preload" href="fonts/TTFirsNeueRegular.woff" as="font">
+  <link rel="preload" href="fonts/TTFirsNeueMedium.woff" as="font">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/main.css" />
+
+
+  <script defer src="main.js"></script>
+
+  <title>Заюшка-знаюшка</title>
+</head>
+
+<body>
+  <header class="header section">
+    <div class="container">
+      <div class="header__grid">
+        <a href="#" class="header__logo">
+          <picture>
+            <source srcset="image/logo.png" media="(max-width: 1070px)">
+            <source srcset="image/logo250.png" media="(max-width: 4400px)">
+            <img class="header__img" src="image/logo150.png" alt="logo">
+          </picture>
+        </a>
+        <ul class="header__nav">
+          <li class="header__nav-item">
+            <a href="#about" class="header__nav-link">
+              О студии
+            </a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#program" class="header__nav-link">
+              Программы развития
+            </a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#room" class="header__nav-link">
+              Оборудование
+            </a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#feedback" class="header__nav-link">
+              Отзывы
+            </a>
+          </li>
+          <li class="header__nav-item">
+            <a href="#contact" class="header__nav-link">
+              Контакты
+            </a>
+          </li>
+        </ul>
+        <div class="header__burger">
+          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" version="1.1" id="svg4"
+            sodipodi:docname="burger.svg" inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)">
+            <g id="g8938">
+              <rect
+                style="fill:none;stroke:#ffffff;stroke-width:2.57851;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+                id="rect6717" width="37.399136" height="37.347374" x="1.3333731" y="1.3851378" ry="5.9755793" />
+              <g id="g6782" transform="translate(4.8658823,1.2423529)" style="fill:#ffffff">
+                <rect style="fill:#ffffff;stroke:none;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+                  id="rect6719-1" width="24.720041" height="4.3482308" x="2.83761" y="16.804707" ry="2.1741154" />
+                <rect style="fill:#ffffff;stroke:none;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+                  id="rect6719-1-8" width="24.720041" height="4.3482308" x="2.8070376" y="8.8517666" ry="2.1741154" />
+                <rect style="fill:#ffffff;stroke:none;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none"
+                  id="rect6719-1-1" width="24.720041" height="4.3482308" x="2.7552731" y="24.795296" ry="2.1741154" />
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="header__block">
+          <a class="header__block-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <path
+                d="M18.3425 14.0983C17.215 14.0983 16.1242 13.915 15.1067 13.585C14.7858 13.475 14.4283 13.5575 14.1808 13.805L12.7417 15.6108C10.1475 14.3733 7.71833 12.0358 6.42583 9.35L8.21333 7.82833C8.46083 7.57167 8.53417 7.21417 8.43333 6.89333C8.09417 5.87583 7.92 4.785 7.92 3.6575C7.92 3.1625 7.5075 2.75 7.0125 2.75H3.84083C3.34583 2.75 2.75 2.97 2.75 3.6575C2.75 12.1733 9.83583 19.25 18.3425 19.25C18.9933 19.25 19.25 18.6725 19.25 18.1683V15.0058C19.25 14.5108 18.8375 14.0983 18.3425 14.0983Z"
+                fill="currentcolor" />
+            </svg>
+            +7 905 947 6300
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="about__grid">
+          <div class="about__block">
+            <h2 class="about__title">
+              О&nbsp;студии
+            </h2>
+            <p class="about__text text">
+              (Мотивирующий текст)Заюшка-знаюшка – это центр развития детей и детского досуга в Красногорске,
+              позволяющий обучающий детей с
+              полугода, и предоставляющий целый спектр развивающих занятий для детей любых
+              возрастов.
+            </p>
+            <p class="about__text text">
+              В детском центре действуют разные программы, что позволяет освободить мам и пап, а детишкам радостно
+              играть.
+            </p>
+            <h3 class="about__title-small">
+              Заказать обратный звонок
+            </h3>
+            <form class="about__form" action="https://jsonplaceholder.typicode.com/posts" method="POST">
+              <input class="about__input" type="email" placeholder="Напиши имя и телефон" required>
+              <button class="btn btn-reset btnfull" type="submit" aria-label="Отправить">
+                Заказать
+              </button>
+            </form>
+          </div>
+          <img class="about__img" src="image/video.jpg" alt="video">
+        </div>
+      </div>
+      </div>
+    </section>
+    <section class="banner section">
+      <div class="container">
+        <div class="banner__block">
+          <h1 class="banner__title">
+            Развитие ребенка от ползунков до школы
+          </h1>
+          <p class="banner__text">
+            В детском центре действуют разные программы.
+          </p>
+          <p class="banner__text">
+            Попробовать первое занятье можно за 1500 руб.
+          </p>
+          <button class=" banner__btn btn btn-reset btnfull" type="submit" aria-label="Отправить">
+            Записаться
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="program section" id="program">
+      <div class="container">
+        <div class="program__grid">
+          <div class="program__block">
+            <div>
+              <h2 class="program__title">Раннее развитие</h2>
+              <p class="program__text">
+                А вы уже задумывались о раннем развитии своего малыша?
+                Занятия направлены на развитие мелкой, крупной моторики, на координацию, звукоподражание, спортивные и
+                музыкальные игры!
+                Мы будем учиться дружить, играть вместе, взаимодействовать с детьми и педагогом!
+                Для кого подойдёт: дети 11 мес – 1,3 года
+              </p>
+            </div>
+            <button class=" program__btn btn btn-reset btnfull" type="submit" aria-label="Отправить">
+              Записаться
+            </button>
+          </div>
+          <div class="program__block">
+            <div>
+              <h2 class="program__title">Развитие речи</h2>
+              <p class="program__text">
+                Проведение коррекции речевых нарушений детей.
+                кроме того
+
+                – Сенсорное и сенсомоторное развитие
+                – Формирование пространственно – предметных отношений
+                – Формирование представления о предметах и явлениях
+                – Обогащение словаря и развитие связной речи
+              </p>
+            </div>
+            <button class=" program__btn btn btn-reset btnfull" type="submit" aria-label="Отправить">
+              Записаться
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section class="room section" id="room">
+      <div class="container">
+
+        <h2 class="room__title">Наше оборудование</h2>
+
+        <div class="slider">
+          <div class="slider__container">
+            <!-- Add Pagination -->
+            <div class="slider__nav">
+              <label for="s1" class="slider__nav-item"></label>
+              <label for="s2" class="slider__nav-item"></label>
+              <label for="s3" class="slider__nav-item"></label>
+              <label for="s4" class="slider__nav-item"></label>
+              <label for="s5" class="slider__nav-item"></label>
+              <label for="s6" class="slider__nav-item"></label>
+            </div>
+            <div class="slider__items">
+
+              <input type="radio" name="s" id="s1">
+              <input type="radio" name="s" id="s2">
+              <input type="radio" name="s" id="s3">
+              <input type="radio" name="s" id="s4">
+              <input type="radio" name="s" id="s5">
+              <input type="radio" name="s" id="s6">
+
+              <div class="slider__item s1">
+                <div class="room__img ">
+                  <img src="image/1.jpg" alt="video">
+                </div>
+              </div>
+              <div class="slider__item">
+                <div class="room__img">
+                  <img src="image/2.jpg" alt="video">
+                </div>
+              </div>
+              <div class="slider__item">
+                <div class="room__img">
+                  <img src="image/3.jpg" alt="video">
+                </div>
+              </div>
+              <div class="slider__item">
+                <div class="room__img">
+                  <img src="image/4.jpg" alt="video">
+                </div>
+              </div>
+              <div class="slider__item">
+                <div class="room__img">
+                  <img src="image/5.jpg" alt="video">
+                </div>
+              </div>
+              <div class="slider__item">
+                <div class="room__img">
+                  <img src="image/6.jpg" alt="video">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Add Navigation -->
+          <!-- <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div> -->
+          <!-- <div class="swiper-scrollbar"></div> -->
+        </div>
+
+        <p class="room__text">
+          У нас лучшие игрушки и другие нужные штуки. Слайдер с видами
+        </p>
+
+      </div>
+    </section>
+    <section class="feedback section" id="feedback">
+      <div class="container">
+        <h2 class="feedback__title-main">Отзывы наших клиентов</h2>
+        <div class="feedback__grid">
+          <div class="feedback__block">
+            <div class="feedback__img one"></div>
+            <h3 class="feedback__title">Кристина</h3>
+            <p class="feedback__text">
+              Прекрасный центр! Занимались с педагогом Надеждой, очень чуткий и внимательный специалист. Малыш быстро
+              привык и
+              адаптировался, спокойно отпускал родителей и начал называть педагога по имени, вспоминал дома и всегда с
+              улыбкой ехал на
+              занятия. Начали заниматься в 1,5 года. Надежда и сама всегда оставляла комментарии, давала рекомендации
+              для занятий дома и
+              подробно рассказывала,
+              что сейчас актуально для ребенка.
+            </p>
+          </div>
+          <div class="feedback__block">
+            <div class="feedback__img one"></div>
+            <h3 class="feedback__title">Карина Климова</h3>
+            <p class="feedback__text">
+              Очень нравится данная студия. Сын занимался с педагогом-Натальей, очень грамотный специалист, легко
+              нашла подход к
+              малышу, помогла нам разговориться и вообще привить любовь к занятиям. Ребенок (2 года) не хотел уходить
+              с занятий! Также
+              были на занятии у Надежды, очень опытный специалист, сразу определила сильные и слабые стороны ребенка,
+              дала обратную
+              связь с чем лучше поработать. В кабинете всегда идеально чисто и уютно. От всей души могу рекомендовать!
+            </p>
+          </div>
+          <div class="feedback__block">
+            <div class="feedback__img one"></div>
+            <h3 class="feedback__title">Альбина</h3>
+            <p class="feedback__text">
+              К Надежде с сыном ходим уже больше года, ребенок с первого посещения был в восторге от занятий в игровой
+              форме.
+              Уже после нескольких недель был замечен прорыв в развитии
+              Всегда новые увлекательные игры, развивающие игрушки, изготовление разных поделок.
+              Надежда замечательный педагог с индивидуальным подходом к малышам.
+              Мой просто влюблен в нее, всегда рвётся на занятия, а после долгих разлук в виде отпусков, бросается в
+              объятия
+              Очень рады, что когда то нашли этот центр
+            </p>
+          </div>
+          <div class="feedback__block feedback__hide">
+            <div class="feedback__img one"></div>
+            <h3 class="feedback__title">Вера Н.</h3>
+            <p class="feedback__text">
+              Мы ходим к Надежде уже почти 2 года. Считаю это самое лучшее решение для любого ребёнка! Прекрасный
+              индивидуальный
+              подход, в котором работают с каждым ребёнком индивидуально, учитывая его особенности характера и
+              возможностей.
+              Прекрасный центр, всё очень уютно. Ребёнок в восторге, родители тоже. Всем советуем этот центр
+            </p>
+          </div>
+          <p class="feedback__text">Больше отзывов наших клиентов на yandex.ru</p>
+        </div>
+
+    </section>
+    <section class="contakt section" id="contact">
+      <div class="container">
+        <h2 class="contakt__title">
+          Контакты
+        </h2>
+        <div class="contakt__map">
+          <script type="text/javascript" charset="utf-8" async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6e59a2e495f473c7b57034c4fcb64af25678945819e1ecc2b4d087c55c7e59e3&amp;width=1280&amp;height=447&amp;lang=ru_RU&amp;scroll=true">
+            </script>
+          <div class="contakt__block">
+            <div class="contakt__decsription">
+              <h3 class="contakt__title-description">
+                Заюшка-Знаюшка
+              </h3>
+              <p class="contakt__text-decsription text">
+                Спасская ул., 4, Красногорск</p>
+              <p class="contakt__span">
+                +7&nbsp;905&nbsp;947&#8209;64&#8209;00
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer section">
+    <div class="container">
+      <div class="footer__grid">
+        <a class="footer__logo" href="#">
+          <picture>
+            <source srcset="image/Logo-320.png" media="(max-width: 590px)">
+            <source srcset="image/Logo-1024.png" media="(max-width: 1024px)">
+            <img class="footer__img" src="image/logo.png" alt="logo">
+          </picture>
+          <h4 class="footer__logo-description">
+            Заюшка-Знаюшка
+          </h4>
+        </a>
+        <p class="footer__description">
+          Мы поможем вашему ребенку провести время не только весело,<br>
+          но и с пользой!
+        </p>
+        <div class="footer__media">
+          <p class="footer__span">Больше интересного:</p>
+          <ul class="footer__list list-reset">
+            <li class="footer__item">
+              <a class="footer__icon" href="#">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.8527 9.99062C12.8527 11.2273 13.8552 12.2299 15.0919 12.2299C16.3286 12.2299 17.3311 11.2273 17.3311 9.99062C17.3311 8.75396 16.3286 7.7514 15.0919 7.7514C13.8552 7.7514 12.8527 8.75396 12.8527 9.99062Z"
+                    fill="currentcolor" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 0 15 0C6.71572 0 0 6.71573 0 15C0 23.2843 6.71572 30 15 30ZM9.67501 9.99055C9.67501 6.99892 12.1002 4.57364 15.0919 4.57364C18.0836 4.57364 20.5088 6.99892 20.5088 9.99055C20.5088 12.9822 18.0836 15.4077 15.0919 15.4077C12.1002 15.4077 9.67501 12.9822 9.67501 9.99055ZM20.5412 18.194C20.4724 18.2491 19.1729 19.2761 17.0043 19.7179L20.2777 22.9622C20.8534 23.5369 20.854 24.4695 20.2793 25.0451C19.7046 25.6207 18.7722 25.6216 18.1964 25.0467L15.0184 21.952L12.1319 25.0268C11.8429 25.3266 11.4575 25.4774 11.0716 25.4774C10.7035 25.4774 10.3351 25.3404 10.0493 25.0648C9.46372 24.5001 9.44677 23.5677 10.0114 22.9822L13.1185 19.735C10.8891 19.3036 9.53591 18.2499 9.46622 18.194C8.83165 17.6851 8.72971 16.7581 9.23862 16.1235C9.74746 15.4889 10.6744 15.387 11.3091 15.8958C11.3225 15.9067 12.7378 16.9699 15.0183 16.9715C17.2989 16.9699 18.6849 15.9067 18.6983 15.8958C19.333 15.387 20.2599 15.4889 20.7688 16.1235C21.2777 16.7581 21.1757 17.6851 20.5412 18.194Z"
+                    fill="currentcolor" />
+                </svg>
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__icon" href="#">
+                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M15 0C6.71601 0 0 6.7157 0 15C0 23.2843 6.71601 30 15 30C23.284 30 30 23.2843 30 15C30 6.7157 23.284 0 15 0ZM22.6088 16.6223C23.3079 17.3052 24.0476 17.9478 24.6752 18.7013C24.9533 19.0346 25.2154 19.3792 25.4148 19.7669C25.6996 20.3196 25.4425 20.9257 24.9477 20.9586L21.8747 20.958C21.081 21.0236 20.4494 20.7035 19.9169 20.1609C19.4919 19.7285 19.0975 19.2666 18.6881 18.8194C18.5208 18.6359 18.3447 18.4631 18.1347 18.3272C17.7158 18.0546 17.3518 18.1381 17.1118 18.5758C16.8672 19.0211 16.8114 19.5146 16.788 20.0102C16.7546 20.7348 16.5361 20.9242 15.809 20.9583C14.2555 21.031 12.7814 20.7953 11.4114 20.0121C10.2028 19.3212 9.26732 18.3462 8.45218 17.2423C6.86486 15.0902 5.64921 12.7283 4.55693 10.2985C4.3111 9.7513 4.49095 9.45852 5.09463 9.44716C6.0976 9.42783 7.10056 9.43028 8.10353 9.44624C8.51172 9.45268 8.78179 9.68624 8.93862 10.0714C9.48062 11.4049 10.1451 12.6737 10.9777 13.8503C11.1996 14.1637 11.4261 14.4761 11.7486 14.6974C12.1047 14.9417 12.376 14.861 12.5438 14.4635C12.6513 14.2109 12.6976 13.9409 12.7209 13.6702C12.8007 12.743 12.8102 11.8162 12.6721 10.8927C12.5862 10.3148 12.2612 9.94158 11.6851 9.83233C11.3917 9.77678 11.4347 9.66813 11.5774 9.50056C11.8251 9.21084 12.0571 9.03161 12.5208 9.03161L15.9928 9.031C16.5401 9.13841 16.6628 9.38394 16.7371 9.93514L16.7402 13.7936C16.7337 14.0069 16.8473 14.6391 17.2303 14.7787C17.5372 14.88 17.7398 14.6339 17.9233 14.4396C18.7559 13.556 19.3492 12.5131 19.8804 11.4338C20.1149 10.9577 20.3171 10.4652 20.5136 9.97166C20.6596 9.60675 20.8868 9.42721 21.2986 9.43335L24.6421 9.43734C24.7406 9.43734 24.8406 9.43826 24.9382 9.45514C25.5017 9.55151 25.6561 9.79396 25.4817 10.3436C25.2074 11.2073 24.6743 11.9266 24.1532 12.6479C23.5946 13.4201 22.9989 14.1652 22.4458 14.9408C21.9376 15.6497 21.9778 16.0066 22.6088 16.6223Z"
+                    fill="currentcolor" />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
+</html>

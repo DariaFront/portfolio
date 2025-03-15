@@ -1,0 +1,129 @@
+@mixin title {
+  margin: 0;
+  padding: 0;
+  font-family: 'TTFirsNeueRegular', 'Arial';
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.contakt {
+  padding: 34px 0 68px;
+
+  &__map {
+    display: flex;
+    position: relative;
+    margin-left: -21px;
+    width: calc(100% + 45px);
+  }
+
+
+  &__block {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding: 60px 40px;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(3, 79, 86, 0.85);
+  }
+
+  &__decsription {
+    color: var(--white);
+  }
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    font-family: 'TTFirsNeueBold', 'Arial-Bold';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31px;
+    color: var(--black);
+
+    &-description {
+      @include title();
+      color: var(--white);
+      margin-bottom: 6px;
+      line-height: 30px;
+    }
+
+    &-form {
+      @include title();
+    }
+  }
+
+  &__text {
+    margin: 0 0 14px 0;
+    color: var(--darkgrey);
+    line-height: 22px;
+
+    &-decsription {
+      margin: 0;
+      color: var(--white);
+      line-height: 27px;
+      margin-bottom: 5px;
+
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    color: var(--darkgrey);
+    outline: none;
+    transition: color var(--time);
+
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__span {
+    padding-left: 20px;
+    padding-bottom: 5px;
+    color: var(--orange);
+    letter-spacing: .9px;
+    background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.3425 14.0983C17.215 14.0983 16.1242 13.915 15.1067 13.585C14.7858 13.475 14.4283 13.5575 14.1808 13.805L12.7417 15.6108C10.1475 14.3733 7.71833 12.0358 6.42583 9.35L8.21333 7.82833C8.46083 7.57167 8.53417 7.21417 8.43333 6.89333C8.09417 5.87583 7.92 4.785 7.92 3.6575C7.92 3.1625 7.5075 2.75 7.0125 2.75H3.84083C3.34583 2.75 2.75 2.97 2.75 3.6575C2.75 12.1733 9.83583 19.25 18.3425 19.25C18.9933 19.25 19.25 18.6725 19.25 18.1683V15.0058C19.25 14.5108 18.8375 14.0983 18.3425 14.0983Z' fill='%23FF6E30'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+  }
+
+  // &__input {
+  //   margin-bottom: 20px;
+  //   padding-left: 20px;
+  //   font-size: 16px;
+  //   width: 100%;
+  //   height: 50px;
+  //   color: var(--darkgrey);
+  //   background: var(--lightgrey);
+  //   border-color: transparent;
+  //   outline: none;
+
+  // }
+
+  // &__area {
+  //   padding: 14px 20px;
+  //   min-height: 150px;
+  //   height: 100%;
+  //   vertical-align: top;
+  //   outline: none;
+  // }
+
+}
+
+@media (min-width: 700px) {
+  .contakt {
+    &__block {
+      top: 50px;
+      left: 75px;
+      width: 350px;
+      height: 260px;
+    }
+  }
+}
