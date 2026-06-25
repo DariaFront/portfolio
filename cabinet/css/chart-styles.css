@@ -1,0 +1,363 @@
+/* chart-styles.css */
+/* Стили для графиков */
+
+/* Общие стили графика */
+.chart-card {
+  overflow: hidden;
+  position: relative;
+}
+
+.no-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  color: var(--grey);
+  font-size: 16px;
+  background: var(--border);
+  border-radius: 8px;
+}
+
+/* Кнопки периода */
+.btn--outline.btn-active {
+  background-color: var(--darkBlue);
+  color: white;
+}
+
+/* Стили для календаря */
+.date-picker {
+  display: none;
+  margin-top: 16px;
+  padding: 20px;
+  background: var(--surface-soft);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.date-picker__container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.date-picker__title {
+  font-weight: 400;
+  color: var(--bark);
+  margin-bottom: 8px;
+}
+
+.date-picker__inputs {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.date-picker__input-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.date-picker__input-group label {
+  font-size: 16px;
+  color: var(--grey);
+  min-width: 32px;
+}
+
+.date-input {
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: 'TT Fors', 'Inter', sans-serif;
+  font-size: 16px;
+  background: white;
+  min-width: 150px;
+}
+
+#applyDate,
+#cancelDate {
+  height: 40px;
+  padding: 0 16px;
+}
+
+/* Стиль для chart-info */
+.chart-info {
+  background: var(--lighGrey);
+  min-height: 200px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--grey);
+  font-size: 14px;
+}
+
+/* Легенда графика */
+.chart-legend {
+  margin-top: 20px;
+  padding: 16px;
+  background-color: #ffffff;
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.legend-text {
+  display: flex;
+  gap: 4px;
+  font-size: 12px;
+}
+
+.legend-name {
+  color: #374151;
+  font-weight: 500;
+}
+
+.legend-value {
+  color: #6B7280;
+}
+
+.legend-total {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 20px;
+}
+
+.legend-total-label {
+  font-size: 12px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.legend-total-value {
+  font-size: 12px;
+  color: #0B63A8;
+  font-weight: 600;
+}
+
+/* Адаптивность для мобильных (до 768px) */
+@media (max-width: 768px) {
+
+  /* График */
+  #incomeChart {
+    height: 220px !important;
+  }
+
+  .chart-card {
+    padding: 10px;
+  }
+
+  /* Кнопки периода */
+  .range-panel__buttons {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .btn--outline {
+    font-size: 11px;
+    padding: 0 12px;
+    height: 36px;
+    min-width: 160px;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* Календарь */
+  .date-picker {
+    padding: 12px;
+  }
+
+  .date-picker__inputs {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .date-picker__input-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .date-picker__input-group label {
+    font-size: 14px;
+    min-width: auto;
+  }
+
+  .date-input {
+    width: 100%;
+    min-width: auto;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  /* Легенда */
+  .chart-legend {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px;
+    margin-top: 15px;
+  }
+
+  .legend-item {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .legend-text {
+    flex: 1;
+    justify-content: space-between;
+  }
+
+  .legend-total {
+    margin-left: 0;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px solid #E5E7EB;
+  }
+
+  /* ИЗМЕНЕНИЕ: не скрываем chart-info, а делаем адаптивным */
+  .chart-info {
+    display: flex;
+    /* Принудительно показываем */
+    width: 100%;
+    min-height: 150px;
+    font-size: 12px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  /* Уменьшаем шрифты на графике */
+  .chart-legend {
+    font-size: 11px;
+  }
+
+  /* Адаптация текста на кнопках */
+  #day,
+  #week,
+  #mouns,
+  #quatro,
+  #year {
+    font-size: 10px;
+    padding: 0 8px;
+  }
+
+  #time {
+    font-size: 10px;
+    padding: 0 8px;
+  }
+
+  .btn__icon {
+    display: none;
+  }
+
+  /* Уменьшаем отступы */
+  .range-panel__title {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .range-panel__meta {
+    font-size: 10px;
+    margin-top: 8px;
+  }
+
+  /* Кнопка "Показать" */
+  .btn--primary.btn--wide {
+    font-size: 11px;
+    height: 36px;
+    margin-top: 8px;
+  }
+
+  /* Адаптируем блок с графиками */
+  .chart-block {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .chart-card,
+  .chart-info {
+    width: 100%;
+  }
+
+  .banners {
+    justify-items: center;
+    max-width: 100%;
+    flex-direction: row;
+  }
+
+  .banner {
+    width: 256px;
+  }
+}
+
+@media (max-width: 640px) {
+  .stats-row {
+    flex-direction: column;
+  }
+
+  .stat {
+    width: 100%;
+  }
+
+  .stat__title {
+    max-width: 100%;
+  }
+
+  .stats-actions {
+    flex-direction: column;
+  }
+}
+
+/* Еще более маленькие экраны (до 480px) */
+@media (max-width: 480px) {
+  #incomeChart {
+    height: 180px !important;
+  }
+
+  .btn--outline {
+    font-size: 9px;
+    padding: 0 6px;
+    height: 32px;
+  }
+
+  .chart-legend {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .range-panel__buttons {
+    gap: 4px;
+  }
+
+  .range-panel__title {
+    font-size: 11px;
+  }
+
+  .no-data {
+    height: 200px;
+    font-size: 14px;
+  }
+}

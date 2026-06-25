@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТСЖ «Династия» — Официальный сайт</title>
+    <meta name="description"
+        content="Официальный сайт ТСЖ Династия. Новости, документы, показания счётчиков, состав правления.">
+
+    <!-- Normalize.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Собственные стили -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Критический CSS для предотвращения скрытия контента -->
+    <style>
+        /* Fallback стили на случай, если JS не загрузится */
+        [data-aos] {
+            opacity: 1 !important;
+            transform: none !important;
+            transition: none !important;
+        }
+
+        /* Показываем контент сразу */
+        .main-nav,
+        .hero,
+        .info-grid,
+        .meetings-section,
+        .counters-section,
+        .board-section {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+
+        /* Скрываем бургер-меню по умолчанию на десктопе */
+        @media (min-width: 969px) {
+            .burger-btn {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================== ШАПКА ==================== -->
+    <header class="main-header">
+        <div class="container header-flex">
+            <a href="#" class="logo-block">
+                <div class="logo-icon">
+                    <i data-lucide="building-2"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title">ТСЖ «Династия»</span>
+                    <span class="logo-address">ул. Центральная, 6,8</span>
+                </div>
+            </a>
+            <div class="nav-block">
+                <nav class="main-nav" id="mainNav">
+                    <ul class="nav-list">
+                        <li><a href="#news"><i data-lucide="newspaper"></i>Новости</a></li>
+                        <li><a href="#meetings"><i data-lucide="clipboard-list"></i>Собрания</a></li>
+                        <li><a href="#counters"><i data-lucide="gauge"></i>Приборы учёта</a></li>
+                        <li><a href="#board"><i data-lucide="users"></i>Правление</a></li>
+                        <li><a href="dok.html"><i data-lucide="folder-open"></i>Документы</a></li>
+                    </ul>
+                </nav>
+
+                <button class="eye-toggle" id="eyeToggle" aria-label="Версия для слабовидящих">
+                    <i data-lucide="eye"></i>
+                </button>
+
+                <button class="burger-btn" id="burgerBtn" aria-label="Открыть меню">
+                    <i data-lucide="menu" class="icon-menu"></i>
+                    <i data-lucide="x" class="icon-close"></i>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <!-- ==================== HERO-СЕКЦИЯ ==================== -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-badge">
+                        <i data-lucide="shield-check"></i>
+                        Официальный сайт ТСЖ
+                    </span>
+                    <h1>Добро пожаловать в ТСЖ «Династия»</h1>
+                    <p class="hero-lead">« …кто резко высказывает свои мнения о чужих действиях, тот обязывает этим себя
+                        действовать лучше других. » Ключевский В.О.</p>
+
+                    <div class="hero-actions">
+                        <a href="#counters" class="btn-accent">
+                            <i data-lucide="gauge"></i>
+                            Передать показания
+                        </a>
+                        <a href="#news" class="btn-outline">
+                            <i data-lucide="newspaper"></i>
+                            Последние новости
+                        </a>
+                        <a href="tel:+79817310077" class="btn-emergency">
+                            <i data-lucide="phone-call"></i>
+                            Аварийная служба
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- ==================== НОВОСТИ + ОБЪЯВЛЕНИЯ ==================== -->
+            <div class="info-grid" id="news">
+                <section class="news-section">
+                    <div class="section-header">
+                        <h2>
+                            <i data-lucide="newspaper"></i>
+                            Лента новостей
+                        </h2>
+                    </div>
+
+                    <article class="news-card">
+                        <div class="news-meta">
+                            <time datetime="2026-06-15">26 мая 2026</time>
+                        </div>
+                        <h3>Отключение горячей воды</h3>
+                        <p>27 мая 2026 с 9 00 до 15 00 будет отключено горячее водоснабжение. Ремонтные работы</p>
+
+                    </article>
+
+                    <article class="news-card">
+                        <div class="news-meta">
+                            <time datetime="2026-06-15">22 мая 2026</time>
+                        </div>
+                        <h3>Озеленение двора</h3>
+                        <p>Везем сирень и петунии ! Через час можно приходить и брать 🪴🪴🪴🪴🪴.
+                            Отдаем только тем , кто принес бюллетень )))))
+                            Посадочный материал для высадки только на нашей територии ! С указанием места высадки )
+                            озеленение в рамках месячника по благоустройству, все под отчет , пожалуйста .</p>
+
+                    </article>
+
+                    <article class="news-card">
+                        <div class="news-meta">
+                            <time datetime="2026-06-15">21 мая 2026</time>
+                        </div>
+                        <h3>Внимание мошенники</h3>
+                        <p>В сто тысяч миллионый раз объясняем : тсж НИКОГДА не просит никаких кодов - подтверждений ! В
+                            Максе рассылка сейчас от имени Лимоновой про " электронное обновление данных " - очередной
+                            развод . Отмечаем как спам и нажимаем кнопку " пожаловаться ".</p>
+
+                    </article>
+                    <div class="meetings-footer">
+                        <a href="http://dinastiya-tsj.ru/news.html" class="btn-outline btn-archive">
+                            <i data-lucide="archive"></i>
+                            Открыть страницу новостей
+                        </a>
+                    </div>
+            </div>
+            <section class="complex-gallery container">
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="img/06.jpg" alt="Весна">
+                        <div class="gallery-overlay"><span>Весна</span></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/03.jpg" alt="Лето">
+                        <div class="gallery-overlay"><span>Лето</span></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/02.jpg" alt="Осень">
+                        <div class="gallery-overlay"><span>Осень</span></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="img/01.jpg" alt="Зима">
+                        <div class="gallery-overlay"><span>Зима</span></div>
+                    </div>
+                </div>
+            </section>
+            <!-- ==================== СОБРАНИЯ И ДОКУМЕНТЫ ==================== -->
+            <section id="meetings" class="meetings-section">
+                <div class="meetings-header">
+                    <h2>
+                        <i data-lucide="clipboard-list"></i>
+                        Собрания собственников и документы
+                    </h2>
+                    <p class="meetings-lead">Материалы, уведомления и отчётные документы по текущим и прошедшим
+                        собраниям. Все файлы доступны для скачивания.</p>
+
+
+                </div>
+
+                <!-- Собрание по субсидии -->
+                <div class="meeting-block">
+                    <div class="meeting-title-row">
+                        <span class="meeting-badge badge-important">
+                            <i data-lucide="check-circle-2"></i>
+                            Актуально
+                        </span>
+                        <h3>Собрание по субсидии на модернизацию детских площадок</h3>
+                    </div>
+                    <p class="meeting-desc">Документы по проведению общего собрания собственников для получения субсидии
+                        от города.</p>
+
+                    <div class="docs-grid">
+                        <div class="doc-group">
+                            <h4 class="doc-group-title">
+                                <i data-lucide="bell-ring"></i>
+                                Уведомления и разъяснения
+                            </h4>
+                            <ul class="docs-list">
+                                <li><a href="doki/power2026/Уведомление о собрании Ц6.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="file-text"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Уведомление о собрании (Центральная 6)</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2026/Уведомление о собрании Ц8 .pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="file-text"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Уведомление о собрании (Центральная 8)</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2026/ПОЯСНЕНИЯ по собранию.pdf" class="doc-link" target="_blank"
+                                        rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="file-text"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Пояснения по собранию</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2026/Представление прокуратуры 23.03.26.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="scale"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Представление прокуратуры от 23.03.26</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                            </ul>
+                        </div>
+
+                        <div class="doc-group">
+                            <h4 class="doc-group-title">
+                                <i data-lucide="baby"></i>
+                                Проект и коммерческие предложения
+                            </h4>
+                            <ul class="docs-list">
+                                <li><a href="doki/power2026/Коммерческое предлож. Ц6.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="file-spreadsheet"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Коммерческое предложение — Дом 6</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2026/Комм. предлож. 8 д.pdf" class="doc-link" target="_blank"
+                                        rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="file-spreadsheet"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Коммерческое предложение — Дом 8</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2026/Схема размещения  (ориентир.) Ц6.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="map"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Схема размещения (ориентировочно)</span>
+                                            <span class="doc-meta">PDF · Схема</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2026/МАФ Красивый город игровой коплекс Адмирал.pdf"
+                                        class="doc-link" target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="gamepad-2"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Игровой комплекс «Адмирал»</span>
+                                            <span class="doc-meta">PDF · Каталог</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Годовое собрание 2026 -->
+                <div class="meeting-block">
+                    <div class="meeting-title-row">
+                        <span class="meeting-badge badge-important">
+                            <i data-lucide="star"></i>
+                            Годовое
+                        </span>
+                        <h3>Очередное годовое общее собрание собственников 2026</h3>
+                    </div>
+                    <p class="meeting-desc">Отчёты правления, ревизионной комиссии, смета и планы на текущий год.</p>
+
+                    <div class="docs-grid">
+                        <div class="doc-group">
+                            <h4 class="doc-group-title">
+                                <i data-lucide="bar-chart-3"></i>
+                                Отчёты за 2025 год
+                            </h4>
+                            <ul class="docs-list">
+                                <li><a href="doki/power2026/Отчёт Годовой правления 2025.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="users"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Годовой отчёт правления</span>
+                                            <span class="doc-meta">PDF · 2025</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2026/Отчёт  по исполнению сметы (доходы-расходы) за  2025.pdf"
+                                        class="doc-link" target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="wallet"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Исполнение сметы (доходы-расходы)</span>
+                                            <span class="doc-meta">PDF · 2025</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2026/Отчёт кап.ремонт 2025.pdf" class="doc-link" target="_blank"
+                                        rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="hard-hat"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Отчёт средств капитального ремонта</span>
+                                            <span class="doc-meta">PDF · 2025</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2026/Отчёт по тек.рем 2025.pdf" class="doc-link" target="_blank"
+                                        rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="wrench"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Отчёт по плану текущего ремонта</span>
+                                            <span class="doc-meta">PDF · 2025</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2026/Отчёт ревизора 2025.pdf" class="doc-link" target="_blank"
+                                        rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="shield-check"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Отчёт ревизора</span>
+                                            <span class="doc-meta">PDF · 2025</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2026/Отчёт Содержание и ремонт 2025.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="home"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Содержание и ремонт (годовой план)</span>
+                                            <span class="doc-meta">PDF · 2025</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                            </ul>
+                        </div>
+
+                        <div class="doc-group">
+                            <h4 class="doc-group-title">
+                                <i data-lucide="calendar-range"></i>
+                                Планы и смета на 2026 год
+                            </h4>
+                            <ul class="docs-list">
+                                <li><a href="doki/power2026/объявление уведомление члену ТСН.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="megaphone"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Объявление-уведомление члену ТСН</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2026/План тек. рем. 2026.pdf" class="doc-link" target="_blank"
+                                        rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="wrench"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">План текущего ремонта</span>
+                                            <span class="doc-meta">PDF · 2026</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2026/Смета  на  2026.pdf" class="doc-link" target="_blank"
+                                        rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="calculator"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Смета доходов и расходов</span>
+                                            <span class="doc-meta">PDF · 2026</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="meeting-results">
+                        <h4 class="doc-group-title">
+                            <i data-lucide="vote"></i>
+                            Результаты голосования
+                        </h4>
+                        <ul class="docs-list">
+                            <li><a href="doki/power2026/объявление уведомление о результатах 6 и 8.pdf" class="doc-link"
+                                    target="_blank" rel="noopener">
+                                    <span class="doc-icon"><i data-lucide="pie-chart"></i></span>
+                                    <span class="doc-info">
+                                        <span class="doc-name">Объявление о результатах (дом 6 и дом 8)</span>
+                                        <span class="doc-meta">PDF · Протокол</span>
+                                    </span>
+                                    <i data-lucide="external-link" class="doc-action"></i>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="meetings-footer">
+                    <a href="http://dinastiya-tsj.ru/arhive.html" class="btn-outline btn-archive">
+                        <i data-lucide="archive"></i>
+                        Открыть архив документов за прошлые годы
+                    </a>
+                </div>
+            </section>
+
+            <!-- ==================== ПРИБОРЫ УЧЕТА ==================== -->
+            <section id="counters" class="counters-section">
+                <h2>
+                    <i data-lucide="gauge"></i>
+                    Приборы учёта (ПИУ)
+                </h2>
+                <div class="warning-banner">
+                    <i data-lucide="alert-triangle"></i>
+                    <div>
+                        <strong>Внимание!</strong> Показания ИПУ необходимо передавать
+                        <strong>до 23 числа каждого месяца, </strong>независимо от того, когда вы платите!
+                    </div>
+                </div>
+
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-num">1</div>
+                        <h4>Снимите показания</h4>
+                        <p>Записывайте только целую часть расхода (чёрные цифры на циферблате), красные цифры (литры)
+                            учитывать не нужно.</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-num">2</div>
+                        <h4>Выберите способ</h4>
+                        <p>через операционистов Сбербанка при оплате;</p>
+                        <p>через систему Сбербанк-он-лайн;</p>
+                        <!-- <p>через личный кабинет на сайте «С-300»</p> -->
+                    </div>
+                    <div class="step-card">
+                        <div class="step-num">3</div>
+                        <h4>Работа с должниками</h4>
+                        <p><strong>В случае неоплаты коммунальных услуг по показаниям ИПУ или несдачи показаний ИПУ
+                                ЕЖЕМЕСЯЧНО,</strong> первый месяц начисления по коммунальных услугам будут произведены
+                            по вашему среднемесячному потреблению, а затем по утвержденным нормативам.</p>
+                    </div>
+                </div>
+
+                <div class="buttons-row">
+                    <!-- <a href="#" target="_blank" rel="noopener" class="btn-outline">
+                        <i data-lucide="external-link"></i>
+                        личный кабинет на сайте «С-300»
+                    </a> -->
+                    <a href="https://online.sberbank.ru/" class="btn-outline">
+                        <i data-lucide="smartphone"></i>
+                        Сбербанк online
+                    </a>
+                </div>
+            </section>
+
+            <!-- ==================== ПРАВЛЕНИЕ ==================== -->
+            <section id="board" class="board-section">
+                <div class="board-header">
+                    <h2>
+                        <i data-lucide="users"></i>
+                        Состав правления ТСЖ
+                    </h2>
+
+                </div>
+
+                <div class="board-grid">
+
+                    <div class="board-card">
+
+                        <h3>Лимонова Наталья Александровна</h3>
+                        <p class="board-role">Председатель правления</p>
+                        <p class="board-since">в правлении с 2012 г.</p>
+                        <a href="mailto:dinastia-limonova@mail.ru" class="contact-link">
+                            <i data-lucide="mail"></i>
+                            dinastia-limonova@mail.ru
+                        </a>
+                    </div>
+
+                    <div class="board-card board-card-big">
+                        <div>
+                            <h3>Воронина Нина Вадимовна</h3>
+                            <p class="board-since">в правлении с 2008 г.</p>
+                        </div>
+                        <div>
+                            <h3>Гаталова Евгения Владимировна</h3>
+                            <p class="board-since">в правлении с 2012 г.</p>
+                        </div>
+                        <div>
+                            <h3>Иващенко Илья Валерьевич</h3>
+                            <p class="board-since">в правлении с 2012 г.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+                <a href="dok.html" class="btn-outline btn-docs-link">
+                    <i data-lucide="file-check-2"></i>
+                    Правоустанавливающие документы
+                </a>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- ==================== ПОДВАЛ ==================== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>
+                        <i data-lucide="phone-call"></i>
+                        Контакты ТСЖ
+                    </h4>
+                    <ul class="footer-contacts">
+                        <li>
+                            <span class="icon"><i data-lucide="phone"></i></span>
+                            <div>
+                                <strong>Диспетчерская служба:</strong><br>
+                                <a href="tel:+79817310077" class="phone-highlight">+7 (981) 731-00-77</a>
+                                <span class="work-time">Круглосуточно</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon"><i data-lucide="mail"></i></span>
+                            <div>
+                                <strong>Email для обращений:</strong><br>
+                                <a href="mailto:dinastia-limonova@mail.ru">dinastia-limonova@mail.ru</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>
+                        <i data-lucide="map-pin"></i>
+                        Адрес правления
+                    </h4>
+                    <p class="footer-address">
+                        <strong>Фактический и юр. адрес:</strong><br>
+                        188643, Ленинградская область, Всеволожский район, г. Всеволожск, ул. Центральная, д. 6, оф. 9Н
+                        (пом. 9Н)
+                    </p>
+                </div>
+
+                <div class="footer-col footer-requisites">
+                    <h4>
+                        <i data-lucide="building"></i>
+                        Реквизиты организации
+                    </h4>
+
+                    <div class="footer-address">
+                        <div><span>ИНН:</span> 4703106103</div>
+                        <div><span>КПП:</span> 470301001</div>
+                        <div><span>ОГРН:</span> 1084703004484</div>
+                        <div><span>ОКПО:</span> 85170117</div>
+                    </div>
+                    <div class="footer-address">
+                        <strong>Расчётный счёт:</strong> № 40703810355410000032<br>
+                        <strong>Банк:</strong> Всеволожское отделение № 5542 Северо-Западный Банк Сбербанка РФ г.
+                        Санкт-Петербург<br>
+                        <strong>БИК:</strong> 044030653<br>
+                        <strong>Корр. счёт:</strong> 30101810500000000653
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container bottom-flex">
+                <p>&copy; 2026 ТСЖ «Династия». Все права защищены.</p>
+                <p>Официальный сайт раскрытия информации</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипты в правильном порядке -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+
+    <!-- Fallback инициализация, если основные скрипты не загрузились -->
+    <script>
+        window.addEventListener('load', function () {
+            // Принудительная инициализация Lucide
+            if (window.lucide && typeof lucide.createIcons === 'function') {
+                try {
+                    lucide.createIcons();
+                } catch (e) {
+                    console.warn('Lucide initialization failed:', e);
+                }
+            }
+
+            // Принудительная инициализация AOS
+            if (window.AOS && typeof AOS.init === 'function') {
+                try {
+                    AOS.init({
+                        duration: 700,
+                        easing: 'ease-out-cubic',
+                        once: true,
+                        offset: 80,
+                        disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+                    });
+                } catch (e) {
+                    console.warn('AOS initialization failed:', e);
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

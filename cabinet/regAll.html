@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/headerMain.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/reg.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script defer src="js/scriptMain.js"></script>
+
+    <!-- Добавляем jQuery UI для автокомплита и Select2 для множественного выбора -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <title>СЕЙЛ ТРЕКЕР | Регистрация</title>
+
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__top">
+                <div class="header__logo">
+                    <a href="/" class="header__logo-link">
+                        <img class="header__logo-img" src="img/Сейл Трекер_горизонт_синий_Sk.svg" alt="logo">
+                    </a>
+                </div>
+                <div class="header__links">
+                    <ul class="header__list-top list-reset flex">
+                        <li class="header__burger">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 34 34"
+                                    fill="none">
+                                    <path d="M2 12.2354H41" stroke="currentcolor" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <path d="M2 22.1177H41" stroke="currentcolor" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <path d="M2 32H41" stroke="currentcolor" stroke-width="2" stroke-linecap="round" />
+                                    <path d="M2 2H41" stroke="currentcolor" stroke-width="2" stroke-linecap="round" />
+                                </svg></a>
+                        </li>
+                        <li class="header__burger-close">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="16" viewBox="0 0 34 34"
+                                    fill="none">
+                                    <path d="M1 1.29297L33.707 34" stroke="currentcolor" stroke-width="2"
+                                        stroke-linecap="round" />
+                                    <path d="M1 34L33.707 1.29297" stroke="currentcolor" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg></a>
+                        </li>
+                        <li class="header__button">
+                            <a href="https://portal.platforma-czs.ru/registration/">Регистрация</a>
+                        </li>
+                        <li class="header__button">
+                            <a href="https://portal.platforma-czs.ru/login/">Вход</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <nav class="header__menu">
+            <div class="container">
+                <!-- <ul class="header__list-menu list-reset flex">
+                    <li class="header__link">
+                        <a href="https://portal.platforma-czs.ru/">Главная</a>
+                    </li>
+                    <li class="header__link">
+                        <a href="https://portal.platforma-czs.ru/about/">О проекте</a>
+                    </li>
+                    <li class="header__link">
+                        <a href="https://portal.platforma-czs.ru/#/">Отзывы</a>
+                    </li>
+                    <li class="header__link">
+                        <a href="https://portal.platforma-czs.ru/vendors/">Поставщикам</a>
+                    </li>
+                    <li class="header__link">
+                        <a href="https://portal.platforma-czs.ru/buyers/">Закупщикам</a>
+                    </li>
+                    <li class="header__link">
+                        <a href="https://portal.platforma-czs.ru/calendar/">Календарь ЦЗС</a>
+                    </li>
+                    <li class="header__link">
+                        <a href="https://portal.platforma-czs.ru/news/">Новости</a>
+                    </li>
+                    <li class="header__link">
+                        <a href="https://portal.platforma-czs.ru/education/">Обучение</a>
+                    </li>
+                    <li class="header__link">
+                        <a href="https://portal.platforma-czs.ru/partners/">Партнеры</a>
+                    </li>
+                </ul> -->
+            </div>
+        </nav>
+    </header>
+
+    <main class="registration-wrapper">
+        <div class="container">
+            <section class="title__block">
+                <h1 class="title">Зарегистрироваться</h1>
+            </section>
+
+            <form class="registration-form" id="registrationForm">
+                <!-- Переключатель ролей -->
+                <section class="role-selector">
+                    <h2>Выберите роль <span class="required">*</span></h2>
+                    <div class="role-options">
+                        <label>
+                            <input type="radio" name="userRole" value="supplier" checked>
+                            Поставщик
+                        </label>
+                        <label>
+                            <input type="radio" name="userRole" value="buyer">
+                            Закупщик
+                        </label>
+                    </div>
+                </section>
+
+                <!-- Секция идентификации и юридических данных -->
+                <section class="form-section">
+                    <h2>Идентификация и юридические данные</h2>
+                    <div class="form-grid">
+                        <div class="form-field full-width">
+                            <label for="legalName">Юридическое наименование / группа компаний <span
+                                    class="required">*</span></label>
+                            <input type="text" id="legalName" name="legalName" required autocomplete="off">
+                        </div>
+                        <div class="form-field full-width">
+                            <label for="inn">ИНН <span class="required">*</span></label>
+                            <input type="text" id="inn" name="inn" required pattern="\d*" maxlength="12"
+                                title="Введите ИНН (только цифры)" autocomplete="off">
+                            <div class="hint">Только цифры, до 12 символов</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Секция бизнес-профиля компании (только для закупщика) -->
+                <section class="form-section buyer-only" id="businessProfileSection">
+                    <h2>Бизнес‑профиль компании</h2>
+                    <div class="form-grid">
+                        <div class="form-field multiselect-field">
+                            <label for="storeFormats">Форматы сети (гипер/супер/дискаунтер/у дома/e‑com и т.д.) <span
+                                    class="required">*</span></label>
+                            <select id="storeFormats" name="storeFormats[]" multiple="multiple" style="width: 100%;">
+                                <option value="hypermarket">Гипермаркет</option>
+                                <option value="supermarket">Супермаркет</option>
+                                <option value="discounter">Дискаунтер</option>
+                                <option value="convenience">У дома</option>
+                                <option value="ecommerce">E-commerce</option>
+                                <option value="cash_and_carry">Cash & Carry</option>
+                                <option value="duty_free">Duty Free</option>
+                                <option value="specialized">Специализированный магазин</option>
+                            </select>
+                            <div class="hint">Можно выбрать несколько значений</div>
+                        </div>
+                        <div class="form-field multiselect-field">
+                            <label for="procurementCategories">Категории закупок <span class="required">*</span></label>
+                            <select id="procurementCategories" name="procurementCategories[]" multiple="multiple"
+                                style="width: 100%;">
+                                <option value="food">Продукты питания</option>
+                                <option value="beverages">Напитки</option>
+                                <option value="household">Товары для дома</option>
+                                <option value="electronics">Бытовая техника и электроника</option>
+                                <option value="clothing">Одежда и обувь</option>
+                                <option value="cosmetics">Косметика и парфюмерия</option>
+                                <option value="children">Товары для детей</option>
+                                <option value="sports">Спортивные товары</option>
+                                <option value="auto">Автотовары</option>
+                                <option value="office">Офисные принадлежности</option>
+                                <option value="furniture">Мебель</option>
+                                <option value="building">Строительные материалы</option>
+                                <option value="pharmacy">Аптека и медицинские товары</option>
+                                <option value="pet">Зоотовары</option>
+                                <option value="garden">Сад и огород</option>
+                            </select>
+                            <div class="hint">Можно выбрать несколько значений</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Секция географии и инфраструктуры (только для закупщика) -->
+                <section class="form-section buyer-only" id="geographySection">
+                    <h2>География и инфраструктура</h2>
+                    <div class="form-grid">
+                        <div class="form-field multiselect-field">
+                            <label for="geography">География присутствия (регионы/города) <span
+                                    class="required">*</span></label>
+                            <select id="geography" name="geography[]" multiple="multiple" style="width: 100%;">
+                                <optgroup label="Федеральные округа">
+                                    <option value="msk">Москва</option>
+                                    <option value="spb">Санкт-Петербург</option>
+                                    <option value="mo">Московская область</option>
+                                    <option value="lo">Ленинградская область</option>
+                                </optgroup>
+                                <optgroup label="Центральный ФО">
+                                    <option value="belgorod">Белгородская область</option>
+                                    <option value="bryansk">Брянская область</option>
+                                    <option value="vladimir">Владимирская область</option>
+                                    <option value="voronezh">Воронежская область</option>
+                                    <option value="ivanovo">Ивановская область</option>
+                                    <option value="kaluga">Калужская область</option>
+                                    <option value="kostroma">Костромская область</option>
+                                    <option value="kursk">Курская область</option>
+                                    <option value="lipetsk">Липецкая область</option>
+                                    <option value="orel">Орловская область</option>
+                                    <option value="ryazan">Рязанская область</option>
+                                    <option value="smolensk">Смоленская область</option>
+                                    <option value="tambov">Тамбовская область</option>
+                                    <option value="tver">Тверская область</option>
+                                    <option value="tula">Тульская область</option>
+                                    <option value="yaroslavl">Ярославская область</option>
+                                </optgroup>
+                                <optgroup label="Северо-Западный ФО">
+                                    <option value="karelia">Республика Карелия</option>
+                                    <option value="komi">Республика Коми</option>
+                                    <option value="arkhangelsk">Архангельская область</option>
+                                    <option value="vologda">Вологодская область</option>
+                                    <option value="kaliningrad">Калининградская область</option>
+                                    <option value="murmansk">Мурманская область</option>
+                                    <option value="novgorod">Новгородская область</option>
+                                    <option value="pskov">Псковская область</option>
+                                </optgroup>
+                                <optgroup label="Южный ФО">
+                                    <option value="adygea">Республика Адыгея</option>
+                                    <option value="kalmykia">Республика Калмыкия</option>
+                                    <option value="krasnodar">Краснодарский край</option>
+                                    <option value="astrakhan">Астраханская область</option>
+                                    <option value="volgograd">Волгоградская область</option>
+                                    <option value="rostov">Ростовская область</option>
+                                    <option value="crimea">Республика Крым</option>
+                                    <option value="sevastopol">Севастополь</option>
+                                </optgroup>
+                                <optgroup label="Северо-Кавказский ФО">
+                                    <option value="dagestan">Республика Дагестан</option>
+                                    <option value="ingushetia">Республика Ингушетия</option>
+                                    <option value="kabardino">Кабардино-Балкарская Республика</option>
+                                    <option value="karachay">Карачаево-Черкесская Республика</option>
+                                    <option value="ossetia">Республика Северная Осетия-Алания</option>
+                                    <option value="chechnya">Чеченская Республика</option>
+                                    <option value="stavropol">Ставропольский край</option>
+                                </optgroup>
+                                <optgroup label="Приволжский ФО">
+                                    <option value="bashkortostan">Республика Башкортостан</option>
+                                    <option value="mari">Республика Марий Эл</option>
+                                    <option value="mordovia">Республика Мордовия</option>
+                                    <option value="tatarstan">Республика Татарстан</option>
+                                    <option value="udmurtia">Удмуртская Республика</option>
+                                    <option value="chuvashia">Чувашская Республика</option>
+                                    <option value="kirov">Кировская область</option>
+                                    <option value="nizhny">Нижегородская область</option>
+                                    <option value="orenburg">Оренбургская область</option>
+                                    <option value="penza">Пензенская область</option>
+                                    <option value="perm">Пермский край</option>
+                                    <option value="samara">Самарская область</option>
+                                    <option value="saratov">Саратовская область</option>
+                                    <option value="ulyanovsk">Ульяновская область</option>
+                                </optgroup>
+                                <optgroup label="Уральский ФО">
+                                    <option value="kurgan">Курганская область</option>
+                                    <option value="sverdlovsk">Свердловская область</option>
+                                    <option value="tyumen">Тюменская область</option>
+                                    <option value="chelyabinsk">Челябинская область</option>
+                                    <option value="khanty">Ханты-Мансийский АО</option>
+                                    <option value="yamal">Ямало-Ненецкий АО</option>
+                                </optgroup>
+                                <optgroup label="Сибирский ФО">
+                                    <option value="altai">Республика Алтай</option>
+                                    <option value="tyva">Республика Тыва</option>
+                                    <option value="khakassia">Республика Хакасия</option>
+                                    <option value="altai_krai">Алтайский край</option>
+                                    <option value="krasnoyarsk">Красноярский край</option>
+                                    <option value="irkutsk">Иркутская область</option>
+                                    <option value="kemerovo">Кемеровская область</option>
+                                    <option value="novosibirsk">Новосибирская область</option>
+                                    <option value="omsk">Омская область</option>
+                                    <option value="tomsk">Томская область</option>
+                                </optgroup>
+                                <optgroup label="Дальневосточный ФО">
+                                    <option value="buryatia">Республика Бурятия</option>
+                                    <option value="sakha">Республика Саха (Якутия)</option>
+                                    <option value="zabaykalsk">Забайкальский край</option>
+                                    <option value="kamchatka">Камчатский край</option>
+                                    <option value="primorsky">Приморский край</option>
+                                    <option value="khabarovsk">Хабаровский край</option>
+                                    <option value="amur">Амурская область</option>
+                                    <option value="magadan">Магаданская область</option>
+                                    <option value="sakhalin">Сахалинская область</option>
+                                    <option value="jewish">Еврейская автономная область</option>
+                                    <option value="chukotka">Чукотский АО</option>
+                                </optgroup>
+                            </select>
+                            <div class="hint">Можно выбрать несколько регионов</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Секция сотрудников (только один сотрудник) -->
+                <section class="form-section">
+                    <h2>Сотрудник</h2>
+                    <div class="employee-card">
+                        <div class="form-grid">
+                            <div class="form-field">
+                                <label for="employee_name">Фамилия <span class="required">*</span></label>
+                                <input type="text" id="employee_name" name="employee_name" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="employee_name">Имя <span class="required">*</span></label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="employee_name">Отчество</label>
+                                <input type="text" id="employee" name="employee" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="employee_position">Должность <span class="required">*</span></label>
+                                <input type="text" id="employee_position" name="employee_position" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="employee_email">Корпоративный email (логин) <span
+                                        class="required">*</span></label>
+                                <input type="email" id="employee_email" name="employee_email" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="employee_phone">Телефон <span class="required">*</span></label>
+                                <input type="tel" id="employee_phone" name="employee_phone" required
+                                    placeholder="+7 (___) ___-__-__">
+                            </div>
+                            <div class="form-field multiselect-field">
+                                <label for="employee_category">Категории ответственности <span
+                                        class="required">*</span></label>
+                                <select id="employee_category" name="employee_category[]" multiple="multiple" required
+                                    style="width: 100%;">
+                                    <option value="food">Продукты питания</option>
+                                    <option value="beverages">Напитки</option>
+                                    <option value="household">Товары для дома</option>
+                                    <option value="electronics">Бытовая техника и электроника</option>
+                                    <option value="clothing">Одежда и обувь</option>
+                                    <option value="cosmetics">Косметика и парфюмерия</option>
+                                    <option value="children">Товары для детей</option>
+                                    <option value="sports">Спортивные товары</option>
+                                    <option value="auto">Автотовары</option>
+                                    <option value="office">Офисные принадлежности</option>
+                                    <option value="furniture">Мебель</option>
+                                    <option value="building">Строительные материалы</option>
+                                    <option value="pharmacy">Аптека и медицинские товары</option>
+                                    <option value="pet">Зоотовары</option>
+                                    <option value="garden">Сад и огород</option>
+                                </select>
+                                <div class="hint">Можно выбрать несколько категорий</div>
+                            </div>
+                            <div class="form-field multiselect-field">
+                                <label for="employee_region">Регионы ответственности <span
+                                        class="required">*</span></label>
+                                <select id="employee_region" name="employee_region[]" multiple="multiple" required
+                                    style="width: 100%;">
+                                    <optgroup label="Федеральные округа">
+                                        <option value="msk">Москва</option>
+                                        <option value="spb">Санкт-Петербург</option>
+                                        <option value="mo">Московская область</option>
+                                        <option value="lo">Ленинградская область</option>
+                                    </optgroup>
+                                    <optgroup label="Центральный ФО">
+                                        <option value="belgorod">Белгородская область</option>
+                                        <option value="bryansk">Брянская область</option>
+                                        <option value="vladimir">Владимирская область</option>
+                                        <option value="voronezh">Воронежская область</option>
+                                        <option value="ivanovo">Ивановская область</option>
+                                        <option value="kaluga">Калужская область</option>
+                                        <option value="kostroma">Костромская область</option>
+                                        <option value="kursk">Курская область</option>
+                                        <option value="lipetsk">Липецкая область</option>
+                                        <option value="orel">Орловская область</option>
+                                        <option value="ryazan">Рязанская область</option>
+                                        <option value="smolensk">Смоленская область</option>
+                                        <option value="tambov">Тамбовская область</option>
+                                        <option value="tver">Тверская область</option>
+                                        <option value="tula">Тульская область</option>
+                                        <option value="yaroslavl">Ярославская область</option>
+                                    </optgroup>
+                                    <optgroup label="Северо-Западный ФО">
+                                        <option value="karelia">Республика Карелия</option>
+                                        <option value="komi">Республика Коми</option>
+                                        <option value="arkhangelsk">Архангельская область</option>
+                                        <option value="vologda">Вологодская область</option>
+                                        <option value="kaliningrad">Калининградская область</option>
+                                        <option value="murmansk">Мурманская область</option>
+                                        <option value="novgorod">Новгородская область</option>
+                                        <option value="pskov">Псковская область</option>
+                                    </optgroup>
+                                    <optgroup label="Южный ФО">
+                                        <option value="adygea">Республика Адыгея</option>
+                                        <option value="kalmykia">Республика Калмыкия</option>
+                                        <option value="krasnodar">Краснодарский край</option>
+                                        <option value="astrakhan">Астраханская область</option>
+                                        <option value="volgograd">Волгоградская область</option>
+                                        <option value="rostov">Ростовская область</option>
+                                    </optgroup>
+                                    <optgroup label="Приволжский ФО">
+                                        <option value="bashkortostan">Республика Башкортостан</option>
+                                        <option value="tatarstan">Республика Татарстан</option>
+                                        <option value="nizhny">Нижегородская область</option>
+                                        <option value="samara">Самарская область</option>
+                                    </optgroup>
+                                    <optgroup label="Уральский ФО">
+                                        <option value="sverdlovsk">Свердловская область</option>
+                                        <option value="chelyabinsk">Челябинская область</option>
+                                        <option value="tyumen">Тюменская область</option>
+                                    </optgroup>
+                                    <optgroup label="Сибирский ФО">
+                                        <option value="novosibirsk">Новосибирская область</option>
+                                        <option value="krasnoyarsk">Красноярский край</option>
+                                        <option value="irkutsk">Иркутская область</option>
+                                    </optgroup>
+                                    <optgroup label="Дальневосточный ФО">
+                                        <option value="primorsky">Приморский край</option>
+                                        <option value="khabarovsk">Хабаровский край</option>
+                                    </optgroup>
+                                </select>
+                                <div class="hint">Можно выбрать несколько регионов</div>
+                            </div>
+                            <div class="form-field">
+                                <label for="employee_password">Пароль <span class="required">*</span></label>
+                                <input type="password" id="password" name="passworde" required>
+                                <div class="hint">Пароль должен содержать не менее 8 символов, заглавные и строчные буквы. Дополнительные знаки</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Кнопки действий -->
+                <div class="form-actions">
+                    <button type="submit" class="reg_button">Зарегистрироваться</button>
+                    <button type="reset" class="reset-btn">Очистить форму</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__block-name">ООО "Сейл трекер", 2025</div>
+                <div class="footer__block-text">
+                    <p>121205, город Москва,<br>
+                        территория Инновационного Центра Сколково, Большой б-р, д. 42 стр. 1</p>
+                </div>
+                <div class="footer__block-contact">
+                    <p>saletracker.ru@gmail.com</p>
+                    <a href="tel:+79213080573" class="footer__link clickable-phone">+7 921 308 0573</a>
+                </div>
+                <div class="footer__block-icon">
+                    <a class="footer__link" href="https://t.me/czs_ru">
+                        <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="800px"
+                            height="800px" viewBox="0 0 32 32" version="1.1">
+                            <title>telegram</title>
+                            <path
+                                d="M22.122 10.040c0.006-0 0.014-0 0.022-0 0.209 0 0.403 0.065 0.562 0.177l-0.003-0.002c0.116 0.101 0.194 0.243 0.213 0.403l0 0.003c0.020 0.122 0.031 0.262 0.031 0.405 0 0.065-0.002 0.129-0.007 0.193l0-0.009c-0.225 2.369-1.201 8.114-1.697 10.766-0.21 1.123-0.623 1.499-1.023 1.535-0.869 0.081-1.529-0.574-2.371-1.126-1.318-0.865-2.063-1.403-3.342-2.246-1.479-0.973-0.52-1.51 0.322-2.384 0.221-0.23 4.052-3.715 4.127-4.031 0.004-0.019 0.006-0.040 0.006-0.062 0-0.078-0.029-0.149-0.076-0.203l0 0c-0.052-0.034-0.117-0.053-0.185-0.053-0.045 0-0.088 0.009-0.128 0.024l0.002-0.001q-0.198 0.045-6.316 4.174c-0.445 0.351-1.007 0.573-1.619 0.599l-0.006 0c-0.867-0.105-1.654-0.298-2.401-0.573l0.074 0.024c-0.938-0.306-1.683-0.467-1.619-0.985q0.051-0.404 1.114-0.827 6.548-2.853 8.733-3.761c1.607-0.853 3.47-1.555 5.429-2.010l0.157-0.031zM15.93 1.025c-8.302 0.020-15.025 6.755-15.025 15.060 0 8.317 6.742 15.060 15.060 15.060s15.060-6.742 15.060-15.060c0-8.305-6.723-15.040-15.023-15.060h-0.002q-0.035-0-0.070 0z" />
+                        </svg>
+                    </a>
+                    <a class="footer__link" href="https://vk.com/czs_ru">
+                        <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="800px"
+                            height="800px" viewBox="0 0 20 20">
+                            <path
+                                d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6 9.6-4.298 9.6-9.6S15.302.4 10 .4zm3.692 10.831s.849.838 1.058 1.227c.006.008.009.016.011.02.085.143.105.254.063.337-.07.138-.31.206-.392.212h-1.5c-.104 0-.322-.027-.586-.209-.203-.142-.403-.375-.598-.602-.291-.338-.543-.63-.797-.63a.305.305 0 0 0-.095.015c-.192.062-.438.336-.438 1.066 0 .228-.18.359-.307.359h-.687c-.234 0-1.453-.082-2.533-1.221-1.322-1.395-2.512-4.193-2.522-4.219-.075-.181.08-.278.249-.278h1.515c.202 0 .268.123.314.232.054.127.252.632.577 1.2.527.926.85 1.302 1.109 1.302a.3.3 0 0 0 .139-.036c.338-.188.275-1.393.26-1.643 0-.047-.001-.539-.174-.775-.124-.171-.335-.236-.463-.26a.55.55 0 0 1 .199-.169c.232-.116.65-.133 1.065-.133h.231c.45.006.566.035.729.076.33.079.337.292.308 1.021-.009.207-.018.441-.018.717 0 .06-.003.124-.003.192-.01.371-.022.792.24.965a.216.216 0 0 0 .114.033c.091 0 .365 0 1.107-1.273a9.718 9.718 0 0 0 .595-1.274c.015-.026.059-.106.111-.137a.266.266 0 0 1 .124-.029h1.781c.194 0 .327.029.352.104.044.119-.008.482-.821 1.583l-.363.479c-.737.966-.737 1.015.046 1.748z" />
+                        </svg>
+                    </a>
+                    <a class="footer__link conf__link" href="https://platforma-czs.ru/conf">Политика
+                        конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно успешной регистрации -->
+    <div class="modal-overlay" id="successModal">
+        <div class="modal-window">
+            <div class="modal-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+                    <path
+                        d="M 25 2 C 12.309534 2 2 12.309534 2 25 C 2 37.690466 12.309534 48 25 48 C 37.690466 48 48 37.690466 48 25 C 48 12.309534 37.690466 2 25 2 z M 25 4 C 36.609534 4 46 13.390466 46 25 C 46 36.609534 36.609534 46 25 46 C 13.390466 46 4 36.609534 4 25 C 4 13.390466 13.390466 4 25 4 z M 34.988281 14.988281 A 1.0001 1.0001 0 0 0 34.171875 15.439453 L 23.970703 30.476562 L 16.679688 23.710938 A 1.0001 1.0001 0 1 0 15.320312 25.177734 L 24.316406 33.525391 L 35.828125 16.560547 A 1.0001 1.0001 0 0 0 34.988281 14.988281 z" />
+                </svg>
+            </div>
+            <h2 class="modal-title">Проверка email</h2>
+            <div class="modal-text">
+                <p>Ваш электронный адрес отправлен на проверку, вы можете перейти по ссылке</p>
+                <p class="modal-link">https://mail.ru/page115295566.html</p>
+            </div>
+            <button class="modal-button" onclick="closeModal()">Закрыть</button>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            'use strict';
+
+            // ==================== МОДАЛЬНОЕ ОКНО ====================
+            const ModalController = (() => {
+                const modal = document.getElementById('successModal');
+                
+                function show() {
+                    if (!modal) return;
+                    modal.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+                }
+
+                function hide() {
+                    if (!modal) return;
+                    modal.style.display = 'none';
+                    document.body.style.overflow = '';
+                }
+
+                function init() {
+                    if (!modal) return;
+
+                    // Закрытие по клику на оверлей
+                    modal.addEventListener('click', (e) => {
+                        if (e.target === modal) hide();
+                    });
+
+                    // Закрытие по Escape
+                    document.addEventListener('keydown', (e) => {
+                        if (e.key === 'Escape' && modal.style.display === 'flex') hide();
+                    });
+                }
+
+                return { show, hide, init };
+            })();
+
+            // ==================== БАЗА ДАННЫХ КОМПАНИЙ ====================
+            const companiesDatabase = [
+                { name: 'ООО "Ромашка"', inn: '7701234567', address: 'г. Москва, ул. Ленина, д. 1', kpp: '770101001', ogrn: '1027701234567' },
+                { name: 'ООО "Ромашка-Сервис"', inn: '7707654321', address: 'г. Москва, ул. Пушкина, д. 10', kpp: '770201001', ogrn: '1037701234567' },
+                { name: 'ПАО "Ромашка Групп"', inn: '7709123456', address: 'г. Москва, ул. Тверская, д. 5', kpp: '770301001', ogrn: '1047701234567' },
+                { name: 'ООО "ТехноСервис"', inn: '7702234567', address: 'г. Москва, ул. Новый Арбат, д. 15', kpp: '770401001', ogrn: '1057701234567' },
+                { name: 'АО "СтройИнвест"', inn: '7703345678', address: 'г. Москва, ул. Профсоюзная, д. 50', kpp: '770501001', ogrn: '1067701234567' },
+                { name: 'ООО "Альфа-Групп"', inn: '7704456789', address: 'г. Москва, ул. Мясницкая, д. 20', kpp: '770601001', ogrn: '1077701234567' }
+            ];
+
+            // ==================== УПРАВЛЕНИЕ РОЛЯМИ ====================
+            const RoleManager = (() => {
+                const roleRadios = document.querySelectorAll('input[name="userRole"]');
+                const buyerSections = document.querySelectorAll('.buyer-only');
+
+                function toggleSections(role) {
+                    buyerSections.forEach(section => {
+                        if (role === 'buyer') {
+                            section.style.display = 'block';
+                            // Добавляем required для полей закупщика
+                            section.querySelectorAll('select[multiple]').forEach(select => {
+                                select.setAttribute('required', 'required');
+                            });
+                        } else {
+                            section.style.display = 'none';
+                            // Убираем required для полей поставщика
+                            section.querySelectorAll('select[multiple]').forEach(select => {
+                                select.removeAttribute('required');
+                                // Очищаем выбранные значения
+                                $(select).val(null).trigger('change');
+                            });
+                        }
+                    });
+                }
+
+                function init() {
+                    if (!roleRadios.length) return;
+
+                    roleRadios.forEach(radio => {
+                        radio.addEventListener('change', (e) => {
+                            toggleSections(e.target.value);
+                        });
+                    });
+
+                    // Устанавливаем начальное состояние (поставщик по умолчанию)
+                    toggleSections('supplier');
+                }
+
+                return { init };
+            })();
+
+            // ==================== УПРАВЛЕНИЕ ФОРМОЙ ====================
+            const FormManager = (() => {
+                const form = document.getElementById('registrationForm');
+                const legalNameInput = document.getElementById('legalName');
+                const innInput = document.getElementById('inn');
+
+                // Поиск компании по ИНН
+                function findCompanyByINN(inn) {
+                    return companiesDatabase.find(company => company.inn === inn);
+                }
+
+                // Поиск компаний по названию
+                function findCompaniesByName(name) {
+                    const searchTerm = name.toLowerCase();
+                    return companiesDatabase.filter(company =>
+                        company.name.toLowerCase().includes(searchTerm)
+                    );
+                }
+
+                // Настройка автокомплита
+                function initAutocomplete() {
+                    if (!legalNameInput) return;
+
+                    $(legalNameInput).autocomplete({
+                        source: function(request, response) {
+                            const companies = findCompaniesByName(request.term);
+                            response(companies.map(company => ({
+                                label: company.name,
+                                value: company.name,
+                                inn: company.inn,
+                                address: company.address,
+                                kpp: company.kpp,
+                                ogrn: company.ogrn
+                            })));
+                        },
+                        minLength: 2,
+                        select: function(event, ui) {
+                            innInput.value = ui.item.inn;
+                            legalNameInput.dataset.selectedInn = ui.item.inn;
+                            legalNameInput.dataset.companyAddress = ui.item.address;
+                            console.log('Выбрана компания:', ui.item);
+                        },
+                        open: function() {
+                            $(this).removeClass('ui-corner-all').addClass('ui-corner-top');
+                        },
+                        close: function() {
+                            $(this).removeClass('ui-corner-top').addClass('ui-corner-all');
+                        }
+                    }).data('ui-autocomplete')._renderItem = function(ul, item) {
+                        return $('<li>')
+                            .append(`<div class="company-suggestion">
+                                <span class="company-name">${item.label}</span>
+                                <span class="company-details">ИНН: ${item.inn}</span>
+                            </div>`)
+                            .appendTo(ul);
+                    };
+                }
+
+                // Обработчик ввода ИНН
+                function initINNHandler() {
+                    if (!innInput) return;
+
+                    let innTimeout;
+                    innInput.addEventListener('input', function() {
+                        const inn = this.value.trim();
+
+                        if (inn.length >= 4) {
+                            clearTimeout(innTimeout);
+                            innTimeout = setTimeout(() => {
+                                const company = findCompanyByINN(inn);
+                                if (company && legalNameInput) {
+                                    legalNameInput.value = company.name;
+                                    legalNameInput.dataset.selectedInn = company.inn;
+                                    alert(`Найдена компания: ${company.name}\nАдрес: ${company.address}`);
+                                }
+                            }, 500);
+                        }
+                    });
+
+                    // Валидация ИНН (только цифры)
+                    innInput.addEventListener('keypress', function(e) {
+                        if (!/[0-9]/.test(e.key)) {
+                            e.preventDefault();
+                        }
+                    });
+                }
+
+                // Валидация перед отправкой
+                function validateForm(formData) {
+                    const role = formData.get('userRole');
+                    
+                    // Для поставщика проверяем только базовые поля
+                    if (role === 'supplier') {
+                        return true;
+                    }
+
+                    // Для закупщика проверяем дополнительные поля
+                    const storeFormats = formData.getAll('storeFormats[]');
+                    const procurementCategories = formData.getAll('procurementCategories[]');
+                    const geography = formData.getAll('geography[]');
+
+                    if (!storeFormats.length || !procurementCategories.length || !geography.length) {
+                        alert('Пожалуйста, заполните все поля бизнес-профиля и географии');
+                        return false;
+                    }
+
+                    return true;
+                }
+
+                // Обработка отправки формы
+                function initSubmitHandler() {
+                    if (!form) return;
+
+                    form.addEventListener('submit', function(e) {
+                        e.preventDefault();
+
+                        // Проверка соответствия ИНН и названия
+                        const inn = innInput?.value.trim();
+                        const companyName = legalNameInput?.value.trim();
+
+                        if (inn && companyName) {
+                            const companyByINN = findCompanyByINN(inn);
+                            const companiesByName = findCompaniesByName(companyName);
+
+                            if (companyByINN && companiesByName.length > 0) {
+                                const matchFound = companiesByName.some(c => c.inn === inn);
+                                if (!matchFound) {
+                                    const confirmSubmit = confirm('Внимание! ИНН не соответствует выбранному названию компании. Продолжить регистрацию?');
+                                    if (!confirmSubmit) return;
+                                }
+                            }
+                        }
+
+                        // Сбор данных формы
+                        const formData = new FormData(this);
+                        
+                        // Валидация
+                        if (!validateForm(formData)) return;
+
+                        // Форматирование данных для отладки
+                        const data = {};
+                        for (let [key, value] of formData.entries()) {
+                            if (key.endsWith('[]')) {
+                                if (!data[key]) data[key] = [];
+                                data[key].push(value);
+                            } else {
+                                data[key] = value;
+                            }
+                        }
+
+                        console.log('Данные формы:', data);
+                        
+                        // Показываем модальное окно
+                        ModalController.show();
+
+                        // Здесь будет реальная отправка на сервер
+                        // fetch('/api/register', { method: 'POST', body: formData })
+                    });
+                }
+
+                // Обработка сброса формы
+                function initResetHandler() {
+                    if (!form) return;
+
+                    form.addEventListener('reset', function() {
+                        if (legalNameInput) {
+                            legalNameInput.value = '';
+                            delete legalNameInput.dataset.selectedInn;
+                        }
+                        if (innInput) innInput.value = '';
+
+                        // Сброс select2 полей
+                        $('select[multiple]').val(null).trigger('change');
+
+                        // Сброс роли на "поставщик" (по умолчанию)
+                        const supplierRadio = document.querySelector('input[name="userRole"][value="supplier"]');
+                        if (supplierRadio) {
+                            supplierRadio.checked = true;
+                            supplierRadio.dispatchEvent(new Event('change'));
+                        }
+                    });
+                }
+
+                function init() {
+                    initAutocomplete();
+                    initINNHandler();
+                    initSubmitHandler();
+                    initResetHandler();
+                }
+
+                return { init };
+            })();
+
+            // ==================== ИНИЦИАЛИЗАЦИЯ SELECT2 ====================
+            function initSelect2() {
+                $('select[multiple]').select2({
+                    placeholder: 'Выберите значения',
+                    allowClear: true,
+                    width: '100%',
+                    dropdownPosition: 'below',
+                    language: {
+                        noResults: () => "Ничего не найдено"
+                    }
+                });
+            }
+
+            // ==================== ГЛОБАЛЬНЫЕ ФУНКЦИИ ДЛЯ МОДАЛКИ ====================
+            window.closeModal = () => ModalController.hide();
+
+            // ==================== ЗАПУСК ПРИ ЗАГРУЗКЕ ====================
+            document.addEventListener('DOMContentLoaded', function() {
+                ModalController.init();
+                initSelect2();
+                RoleManager.init();
+                FormManager.init();
+            });
+
+        })();
+    </script>
+</body>
+
+</html>

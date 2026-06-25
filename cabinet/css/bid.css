@@ -1,0 +1,678 @@
+/* ==========================================================================
+   МОИ ЗАЯВКИ (My requestDs Page)
+   ========================================================================== */
+
+/* Фильтры заявок */
+.requestDs-filter {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.requestDs-filter__link {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 4px 0;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.requestDs-filter__link:hover {
+  color: var(--blue-900);
+}
+
+.requestDs-filter__link--active {
+  color: var(--blue-900);
+  font-weight: 600;
+}
+
+.requestDs-filter__link--active::after {
+  content: '';
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--blue-900);
+  border-radius: 3px 3px 0 0;
+}
+
+/* Список заявок */
+.requestDs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ==========================================================================
+   КАРТОЧКА ЗАЯВКИ
+   ========================================================================== */
+
+.requestD-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.requestD-card:hover {
+  box-shadow: 0 8px 24px rgba(11, 99, 168, 0.12);
+  border-color: var(--blue-900);
+  transform: translateY(-2px);
+}
+
+/* Модификаторы карточки */
+.requestD-card--active {
+  border-left: 4px solid var(--blue-900);
+  background: linear-gradient(to right, rgba(230, 244, 255, 0.3), #fff);
+}
+
+.requestD-card--deadline {
+  border-left: 4px solid var(--danger);
+  background: linear-gradient(to right, rgba(211, 47, 47, 0.05), #fff);
+}
+
+.requestD-card--draft {
+  border-left: 4px solid var(--muted);
+  background: linear-gradient(to right, rgba(230, 244, 255, 0.3), #fff);
+}
+
+/* Шапка карточки */
+.requestD-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.requestD-card__header-left {
+  flex: 1;
+}
+
+.requestD-card__header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 16px;
+}
+
+.requestD-card__title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.requestD-card__title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--dark);
+  margin: 0;
+}
+
+.requestD-card__category {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.requestD-card__subcategory {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* Иконка категории */
+.requestD-card__category-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  fill: #D2691E;
+  /* Значение по умолчанию */
+}
+
+/* Цвета для разных категорий */
+.requestD-card[data-category="bakery"] .requestD-card__category-icon {
+  fill: #8B4513;
+}
+
+.requestD-card[data-category="drinks"] .requestD-card__category-icon {
+  fill: #FFA500;
+}
+
+.requestD-card[data-category="dairy"] .requestD-card__category-icon {
+  fill: #4682B4;
+}
+
+/* Статусы */
+.requestD-card__status {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.requestD-card__status--open {
+  background-color: #0a857e;
+  color: white;
+}
+
+.requestD-card__status--closed {
+  background-color: #D32F2F;
+  color: white;
+}
+
+.requestD-card__status--draft {
+  background-color: #6c7a93;
+  color: white;
+}
+
+.requestD-card__status--private {
+  background-color: #0B63A8;
+  color: white;
+}
+
+/* Контейнер для кнопок действий */
+.requestD-card__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+/* Кнопки действий (карандаш и крестик) */
+.requestD-card__action-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.requestD-card__action-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.requestD-card__action-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(10, 133, 126, 0.3);
+}
+
+.requestD-card__action-icon {
+  width: 16px;
+  height: 16px;
+  color: #666;
+  transition: color 0.2s;
+}
+
+.requestD-card__action-btn:hover .requestD-card__action-icon {
+  color: #333;
+}
+
+.requestD-card__action-btn--close:hover .requestD-card__action-icon {
+  color: #D32F2F;
+}
+
+.requestD-card__action-btn--edit:hover .requestD-card__action-icon {
+  color: #0a857e;
+}
+
+/* Меню с тремя точками */
+.requestD-card__menu {
+  position: relative;
+}
+
+.requestD-card__menu-trigger {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.requestD-card__menu-trigger span {
+  width: 4px;
+  height: 4px;
+  background-color: #666;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.requestD-card__menu-trigger:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.requestD-card__menu-trigger:hover span {
+  background-color: #333;
+}
+
+.requestD-card__menu-trigger:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(10, 133, 126, 0.3);
+}
+
+.requestD-card__menu-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 4px;
+  min-width: 160px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: all 0.2s;
+  z-index: 100;
+}
+
+/* Показываем меню при наведении или активном классе */
+.requestD-card__menu:hover .requestD-card__menu-dropdown,
+.requestD-card__menu--active .requestD-card__menu-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.requestD-card__menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+}
+
+.requestD-card__menu-item {
+  padding: 0;
+}
+
+.requestD-card__menu-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 16px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.requestD-card__menu-btn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.requestD-card__menu-btn:focus {
+  outline: none;
+  background-color: rgba(10, 133, 126, 0.1);
+}
+
+.requestD-card__menu-icon {
+  width: 16px;
+  height: 16px;
+  color: #666;
+}
+
+.requestD-card__menu-btn:hover .requestD-card__menu-icon {
+  color: #333;
+}
+
+.requestD-card__menu-btn--close,
+.requestD-card__menu-btn--close .requestD-card__menu-icon {
+  color: #D32F2F;
+}
+
+/* Контент карточки */
+.requestD-card__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.requestD-card__info {
+  flex: 2;
+  min-width: 280px;
+}
+
+/* Регионы */
+.requestD-card__regions {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.requestD-card__region {
+  background: var(--lightBlue);
+  color: var(--blue-900);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+/* Предложения */
+.requestD-card__proposals {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  flex-direction: column;
+}
+
+.requestD-proposal {
+  display: flex;
+  width: 200px;
+  justify-content: space-between;
+}
+
+.requestD-card__proposal,
+.requestD-card__newPoposal {
+  font-weight: 600;
+  color: #000;
+}
+
+/* Детали заявки */
+.requestD-card__details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.requestD-card__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.requestD-card__detail--deadline .requestD-card__detail-value {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.requestD-card__detail-label {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.requestD-card__detail-value {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--dark);
+}
+
+/* Статистика заявки */
+.requestD-card__stats {
+  flex: 1;
+  min-width: 240px;
+  width: 100%;
+  background: var(--lightBlue);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.requestD-stats {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.requestD-stats__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+  padding: 4px 0;  
+}
+
+.requestD-stats__item:last-child {
+  border-bottom: none;
+}
+
+.requestD-stats__item--new .requestD-stats__value {
+  color: var(--blue-900);
+  font-weight: 700;
+  background: rgba(11, 99, 168, 0.1);
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.requestD-stats__item--activity .requestD-stats__value {
+  color: var(--dark);
+  font-size: 12px;
+}
+
+.requestD-stats__item--deadline {
+  background: var(--danger-soft);
+  padding: 4px 12px;
+  justify-content: center;
+}
+
+.requestD-stats__item--deadline .requestD-stats__label {
+  color: var(--danger);
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.requestD-stats__label {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.requestD-stats__value {
+  font-weight: 600;
+  color: var(--dark);
+}
+
+/* Действия с заявкой (нижняя часть) */
+.requestD-card__footer-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+
+/* Кнопки */
+.requestD-card__btn {
+  display: flex;
+  justify-self: flex-end;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.requestD-card__btn--primary {
+  background: var(--blue-900);
+  color: white;
+}
+
+.requestD-card__btn--primary:hover {
+  background: var(--blue-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(11, 99, 168, 0.3);
+}
+
+.requestD-card__btn--secondary {
+  background: transparent;
+  border: 1px solid var(--blue-900);
+  color: var(--blue-900);
+}
+
+.requestD-card__btn--secondary:hover {
+  background: var(--lightBlue);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   КНОПКА СОЗДАНИЯ ЗАЯВКИ
+   ========================================================================== */
+
+.btn-requestD {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  background: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  color: var(--blue-900);
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  justify-content: center;
+}
+
+.btn-requestD:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: #f5f9ff;
+}
+
+.btn-requestD__icon {
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.btn-requestD:hover .btn-requestD__icon {
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   ПОИСК (сторонний элемент, возможно стоит вынести)
+   ========================================================================== */
+
+.search__btn-bid {
+  width: 384px;
+  height: 48px;
+  color: var(--blue-900);
+  border: 1px solid var(--lightGrey);
+  border-radius: 4px;
+  padding: 0 34px 0 12px;
+  outline: none;
+  background: #fff;
+}
+
+.search__btn-bid:hover {
+  color: #fff;
+  background: var(--darkBlue);
+}
+
+.filtr-icn {
+  width: 22px;
+  height: 48px;
+  color: var(--blue-900);
+}
+
+/* ==========================================================================
+   АДАПТИВНОСТЬ
+   ========================================================================== */
+
+/* Планшеты и средние экраны */
+@media (max-width: 1024px) {
+  .requestD-card__content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .requestD-card__info,
+  .requestD-card__stats {
+    width: 100%;
+  }
+}
+
+/* Мобильные устройства (до 768px) */
+@media (max-width: 768px) {
+  .requestD-card {
+    margin-top: 24px;
+    padding: 20px;
+  }
+
+  .requestDs-filter {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .requestDs-filter__link {
+    font-size: 15px;
+  }
+
+  .requestD-card__title {
+    font-size: 18px;
+  }
+
+  .requestD-card__details {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .requestD-card__footer-actions {
+    flex-direction: column;
+  }
+
+  .requestD-card__btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Маленькие мобильные устройства (до 480px) */
+@media (max-width: 480px) {
+  .requestDs-filter {
+    gap: 12px;
+  }
+
+  .requestDs-filter__link {
+    font-size: 14px;
+  }
+
+  .requestD-card__regions {
+    gap: 6px;
+  }
+
+  .requestD-card__region {
+    font-size: 12px;
+    padding: 3px 8px;
+  }
+
+  .requestD-stats__item {
+    font-size: 13px;
+  }
+}

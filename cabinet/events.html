@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Сейл Трекер — Сводные данные</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/evn.css">
+</head>
+
+<body>
+  <div class="app">
+    <!-- TOP BAR -->
+    <header class="header">
+      <div class="header__left">
+        <img class="brand" aria-label="Сейл Трекер" src="img/Сейл Трекер_горизонт_синий_Sk.svg" alt="Sale Tracker">
+
+        <div class="header__subtitle">Кабинет закупщика</div>
+      </div>
+
+      <div class="header__right">
+        <form class="search" action="#" role="search">
+          <input class="search__input" type="search" placeholder="" aria-label="Поиск">
+          <button class="search__btn" type="button" aria-label="Искать">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M10.5 18.5a8 8 0 1 1 0-16 8 8 0 0 1 0 16Z" fill="none" stroke="currentColor" stroke-width="2">
+              </path>
+              <path d="M16.5 16.5 21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              </path>
+            </svg>
+          </button>
+        </form>
+
+        <div class="header__icons" aria-label="Уведомления">
+          <button class="icon-btn" type="button" aria-label="Почта">
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 6h16v12H4z" fill="none" stroke="currentColor" stroke-width="2"></path>
+              <path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+            </svg>
+            <span class="badge badge--red">4</span>
+          </button>
+
+          <button class="icon-btn" type="button" aria-label="Уведомления">
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 22a2.2 2.2 0 0 0 2-2H10a2.2 2.2 0 0 0 2 2Z" fill="currentColor"></path>
+              <path d="M18 16V11a6 6 0 1 0-12 0v5l-2 2h16l-2-2Z" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linejoin="round"></path>
+            </svg>
+            <span class="badge badge--red">5</span>
+          </button>
+        </div>
+
+        <div class="header__user">
+          <span class="header__user-name">И.О. Посетительный</span>
+          <span class="header__user-avatar" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24">
+              <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" fill="currentColor"></path>
+              <path d="M4 20a8 8 0 0 1 16 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              </path>
+            </svg>
+          </span>
+          <a class="header__logout" href="#" aria-label="Выход">
+            Выход
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="header-line" aria-hidden="true"></div>
+
+    <!-- MAIN LAYOUT -->
+    <div class="layout">
+      <!-- SIDEBAR -->
+      <aside class="sidebar" aria-label="Навигация">
+        <div class="sidebar__company">
+          <div class="sidebar__company-title">КомпанияИма</div>
+          <div class="">
+            <img src="img/logoCZS-c-w.png">
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a class="nav__item" href="index.html">
+            <span class="nav__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 36 36" fill="none">
+                <path
+                  d="M12 0C12.5523 0 13 0.447715 13 1V20C13 20.5523 12.5523 21 12 21H1C0.447715 21 1.00666e-08 20.5523 0 20V4C0 1.79086 1.79086 8.0532e-08 4 0H12ZM6 3.15039C4.34315 3.15039 3 4.49354 3 6.15039V16.8496C3 17.4019 3.44772 17.8496 4 17.8496H9C9.55228 17.8496 10 17.4019 10 16.8496V4.15039C10 3.59811 9.55228 3.15039 9 3.15039H6Z"
+                  fill="currentcolor" />
+                <path
+                  d="M32 0C34.2091 0 36 1.79086 36 4V9H35.9131C35.9685 9.15653 36 9.3245 36 9.5C36 10.3284 35.3284 11 34.5 11C33.6716 11 33 10.3284 33 9.5C33 9.3245 33.0315 9.15653 33.0869 9H33.0762V5C33.0762 3.89543 32.1807 3 31.0762 3H20.0762C19.5241 3.00022 19.0762 3.44785 19.0762 4V17C19.0762 17.5522 19.5241 17.9998 20.0762 18H32.0762C32.6285 18 33.0762 17.5523 33.0762 17V14H33.0869C33.0315 13.8435 33 13.6755 33 13.5C33 12.6716 33.6716 12 34.5 12C35.3284 12 36 12.6716 36 13.5C36 13.6755 35.9685 13.8435 35.9131 14H36V20C36 20.5523 35.5523 21 35 21H17C16.4477 21 16 20.5523 16 20V1C16 0.447715 16.4477 0 17 0H32Z"
+                  fill="currentcolor" />
+                <path
+                  d="M36 32C36 34.2091 34.2091 36 32 36L26 36L26 35.9131C25.4177 35.707 25 35.1529 25 34.5C25 33.8471 25.4177 33.293 26 33.0869L26 33.0498L26.1221 33.0498C26.2429 33.0184 26.3693 33 26.5 33C26.631 33 26.7578 33.0182 26.8789 33.0498L31 33.0498C32.1044 33.0498 32.9998 32.1542 33 31.0498L33 27.0498C32.9998 26.4977 32.5522 26.0498 32 26.0498L4 26.0498C3.44784 26.0498 3.00021 26.4977 3 27.0498L3 31.0498C3.00021 32.1542 3.89556 33.0498 5 33.0498L19.1221 33.0498C19.2429 33.0184 19.3693 33 19.5 33C19.631 33 19.7578 33.0182 19.8789 33.0498L20 33.0498L20 33.0869C20.5823 33.293 21 33.8471 21 34.5C21 35.1529 20.5823 35.707 20 35.9131L20 36L0.999999 36C0.447715 36 -5.48676e-07 35.5523 -5.24535e-07 35L-4.37114e-08 24C0.000207483 23.4479 0.447844 23 1 23L35 23C35.5522 23 35.9998 23.4479 36 24L36 32Z"
+                  fill="currentcolor" />
+              </svg>
+            </span>
+            <span class="nav__text">Дашборд</span>
+          </a>
+
+          <a class="nav__item" href="vit.html">
+            <span class="nav__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 38 30" fill="none">
+                <path
+                  d="M34 3.72266L38 8.78906V13H35V30H4V13H0V9L4 3.5V0H34V3.72266ZM7 22H33V13H7V22ZM5.44434 6L3.11133 9H34.6221L32.0889 6H5.44434Z"
+                  fill="currentcolor" />
+              </svg>
+            </span>
+            <span class="nav__text">Витрина</span>
+          </a>
+
+          <a class="nav__item" href="buy.html">
+            <span class="nav__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <path d="M7 6h14l-2 10H8L7 6Z" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linejoin="round"></path>
+                <path d="M7 6 6 4H3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M9 20a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM18 20a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
+                  fill="none" stroke="currentColor" stroke-width="2"></path>
+              </svg>
+            </span>
+            <span class="nav__text">Закупки</span>
+            <span class="nav__badge">3</span>
+          </a>
+
+          <a class="nav__item" href="bid.html">
+            <span class="nav__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 40 35" fill="none">
+                <path
+                  d="M33.5 7L34.9593 11.4914H39.6819L35.8613 14.2672L37.3206 18.7586L33.5 15.9828L29.6794 18.7586L31.1387 14.2672L27.3181 11.4914H32.0407L33.5 7Z"
+                  fill="currentcolor" />
+                <rect x="29" y="20" width="9" height="15" fill="currentcolor" />
+                <path
+                  d="M20.5 0L21.9593 4.49139H26.6819L22.8613 7.26722L24.3206 11.7586L20.5 8.98278L16.6794 11.7586L18.1387 7.26722L14.3181 4.49139H19.0407L20.5 0Z"
+                  fill="currentcolor" />
+                <rect x="16" y="13" width="9" height="22" fill="currentcolor" />
+                <path
+                  d="M6.5 7L7.95934 11.4914H12.6819L8.86126 14.2672L10.3206 18.7586L6.5 15.9828L2.6794 18.7586L4.13874 14.2672L0.318133 11.4914H5.04066L6.5 7Z"
+                  fill="currentcolor" />
+                <rect x="2" y="20" width="9" height="15" fill="currentcolor" />
+              </svg>
+            </span>
+            <span class="nav__text">Заявки</span>
+            <span class="nav__badge">4</span>
+          </a>
+
+          <a class="nav__item  nav__item--active" href="events.html">
+            <span class="nav__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 28 28" fill="none">
+                <path
+                  d="M19 0C20.1046 0 21 0.895431 21 2V3H25C26.6569 3 28 4.34315 28 6V25C28 26.6569 26.6569 28 25 28H3C1.34315 28 0 26.6569 0 25V6C6.44266e-08 4.34315 1.34315 3 3 3H6V2C6 0.895431 6.89543 0 8 0C9.10457 0 10 0.895431 10 2V3H17V2C17 0.895431 17.8954 0 19 0ZM12.8164 16.4912H7.36719L11.7754 19.2676L10.0918 23.7588L14.5 20.9824L18.9082 23.7588L17.2246 19.2676L21.6328 16.4912H16.1836L14.5 12L12.8164 16.4912ZM5 6C3.89543 6 3 6.89543 3 8V10H25V8C25 6.89543 24.1046 6 23 6H20.7305C20.3845 6.59733 19.7399 7 19 7C18.2601 7 17.6155 6.59733 17.2695 6H9.73047C9.38454 6.59733 8.73993 7 8 7C7.26007 7 6.61546 6.59733 6.26953 6H5Z"
+                  fill="currentcolor" />
+              </svg>
+            </span>
+            <span class="nav__text">События</span>
+            <span class="nav__badge">2</span>
+          </a>
+
+          <a class="nav__item" href="supplier.html">
+            <span class="nav__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 40 40" fill="none">
+                <path
+                  d="M38 0C39.1046 0 40 0.895431 40 2V3C40 4.10457 39.1046 5 38 5H32C31.2601 5 30.6155 4.59733 30.2695 4H27.7305C27.5551 4.30282 27.3028 4.55405 27 4.72949V26C30.866 26 34 29.134 34 33C34 36.866 30.866 40 27 40C24.6087 40 22.4981 38.8004 21.2354 36.9707C21.1598 36.989 21.0812 37 21 37H1C0.447715 37 8.05326e-09 36.5523 0 36V33C0 32.4477 0.447715 32 1 32H20.0723C20.4098 29.6406 21.9227 27.6607 24 26.6738V3C24 1.89543 24.8954 1 26 1H30.2695C30.6155 0.402669 31.2601 1.07894e-08 32 0H38ZM27 29C24.7909 29 23 30.7909 23 33C23 35.2091 24.7909 37 27 37C29.2091 37 31 35.2091 31 33C31 30.7909 29.2091 29 27 29ZM19 23C19.5523 23 20 23.4477 20 24V29C20 29.5523 19.5523 30 19 30H5C4.44772 30 4 29.5523 4 29V24C4 23.4477 4.44772 23 5 23H19ZM19 14C19.5523 14 20 14.4477 20 15V20C20 20.5523 19.5523 21 19 21H5C4.44772 21 4 20.5523 4 20V15C4 14.4477 4.44772 14 5 14H19ZM19 5C19.5523 5 20 5.44772 20 6V11C20 11.5523 19.5523 12 19 12H5C4.44772 12 4 11.5523 4 11V6C4 5.44772 4.44772 5 5 5H19Z"
+                  fill="currentcolor" />
+              </svg>
+            </span>
+            <span class="nav__text">Каталог поставщиков</span>
+            <span class="nav__badge">5</span>
+          </a>
+
+          <a class="nav__item" href="#">
+            <span class="nav__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <path d="M4 18V6m0 12h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                </path>
+                <path d="M7 14l3-4 3 3 5-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </span>
+            <span class="nav__text">Аналитика</span>
+          </a>
+
+          <a class="nav__item" href="bills.html">
+            <span class="nav__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <path d="M6 4h12v16H6z" fill="none" stroke="currentColor" stroke-width="2"></path>
+                <path d="M8 8h8M8 12h8M8 16h5" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round"></path>
+              </svg>
+            </span>
+            <span class="nav__text">Счета и оплата</span>
+          </a>
+        </nav>
+
+        <div class="sidebar__actions">
+          <button class="side-action" type="button">
+            <span class="side-action__icon" aria-hidden="true">+</span>
+            <span class="side-action__text">Разместить заявку</span>
+          </button>
+
+          <button class="side-action" type="button">
+            <span class="side-action__icon side-action__icon--grid" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 42 38" fill="none">
+                <path
+                  d="M15 20.5C16.1046 20.5 17 21.3954 17 22.5V35.5C17 36.6046 16.1046 37.5 15 37.5H2C0.895431 37.5 4.02666e-09 36.6046 0 35.5V22.5C0 21.3954 0.895431 20.5 2 20.5H15ZM34 20.5C35.1046 20.5 36 21.3954 36 22.5V35.5C36 36.6046 35.1046 37.5 34 37.5H21C19.8954 37.5 19 36.6046 19 35.5V22.5C19 21.3954 19.8954 20.5 21 20.5H34ZM15 1.5C16.1046 1.5 17 2.39543 17 3.5V16.5C17 17.6046 16.1046 18.5 15 18.5H2C0.895431 18.5 4.02666e-09 17.6046 0 16.5V3.5C0 2.39543 0.895431 1.5 2 1.5H15ZM34 1.5C34.6093 1.5 35.1537 1.77345 35.5205 2.20312L33.4346 4.1084C33.0711 3.73376 32.5632 3.5 32 3.5H23C21.8954 3.5 21 4.39543 21 5.5V14.5C21 15.6046 21.8954 16.5 23 16.5H32C33.1046 16.5 34 15.6046 34 14.5V10.3633L36 8.53711V16.5C36 17.6046 35.1046 18.5 34 18.5H21C19.8954 18.5 19 17.6046 19 16.5V3.5C19 2.39543 19.8954 1.5 21 1.5H34ZM38.9883 0.392578C39.6 -0.165906 40.5488 -0.123191 41.1074 0.488281C41.6659 1.09995 41.6232 2.0488 41.0117 2.60742L29.5117 13.1074L28.4531 14.0742L22.9395 8.56055C22.3537 7.97476 22.3537 7.02524 22.9395 6.43945C23.5252 5.85367 24.4748 5.85367 25.0605 6.43945L28.5469 9.92578L38.9883 0.392578Z"
+                  fill="currentcolor" />
+              </svg>
+            </span>
+            <span class="side-action__text">Спрос в категории</span>
+          </button>
+        </div>
+
+        <div class="sidebar__fill" aria-hidden="true"></div>
+      </aside>
+
+      <!-- CONTENT -->
+      <main class="content">
+        <h1 class="page-title">События</h1>
+
+        <div class="search__block">
+          <svg class="filtr-icn" xmlns="http://www.w3.org/2000/svg" version="1.0" width="16.000000pt"
+            height="16.000000pt" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+            <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="currentcolor" stroke="none">
+              <path
+                d="M3405 5104 c-38 -8 -108 -34 -155 -56 -69 -33 -100 -57 -170 -127 -86 -87 -127 -149 -160 -244 l-18 -52 -1399 -5 -1398 -5 -34 -24 c-79 -57 -93 -179 -28 -249 57 -61 -50 -57 1470 -62 l1388 -5 24 -58 c77 -190 228 -334 415 -397 43 -15 100 -24 171 -27 134 -7 227 12 341 69 141 71 273 222 324 372 l16 46 391 0 c436 0 443 1 500 69 64 77 38 204 -53 252 -32 18 -65 19 -435 19 l-400 0 -19 53 c-67 195 -243 361 -446 421 -80 24 -239 29 -325 10z" />
+              <path
+                d="M1552 3219 c-212 -32 -401 -169 -496 -360 -25 -50 -46 -100 -46 -110 0 -18 -14 -19 -435 -19 -481 0 -476 1 -532 -63 -56 -64 -56 -150 0 -214 56 -64 51 -63 532 -63 421 0 435 -1 435 -19 0 -10 21 -60 46 -110 75 -151 208 -269 368 -327 186 -67 401 -46 572 57 117 71 231 210 276 336 l23 63 1346 0 1346 0 43 23 c51 27 90 90 90 147 0 57 -39 120 -90 147 l-43 23 -1347 0 -1348 0 -7 28 c-12 51 -64 149 -110 208 -145 189 -390 288 -623 253z" />
+              <path
+                d="M2600 1311 c-194 -52 -344 -175 -430 -353 -20 -42 -40 -86 -43 -97 l-5 -21 -989 0 c-937 0 -990 -1 -1028 -19 -131 -59 -139 -236 -15 -302 33 -18 81 -19 1031 -19 l996 0 27 -70 c117 -297 420 -470 736 -419 224 36 428 205 507 419 l26 70 791 0 c751 0 793 1 826 19 124 66 116 243 -15 302 -38 18 -85 19 -821 19 l-782 0 -23 62 c-73 196 -252 356 -455 408 -98 25 -243 26 -334 1z" />
+            </g>
+          </svg>
+
+          <div class="search search--categories">
+            <input class="search__input search__input-vit" type="search" placeholder="Поиск событий...">
+            <button class="search__btn search__btn-vit" type="button" aria-label="Искать">
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M10.5 18.5a8 8 0 1 1 0-16 8 8 0 0 1 0 16Z" fill="none" stroke="currentColor" stroke-width="2">
+                </path>
+                <path d="M16.5 16.5 21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                </path>
+              </svg>
+            </button>
+          </div>
+          <!-- <button class="search__btn-bid" type="button" aria-label="Новые отклики">С новыми откликами</button> -->
+
+          <select id="searchGroup" class="search__select search__input-vit" required>
+            <option value="" class="search__select-text"><span class="search-span">Все события</span>
+            </option>
+            <option value="candy">Будущие события</option>
+            <option value="milk">Прошедшие события</option>
+            <option value="drink">Календарь событий</option>
+          </select>
+          <select id="searchGroup" class="search__select search__input-vit" required>
+            <option value="" class="search__select-text">Период</option>
+            <option value="candy">Декабрь</option>
+            <option value="milk">Январь</option>
+            <option value="drink">Февраль</option>
+            <option value="outher">Март</option>
+            <option value="candy">Апрель</option>
+            <option value="milk">Май</option>
+            <option value="drink">Июнь</option>
+            <option value="outher">Июль</option>
+            <option value="candy">Август</option>
+            <option value="milk">Сентябрь</option>
+            <option value="drink">Октябрь</option>
+            <option value="outher">Ноябрь</option>
+          </select>
+        </div>
+
+        <div class="new">
+          <h2 class="new__title-main">Ваши события</h2>
+          <ul class="event__list list-reset">
+            <li class="event__item">
+              <div class="event__block">
+                <div class="event__block-data">
+                  <svg class="event__img" xmlns="http://www.w3.org/2000/svg" width="1194.000000pt"
+                    height="1184.000000pt" viewBox="0 0 1194.000000 1184.000000">
+                    <g transform="translate(0.000000,1184.000000) scale(0.100000,-0.100000)" fill="currentcolor"
+                      stroke="none">
+                      <path
+                        d="M4273 9170 c-44 -10 -76 -33 -110 -76 l-28 -37 -3 -254 -3 -253 -442 0 c-495 0 -529 -4 -657 -66 -99 -48 -220 -169 -267 -265 -68 -139 -63 67 -63 -2611 0 -1713 3 -2443 11 -2480 33 -162 163 -330 309 -401 149 -73 -102 -67 2922 -67 1929 0 2743 3 2780 11 208 43 398 226 452 435 14 56 16 307 16 2496 0 2681 5 2480 -62 2618 -45 94 -168 215 -268 264 -128 62 -161 66 -657 66 l-443 0 0 240 c0 268 -3 284 -63 337 -71 62 -169 64 -246 6 -64 -50 -71 -79 -71 -345 l0 -238 -620 0 -620 0 0 237 c0 220 -1 240 -21 280 -55 114 -200 144 -295 61 -67 -59 -68 -67 -72 -335 l-4 -243 -619 0 -619 0 0 238 c0 210 -3 242 -19 278 -22 49 -70 88 -126 103 -44 12 -47 12 -92 1z m677 -2760 l0 -320 -435 0 -435 0 0 320 0 320 435 0 435 0 0 -320z m1430 0 l0 -320 -435 0 -435 0 0 320 0 320 435 0 435 0 0 -320z m1430 0 l0 -320 -435 0 -435 0 0 320 0 320 435 0 435 0 0 -320z m-2860 -1020 l0 -320 -435 0 -435 0 0 320 0 320 435 0 435 0 0 -320z m1430 0 l0 -320 -435 0 -435 0 0 320 0 320 435 0 435 0 0 -320z m1430 0 l0 -320 -435 0 -435 0 0 320 0 320 435 0 435 0 0 -320z m-2860 -1020 l0 -320 -435 0 -435 0 0 320 0 320 435 0 435 0 0 -320z m1430 0 l0 -320 -435 0 -435 0 0 320 0 320 435 0 435 0 0 -320z m1430 0 l0 -320 -435 0 -435 0 0 320 0 320 435 0 435 0 0 -320z" />
+                    </g>
+                  </svg>
+                  <div class="event__block-time">
+                    <p class="event__text">2 июля 2025
+                      <span class="event__span"> 10 00 - 18 00</span>
+                    </p>
+                    <p class="event__text">3 июля 2025
+                      <span class="event__span"> 10 00 - 17 00</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="event__block-title">
+                  <p class="event__title-name">Центр Закупок Сетей™</p>
+                  <a class="event__link" href="#">
+                    <h3 class="event__title">ЦЗС «NEVA BUYERS WEEK 2025»</h3>
+                  </a>
+                  <p class="event__title-plase">Санкт-Петербург, DAA EXPO</p>
+                </div>
+                <div class="event__block-role">
+                  <p class="event__text">Поставщик</p>
+                </div>
+              </div>
+              <a class="event__link" href="#">
+                <div class="event__button">
+
+                  <div class="event__button-img">
+                    <img src="img/event-logo/neva-logo.png" alt="">
+                  </div>
+                  <div class="event__btn btn-reset">
+                    <svg class="event__btn-img" xmlns="http://www.w3.org/2000/svg" width="100mm" height="100mm"
+                      viewBox="0 0 10000 10000">
+                      <g fill="currentcolor" stroke="none">
+                        <path class="fil0"
+                          d="M5490.93 2192.6c825.38,175.6 1539.72,647.42 1960.62,1343.47l-1122.17 0c-286.56,-581.23 -691.38,-1011.35 -975.24,-1240.36 -150.75,-121.62 -105,-154.55 136.79,-103.11zm1.18 5622.4c825.38,-175.6 1539.72,-647.42 1960.62,-1343.47l-1122.17 0c-286.56,581.23 -691.38,1011.35 -975.24,1240.36 -150.75,121.62 -105,154.55 136.79,103.11zm593.13 -1343.47l-975.39 0 0 1064.96c0.08,29.08 1.03,97.16 104.4,8.14 244.61,-210.63 604.6,-574.28 870.99,-1073.1zm1775.32 -1323.32c0.57,-10.44 1.09,-20.89 1.55,-31.35l-0.3 0 -1204.42 0 -7.2 0c-24.08,433.75 -105.35,807.25 -220.58,1128.55l2.36 0 1143.97 0 12.12 0c158.97,-335.12 254.97,-705.93 272.5,-1097.2zm-1422.37 -31.35l-7.63 0 -1320.71 0 -1.18 0 0 1128.55 1.18 0 1084.33 0 0.67 0c143.2,-328.19 240.09,-705.77 243.34,-1128.55zm1424.8 -226.12c-13.69,-402.82 -110.54,-784.49 -273.75,-1128.55l-14.48 0 -1143.97 0c115.23,321.3 196.5,694.8 220.58,1128.55l4.84 0 1204.72 0 2.06 0zm-1667.63 -1128.55l-1.69 0 -1083.82 0 -1.18 0 0 1128.55 1.18 0 1321.89 0 5.27 0c-3.13,-407.78 -93.39,-773.5 -228.28,-1093.42 -4.41,-11.78 -8.86,-23.5 -13.37,-35.13zm-3791.01 0c-158.97,335.12 -254.97,705.93 -272.5,1097.2 -0.57,10.44 -1.09,20.89 -1.55,31.35l0.3 0 1204.19 0 9.38 0c27.17,-434.51 111.89,-807.94 230.39,-1128.55l-26.86 0 -1131.23 0 -12.12 0zm2478.2 1128.55l1.18 0 0 -1128.55 -1.18 0 -1071.56 0 -27.22 0c-139.18,329.02 -231.18,706.52 -229.66,1128.55l9.73 0 1318.71 0zm-1097.6 1354.67l24.86 0 1072.74 0 1.18 0 0 -1128.55 -1.18 0 -1319.89 0 -7.37 0c-1.52,422.03 90.48,799.53 229.66,1128.55zm-1244.09 226.12c22.66,37.48 46.16,74.4 70.46,110.72 406.7,607.97 1039.6,1051.77 1778.37,1210.99 356.13,76.75 370.74,44.29 178.15,-111.2 -275.16,-222.16 -616.32,-613.73 -875.72,-1119.79 -15.29,-29.84 -30.31,-60.09 -45.01,-90.72l-120.3 0 -886.36 0 -99.59 0zm2342.87 1043.8l0 -1043.8 -992.33 0c280.94,540.56 672.46,905.21 923.68,1112.03 70.67,58.19 68.77,-53.61 68.65,-68.23zm1200.33 -3979.26l-975.39 0 0 -1064.96c0.08,-29.08 1.03,-97.16 104.4,-8.14 244.61,210.63 604.6,574.28 870.99,1073.1zm-3680.89 2709.34c-163.21,-344.06 -260.06,-725.73 -273.75,-1128.55l2.06 0 1204.49 0 7.02 0c27.17,434.51 111.89,807.94 230.39,1128.55l-24.5 0 -1131.23 0 -14.48 0zm136.51 -2709.34c22.66,-37.48 46.16,-74.4 70.46,-110.72 406.7,-607.97 1039.6,-1051.77 1778.37,-1210.99 356.13,-76.75 370.74,-44.29 178.15,111.2 -275.16,222.16 -616.32,613.73 -875.72,1119.79 -15.29,29.84 -30.31,60.09 -45.01,90.72l-120.3 0 -886.36 0 -99.59 0zm2342.87 -1043.8l0 1043.8 -992.33 0c280.94,-540.56 672.46,-905.21 923.68,-1112.03 70.67,-58.19 68.77,53.61 68.65,68.23z" />
+                      </g>
+                    </svg>
+                    <span class="event__btn-text">Перейти к событию</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="event__item">
+              <div class="event__block">
+                <div class="event__block-data">
+                  <svg class="event__img" xmlns="http://www.w3.org/2000/svg" width="1194.000000pt"
+                    height="1184.000000pt" viewBox="0 0 1194.000000 1184.000000">
+                    <g transform="translate(0.000000,1184.000000) scale(0.100000,-0.100000)" fill="currentcolor"
+                      stroke="none">
+                      <path
+                        d="M4273 9170 c-44 -10 -76 -33 -110 -76 l-28 -37 -3 -254 -3 -253 -442 0 c-495 0 -529 -4 -657 -66 -99 -48 -220 -169 -267 -265 -68 -139 -63 67 -63 -2611 0 -1713 3 -2443 11 -2480 33 -162 163 -330 309 -401 149 -73 -102 -67 2922 -67 1929 0 2743 3 2780 11 208 43 398 226 452 435 14 56 16 307 16 2496 0 2681 5 2480 -62 2618 -45 94 -168 215 -268 264 -128 62 -161 66 -657 66 l-443 0 0 240 c0 268 -3 284 -63 337 -71 62 -169 64 -246 6 -64 -50 -71 -79 -71 -345 l0 -238 -620 0 -620 0 0 237 c0 220 -1 240 -21 280 -55 114 -200 144 -295 61 -67 -59 -68 -67 -72 -335 l-4 -243 -619 0 -619 0 0 238 c0 210 -3 242 -19 278 -22 49 -70 88 -126 103 -44 12 -47 12 -92 1z m677 -2760 l0 -320 -435 0 -435 0 0 320 0 320 435 0 435 0 0 -320z m1430 0 l0 -320 -435 0 -435 0 0 320 0 320 435 0 435 0 0 -320z m1430 0 l0 -320 -435 0 -435 0 0 320 0 320 435 0 435 0 0 -320z m-2860 -1020 l0 -320 -435 0 -435 0 0 320 0 320 435 0 435 0 0 -320z m1430 0 l0 -320 -435 0 -435 0 0 320 0 320 435 0 435 0 0 -320z m1430 0 l0 -320 -435 0 -435 0 0 320 0 320 435 0 435 0 0 -320z m-2860 -1020 l0 -320 -435 0 -435 0 0 320 0 320 435 0 435 0 0 -320z m1430 0 l0 -320 -435 0 -435 0 0 320 0 320 435 0 435 0 0 -320z m1430 0 l0 -320 -435 0 -435 0 0 320 0 320 435 0 435 0 0 -320z" />
+                    </g>
+                  </svg>
+                  <div class="event__block-time">
+                    <p class="event__text">2 июля 2025
+                      <span class="event__span"> 10 00 - 18 00</span>
+                    </p>
+                    <p class="event__text">3 июля 2025
+                      <span class="event__span"> 10 00 - 17 00</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="event__block-title">
+                  <p class="event__title-name">Выставка</p>
+                  <a class="event__link" href="#">
+                    <h3 class="event__title">«NEVA BUYERS WEEK 2025» </h3>
+                  </a>
+                  <p class="event__title-plase">Санкт-Петербург, DAA EXPO</p>
+                </div>
+                <div class="event__block-role">
+                  <p class="event__text">Экспонент</p>
+                </div>
+              </div>
+              <a class="event__link" href="#">
+                <div class="event__button">
+
+                  <div class="event__button-img">
+                    <img src="img/event-logo/neva-logo.png" alt="">
+                  </div>
+                  <div class="event__btn btn-reset">
+                    <svg class="event__btn-img" xmlns="http://www.w3.org/2000/svg" width="100mm" height="100mm"
+                      viewBox="0 0 10000 10000">
+                      <g fill="currentcolor" stroke="none">
+                        <path class="fil0"
+                          d="M5490.93 2192.6c825.38,175.6 1539.72,647.42 1960.62,1343.47l-1122.17 0c-286.56,-581.23 -691.38,-1011.35 -975.24,-1240.36 -150.75,-121.62 -105,-154.55 136.79,-103.11zm1.18 5622.4c825.38,-175.6 1539.72,-647.42 1960.62,-1343.47l-1122.17 0c-286.56,581.23 -691.38,1011.35 -975.24,1240.36 -150.75,121.62 -105,154.55 136.79,103.11zm593.13 -1343.47l-975.39 0 0 1064.96c0.08,29.08 1.03,97.16 104.4,8.14 244.61,-210.63 604.6,-574.28 870.99,-1073.1zm1775.32 -1323.32c0.57,-10.44 1.09,-20.89 1.55,-31.35l-0.3 0 -1204.42 0 -7.2 0c-24.08,433.75 -105.35,807.25 -220.58,1128.55l2.36 0 1143.97 0 12.12 0c158.97,-335.12 254.97,-705.93 272.5,-1097.2zm-1422.37 -31.35l-7.63 0 -1320.71 0 -1.18 0 0 1128.55 1.18 0 1084.33 0 0.67 0c143.2,-328.19 240.09,-705.77 243.34,-1128.55zm1424.8 -226.12c-13.69,-402.82 -110.54,-784.49 -273.75,-1128.55l-14.48 0 -1143.97 0c115.23,321.3 196.5,694.8 220.58,1128.55l4.84 0 1204.72 0 2.06 0zm-1667.63 -1128.55l-1.69 0 -1083.82 0 -1.18 0 0 1128.55 1.18 0 1321.89 0 5.27 0c-3.13,-407.78 -93.39,-773.5 -228.28,-1093.42 -4.41,-11.78 -8.86,-23.5 -13.37,-35.13zm-3791.01 0c-158.97,335.12 -254.97,705.93 -272.5,1097.2 -0.57,10.44 -1.09,20.89 -1.55,31.35l0.3 0 1204.19 0 9.38 0c27.17,-434.51 111.89,-807.94 230.39,-1128.55l-26.86 0 -1131.23 0 -12.12 0zm2478.2 1128.55l1.18 0 0 -1128.55 -1.18 0 -1071.56 0 -27.22 0c-139.18,329.02 -231.18,706.52 -229.66,1128.55l9.73 0 1318.71 0zm-1097.6 1354.67l24.86 0 1072.74 0 1.18 0 0 -1128.55 -1.18 0 -1319.89 0 -7.37 0c-1.52,422.03 90.48,799.53 229.66,1128.55zm-1244.09 226.12c22.66,37.48 46.16,74.4 70.46,110.72 406.7,607.97 1039.6,1051.77 1778.37,1210.99 356.13,76.75 370.74,44.29 178.15,-111.2 -275.16,-222.16 -616.32,-613.73 -875.72,-1119.79 -15.29,-29.84 -30.31,-60.09 -45.01,-90.72l-120.3 0 -886.36 0 -99.59 0zm2342.87 1043.8l0 -1043.8 -992.33 0c280.94,540.56 672.46,905.21 923.68,1112.03 70.67,58.19 68.77,-53.61 68.65,-68.23zm1200.33 -3979.26l-975.39 0 0 -1064.96c0.08,-29.08 1.03,-97.16 104.4,-8.14 244.61,210.63 604.6,574.28 870.99,1073.1zm-3680.89 2709.34c-163.21,-344.06 -260.06,-725.73 -273.75,-1128.55l2.06 0 1204.49 0 7.02 0c27.17,434.51 111.89,807.94 230.39,1128.55l-24.5 0 -1131.23 0 -14.48 0zm136.51 -2709.34c22.66,-37.48 46.16,-74.4 70.46,-110.72 406.7,-607.97 1039.6,-1051.77 1778.37,-1210.99 356.13,-76.75 370.74,-44.29 178.15,111.2 -275.16,222.16 -616.32,613.73 -875.72,1119.79 -15.29,29.84 -30.31,60.09 -45.01,90.72l-120.3 0 -886.36 0 -99.59 0zm2342.87 -1043.8l0 1043.8 -992.33 0c280.94,-540.56 672.46,-905.21 923.68,-1112.03 70.67,-58.19 68.77,53.61 68.65,68.23z" />
+                      </g>
+                    </svg>
+                    <span class="event__btn-text">Перейти к событию</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="last">
+          <h2 class="last__title-main">Итоги прошедших событий</h2>
+          <ul class="last__list list-reset">
+            <li class="last__item">
+              <div class="last__block-img">
+                <img class="last__img" src="img/event-logo/neva-logo.png" alt="">
+              </div>
+              <div class="last__block">
+                <div class="last__description">
+                  <p class="last__data"><span>Завершилось</span>3 июля 2024</p>
+                  <p class="last__subtitle">Центр Закупок Сетей™</p>
+                  <a class="last__link" href="#">
+                    <h3 class="last__title">ЦЗС «NEVA BUYERS WEEK 2024»</h3>
+                  </a>
+                  <p class="last__text-role">Поставщик</p>
+                </div>
+                <a class="last__link" href="#">
+                  <div class="last__btn btn-reset">
+                    <svg class="last__btn-img" xmlns="http://www.w3.org/2000/svg" width="100mm" height="100mm"
+                      style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                      viewBox="0 0 10000 10000">
+                      <g fill="currentcolor" stroke="none">
+                        <path class="fil0"
+                          d="M7466.41 3277.36l-2142.28 0 -418.04 -506.61 -1818.77 0c-153.63,0 -279.34,125.7 -279.34,279.34l0 88.82 1535.87 0 503.55 530.15 2245.07 -17.76c205.64,-1.62 373.94,168.27 373.94,373.94l0 2620.41c205.67,0 373.94,-168.27 373.94,-373.94l0 -2620.41c0,-205.67 -168.27,-373.94 -373.94,-373.94zm-655.92 591.21l-2142.28 0 -418.04 -506.61 -1818.77 0c-153.63,0 -279.34,125.7 -279.34,279.34l0 601.21 0 2208.4 0 412.01c0,205.67 168.27,373.94 373.94,373.94l4284.49 0c205.67,0 373.94,-168.27 373.94,-373.94l0 -2620.41c0,-205.67 -168.27,-373.94 -373.94,-373.94z" />
+                      </g>
+                    </svg>
+                    Посмотреть итоги
+                  </div>
+                </a>
+              </div>
+
+            </li>
+
+            <li class="last__item">
+              <div class="last__block-img">
+                <img class="last__img" src="img/event-logo/neva-logo.png" alt="">
+              </div>
+              <div class="last__block">
+                <div class="last__description">
+                  <p class="last__data"><span>Завершилось</span>3 июля 2024</p>
+                  <p class="last__subtitle">Выставка</p>
+                  <a class="last__link" href="#">
+                    <h3 class="last__title">«NEVA BUYERS WEEK 2024»</h3>
+                  </a>
+                  <p class="last__text-role">Экспонент</p>
+                </div>
+                <a class="last__link" href="#">
+                  <div class="last__btn btn-reset">
+                    <svg class="last__btn-img" xmlns="http://www.w3.org/2000/svg" width="100mm" height="100mm"
+                      style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                      viewBox="0 0 10000 10000">
+                      <g fill="currentcolor" stroke="none">
+                        <path class="fil0"
+                          d="M7466.41 3277.36l-2142.28 0 -418.04 -506.61 -1818.77 0c-153.63,0 -279.34,125.7 -279.34,279.34l0 88.82 1535.87 0 503.55 530.15 2245.07 -17.76c205.64,-1.62 373.94,168.27 373.94,373.94l0 2620.41c205.67,0 373.94,-168.27 373.94,-373.94l0 -2620.41c0,-205.67 -168.27,-373.94 -373.94,-373.94zm-655.92 591.21l-2142.28 0 -418.04 -506.61 -1818.77 0c-153.63,0 -279.34,125.7 -279.34,279.34l0 601.21 0 2208.4 0 412.01c0,205.67 168.27,373.94 373.94,373.94l4284.49 0c205.67,0 373.94,-168.27 373.94,-373.94l0 -2620.41c0,-205.67 -168.27,-373.94 -373.94,-373.94z" />
+                      </g>
+                    </svg>
+                    Посмотреть итоги
+                  </div>
+                </a>
+              </div>
+
+            </li>
+
+            <li class="last__item">
+              <div class="last__block-img">
+                <img class="last__img" src="img/event-logo/food-logo.png" alt="">
+              </div>
+              <div class="last__block">
+                <div class="last__description">
+                  <p class="last__data"><span>Завершилось</span>20 августа 2024</p>
+                  <p class="last__subtitle">Центр Закупок Сетей™</p>
+                  <a class="last__link" href="#">
+                    <h3 class="last__title">ЦЗС «World Food»</h3>
+                  </a>
+                  <p class="last__text-role">Поставщик</p>
+                </div>
+                <a class="last__link" href="#">
+                  <div class="last__btn btn-reset">
+                    <svg class="last__btn-img" xmlns="http://www.w3.org/2000/svg" width="100mm" height="100mm"
+                      style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                      viewBox="0 0 10000 10000">
+                      <g fill="currentcolor" stroke="none">
+                        <path class="fil0"
+                          d="M7466.41 3277.36l-2142.28 0 -418.04 -506.61 -1818.77 0c-153.63,0 -279.34,125.7 -279.34,279.34l0 88.82 1535.87 0 503.55 530.15 2245.07 -17.76c205.64,-1.62 373.94,168.27 373.94,373.94l0 2620.41c205.67,0 373.94,-168.27 373.94,-373.94l0 -2620.41c0,-205.67 -168.27,-373.94 -373.94,-373.94zm-655.92 591.21l-2142.28 0 -418.04 -506.61 -1818.77 0c-153.63,0 -279.34,125.7 -279.34,279.34l0 601.21 0 2208.4 0 412.01c0,205.67 168.27,373.94 373.94,373.94l4284.49 0c205.67,0 373.94,-168.27 373.94,-373.94l0 -2620.41c0,-205.67 -168.27,-373.94 -373.94,-373.94z" />
+                      </g>
+                    </svg>
+                    Посмотреть итоги
+                  </div>
+                </a>
+              </div>
+
+            </li>
+
+          </ul>
+        </div>
+
+        <div class="future">
+          <h2 class="future__title-main">Календарь ближайших событий</h2>
+          <ul class="future__list list-reset">
+            <li class="future__item">
+              <div class="future__block-top">
+                <div class="future__block-img">
+                  <img class="future__img" src="img/event-logo/food-logo.png" alt="">
+                </div>
+
+                <div class="future__block-date">
+                  <p class="future__text-date">18 сентября 2025г</p>
+                  <p class="future__text-place">Москва, Крокус Экспо (Красногорск, Международная
+                    ул., 16)</p>
+                </div>
+              </div>
+              <div class="future__block">
+                <div class="future__description">
+                  <a class="future__link" href="#">
+                    <h3 class="future__title">WorldFood Moscow 2025</h3>
+                  </a>
+                  <h4 class="future__subtitle">18 сентября, Москва, Крокус Экспо (Красногорск,
+                    Международная ул., 16)</h4>
+                  <p class="future__text">Большая закупка продуктов и товаров в федеральные
+                    и региональные торговые сети</p>
+                </div>
+                <div class="future__block-bottom">
+                  <div class="future__button-title"> 100 закупщиков</div>
+                  <div class="future__button-subtitle"> В категориях: food</div>
+                  <div class="future__block-button">
+                    <button class="future__btn btn-reset">Тарифы</button>
+                    <button class="future__btn btn-reset">Участники</button>
+                    <button class="future__btn future__button btn-reset">
+                      <svg class="future__btn-img" xmlns="http://www.w3.org/2000/svg" width="297.000000pt"
+                        height="302.000000pt" viewBox="0 0 297.000000 302.000000">
+
+                        <g transform="translate(0.000000,302.000000) scale(0.100000,-0.100000)" fill="currentcolor"
+                          stroke="none">
+                          <path
+                            d="M686 2475 c-61 -21 -88 -46 -118 -105 l-28 -54 0 -786 0 -786 28 -55 c29 -57 70 -92 131 -109 22 -6 265 -10 637 -10 l600 0 -165 165 -166 164 -3 212 c-3 228 1 254 46 289 23 19 41 20 250 20 l226 0 168 -167 169 -168 -3 615 -3 615 -23 48 c-29 58 -81 102 -138 116 -29 8 -288 11 -806 11 -629 -1 -770 -3 -802 -15z m1420 -339 c25 -25 34 -43 34 -67 0 -51 -32 -96 -76 -108 -24 -7 -237 -11 -571 -11 -566 0 -584 1 -619 48 -32 41 0 153 46 166 8 2 271 4 583 5 l569 1 34 -34z m-732 -438 c21 -30 20 -98 -2 -124 -32 -40 -54 -44 -256 -44 l-194 0 -31 26 c-27 22 -31 32 -31 74 0 37 6 56 24 77 l24 28 199 5 c211 5 237 1 267 -42z" />
+                          <path
+                            d="M1820 1102 l0 -107 273 -273 272 -272 105 105 105 105 -275 275 -275 275 -102 0 -103 0 0 -108z" />
+                          <path
+                            d="M2550 475 l-104 -105 39 -41 c43 -44 105 -78 144 -79 39 0 105 37 124 69 39 66 14 152 -65 228 l-34 33 -104 -105z" />
+                        </g>
+                      </svg>
+                      Зарегистрироваться
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="future__item">
+              <div class="future__block-top">
+                <div class="future__block-img">
+                  <img class="future__img" src="img/event-logo/flowers-logo.png" alt="">
+                </div>
+
+                <div class="future__block-date">
+                  <p class="future__text-date">9 сентября 2025г</p>
+                  <p class="future__text-place">Москва, Крокус Экспо</p>
+                </div>
+              </div>
+              <div class="future__block">
+                <div class="future__description">
+                  <a class="future__link" href="#">
+                    <h3 class="future__title">Цветы Экспо 2025</h3>
+                  </a>
+                  <h4 class="future__subtitle">9 сентября, Москва, Крокус Экспо</h4>
+                  <p class="future__text">Большая закупка продуктов и товаров в федеральные
+                    и региональные торговые сети</p>
+                </div>
+                <div class="future__block-bottom">
+                  <div class="future__button-title"> 21 закупщиков</div>
+                  <div class="future__button-subtitle"> В категориях: food</div>
+                  <div class="future__block-button">
+                    <button class="future__btn btn-reset">Тарифы</button>
+                    <button class="future__btn btn-reset">Участники</button>
+                    <button class="future__btn future__button btn-reset">
+                      <svg class="future__btn-img" xmlns="http://www.w3.org/2000/svg" width="297.000000pt"
+                        height="302.000000pt" viewBox="0 0 297.000000 302.000000">
+
+                        <g transform="translate(0.000000,302.000000) scale(0.100000,-0.100000)" fill="currentcolor"
+                          stroke="none">
+                          <path
+                            d="M686 2475 c-61 -21 -88 -46 -118 -105 l-28 -54 0 -786 0 -786 28 -55 c29 -57 70 -92 131 -109 22 -6 265 -10 637 -10 l600 0 -165 165 -166 164 -3 212 c-3 228 1 254 46 289 23 19 41 20 250 20 l226 0 168 -167 169 -168 -3 615 -3 615 -23 48 c-29 58 -81 102 -138 116 -29 8 -288 11 -806 11 -629 -1 -770 -3 -802 -15z m1420 -339 c25 -25 34 -43 34 -67 0 -51 -32 -96 -76 -108 -24 -7 -237 -11 -571 -11 -566 0 -584 1 -619 48 -32 41 0 153 46 166 8 2 271 4 583 5 l569 1 34 -34z m-732 -438 c21 -30 20 -98 -2 -124 -32 -40 -54 -44 -256 -44 l-194 0 -31 26 c-27 22 -31 32 -31 74 0 37 6 56 24 77 l24 28 199 5 c211 5 237 1 267 -42z" />
+                          <path
+                            d="M1820 1102 l0 -107 273 -273 272 -272 105 105 105 105 -275 275 -275 275 -102 0 -103 0 0 -108z" />
+                          <path
+                            d="M2550 475 l-104 -105 39 -41 c43 -44 105 -78 144 -79 39 0 105 37 124 69 39 66 14 152 -65 228 l-34 33 -104 -105z" />
+                        </g>
+                      </svg>
+                      Зарегистрироваться
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="future__item">
+              <div class="future__block-top">
+                <div class="future__block-img">
+                  <img class="future__img" src="img/event-logo/sale-logo.png" alt="">
+                </div>
+
+                <div class="future__block-date">
+                  <p class="future__text-date">28 августа 2025</p>
+                  <a class="future__link" href="#"></a>
+                  <p class="future__text-place">Москва, Крокус Экспо</p>
+                </div>
+              </div>
+              <div class="future__block">
+                <div class="future__description">
+                  <a class="future__link" href="#">
+                    <h3 class="future__title">Meat Online 2025</h3>
+                  </a>
+                  <h4 class="future__subtitle">28 августа, Москва, Крокус Экспо</h4>
+                  <p class="future__text">Большая закупка продуктов и товаров в федеральные
+                    и региональные торговые сети</p>
+                </div>
+                <div class="future__block-bottom">
+                  <div class="future__button-title"> 11 закупщиков</div>
+                  <div class="future__button-subtitle"> В категориях: food</div>
+                  <div class="future__block-button">
+                    <button class="future__btn btn-reset">Тарифы</button>
+                    <button class="future__btn btn-reset">Участники</button>
+                    <button class="future__btn future__button btn-reset">
+                      <svg class="future__btn-img" xmlns="http://www.w3.org/2000/svg" width="297.000000pt"
+                        height="302.000000pt" viewBox="0 0 297.000000 302.000000">
+
+                        <g transform="translate(0.000000,302.000000) scale(0.100000,-0.100000)" fill="currentcolor"
+                          stroke="none">
+                          <path
+                            d="M686 2475 c-61 -21 -88 -46 -118 -105 l-28 -54 0 -786 0 -786 28 -55 c29 -57 70 -92 131 -109 22 -6 265 -10 637 -10 l600 0 -165 165 -166 164 -3 212 c-3 228 1 254 46 289 23 19 41 20 250 20 l226 0 168 -167 169 -168 -3 615 -3 615 -23 48 c-29 58 -81 102 -138 116 -29 8 -288 11 -806 11 -629 -1 -770 -3 -802 -15z m1420 -339 c25 -25 34 -43 34 -67 0 -51 -32 -96 -76 -108 -24 -7 -237 -11 -571 -11 -566 0 -584 1 -619 48 -32 41 0 153 46 166 8 2 271 4 583 5 l569 1 34 -34z m-732 -438 c21 -30 20 -98 -2 -124 -32 -40 -54 -44 -256 -44 l-194 0 -31 26 c-27 22 -31 32 -31 74 0 37 6 56 24 77 l24 28 199 5 c211 5 237 1 267 -42z" />
+                          <path
+                            d="M1820 1102 l0 -107 273 -273 272 -272 105 105 105 105 -275 275 -275 275 -102 0 -103 0 0 -108z" />
+                          <path
+                            d="M2550 475 l-104 -105 39 -41 c43 -44 105 -78 144 -79 39 0 105 37 124 69 39 66 14 152 -65 228 l-34 33 -104 -105z" />
+                        </g>
+                      </svg>
+                      Зарегистрироваться
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="future__item">
+              <div class="future__block-top">
+                <div class="future__block-img">
+                  <img class="future__img" src="img/event-logo/neva-logo.png" alt="">
+                </div>
+                <div class="future__block-date">
+                  <p class="future__text-date">2-3 июля 2025</p>
+                  <p class="future__text-place">Москва, Крокус Экспо</p>
+                </div>
+              </div>
+              <div class="future__block">
+                <div class="future__description">
+                  <a class="future__link" href="#">
+                    <h3 class="future__title">NEVA BUYERS WEEK 2025</h3>
+                  </a>
+                  <h4 class="future__subtitle">2-3 июля, Москва, Крокус Экспо</h4>
+                  <p class="future__text">Большая закупка продуктов и товаров в федеральные
+                    и региональные торговые сети</p>
+                </div>
+                <div class="future__block-bottom">
+                  <div class="future__button-title"> 90 закупщиков</div>
+                  <div class="future__button-subtitle"> В категориях: food</div>
+                  <div class="future__block-button">
+                    <button class="future__btn btn-reset">Тарифы</button>
+                    <button class="future__btn btn-reset">Участники</button>
+                    <button class="future__btn future__button btn-reset">
+                      <svg class="future__btn-img" xmlns="http://www.w3.org/2000/svg" width="297.000000pt"
+                        height="302.000000pt" viewBox="0 0 297.000000 302.000000">
+                        <g transform="translate(0.000000,302.000000) scale(0.100000,-0.100000)" fill="currentcolor"
+                          stroke="none">
+                          <path
+                            d="M686 2475 c-61 -21 -88 -46 -118 -105 l-28 -54 0 -786 0 -786 28 -55 c29 -57 70 -92 131 -109 22 -6 265 -10 637 -10 l600 0 -165 165 -166 164 -3 212 c-3 228 1 254 46 289 23 19 41 20 250 20 l226 0 168 -167 169 -168 -3 615 -3 615 -23 48 c-29 58 -81 102 -138 116 -29 8 -288 11 -806 11 -629 -1 -770 -3 -802 -15z m1420 -339 c25 -25 34 -43 34 -67 0 -51 -32 -96 -76 -108 -24 -7 -237 -11 -571 -11 -566 0 -584 1 -619 48 -32 41 0 153 46 166 8 2 271 4 583 5 l569 1 34 -34z m-732 -438 c21 -30 20 -98 -2 -124 -32 -40 -54 -44 -256 -44 l-194 0 -31 26 c-27 22 -31 32 -31 74 0 37 6 56 24 77 l24 28 199 5 c211 5 237 1 267 -42z" />
+                          <path
+                            d="M1820 1102 l0 -107 273 -273 272 -272 105 105 105 105 -275 275 -275 275 -102 0 -103 0 0 -108z" />
+                          <path
+                            d="M2550 475 l-104 -105 39 -41 c43 -44 105 -78 144 -79 39 0 105 37 124 69 39 66 14 152 -65 228 l-34 33 -104 -105z" />
+                        </g>
+                      </svg>
+                      Зарегистрироваться
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </main>
+
+      <aside class="banners">
+        <img class="banner" src="img/neva-560.png" alt="Баннер">
+        <img class="banner" src="img/piterfood-560.png" alt="Баннер">
+      </aside>
+
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__left">
+        <img class="footer__img" aria-label="Сейл Трекер" src="img/Сейл Трекер_горизонт_белый_Sk.png"
+          alt="Sale Tracker">
+        <p class="footer-text">ООО "Сейл трекер", 2025</p>
+      </div>
+
+      <div class="footer__center">
+        <p class="footer-text">офис: Санкт‑Петербург, Магнитогорская 23к1</p>
+        <p class="footer-text">тел.: +7 800 000‑00‑00</p>
+      </div>
+
+      <div class="footer__right">
+        <div class="footer__icons" aria-label="Соцсети">
+          <span class="footer__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+              <path fill="currentColor"
+                d="M25,2c12.703,0,23,10.297,23,23S37.703,48,25,48S2,37.703,2,25S12.297,2,25,2z M32.934,34.375 c0.423-1.298,2.405-14.234,2.65-16.783c0.074-0.772-0.17-1.285-0.648-1.514c-0.578-0.278-1.434-0.139-2.427,0.219 c-1.362,0.491-18.774,7.884-19.78,8.312c-0.954,0.405-1.856,0.847-1.856,1.487c0,0.45,0.267,0.703,1.003,0.966 c0.766,0.273,2.695,0.858,3.834,1.172c1.097,0.303,2.346,0.04,3.046-0.395c0.742-0.461,9.305-6.191,9.92-6.693 c0.614-0.502,1.104,0.141,0.602,0.644c-0.502,0.502-6.38,6.207-7.155,6.997c-0.941,0.959-0.273,1.953,0.358,2.351 c0.721,0.454,5.906,3.932,6.687,4.49c0.781,0.558,1.573,0.811,2.298,0.811C32.191,36.439,32.573,35.484,32.934,34.375z" />
+            </svg>
+          </span>
+          <span class="footer__icon footer__icon--bg" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="50px" height="50px">
+              <!-- Без фона в SVG, фон будет через CSS -->
+              <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"
+                d="M512.0947266,308.1917419c-99.421875-5.2137451-177.0074768,63.7746277-194.1162109,171.7529297  c-14.1681519,89.4194031,10.9517212,198.377655,32.4380493,203.8618469  c9.1132812,2.3260498,31.0438538-14.447998,46.9994507-29.4939575c2.9996643-2.8286133,7.5354309-3.3046265,11.0531616-1.1536255  c24.8721313,15.2089233,53.0321655,26.6383667,84.07724,28.2663574  c102.068512,5.352417,192.52005-74.5308838,197.8663025-176.6076965  C695.7590332,402.7408142,614.163208,313.5441895,512.0947266,308.1917419z M345.6054993,826.5784302  c-3.8494568-2.7254639-9.1531067-1.9857788-12.3791809,1.4550171  c-43.119812,45.9900513-153.4740906,78.2501221-158.5290833,15.4796143c0-49.1799927-11.0461426-90.6229248-23.2081757-136.2524414  c-14.8953705-55.8845825-31.4645691-118.0489502-31.4645691-208.3983765  c0-215.4476624,176.6943207-377.4747925,386.1940918-377.4747925S879.975708,291.3253784,879.975708,500.9545898  S710.4901733,876.3369751,508.2009583,876.3369751C436.4336243,876.3369751,401.6072693,866.2283936,345.6054993,826.5784302z" />
+            </svg>
+          </span>
+        </div>
+        <a class="footer__policy" href="#">Политика конфиденциальности</a>
+      </div>
+    </footer>
+  </div>
+
+
+
+
+</body>
+
+</html>

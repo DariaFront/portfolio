@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТСЖ «Династия» — Новости</title>
+    <meta name="description" content="Новости ТСЖ «Династия»">
+
+    <!-- Normalize.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Собственные стили -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Критический CSS для предотвращения скрытия контента -->
+    <style>
+        /* Fallback стили на случай, если JS не загрузится */
+        [data-aos] {
+            opacity: 1 !important;
+            transform: none !important;
+            transition: none !important;
+        }
+
+        /* Показываем контент сразу */
+        .main-nav,
+        .hero,
+        .info-grid,
+        .meetings-section,
+        .counters-section,
+        .board-section {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+
+        /* Скрываем бургер-меню по умолчанию на десктопе */
+        @media (min-width: 969px) {
+            .burger-btn {
+                display: none !important;
+            }
+        }
+
+        /* Дополнительные стили для страницы документов */
+        .doc-page-section {
+            padding: 40px 0 60px;
+        }
+
+        .doc-page-section h2 {
+            margin-top: 40px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .doc-page-section h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .doc-page-section h3 {
+            margin-top: 28px;
+            font-size: 1.2rem;
+            color: var(--accent-color);
+        }
+
+        .doc-page-section .doc-link {
+            margin-bottom: 4px;
+        }
+
+        .doc-page-section .docs-list-simple {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 16px 0;
+        }
+
+        .doc-page-section .docs-list-simple li {
+            margin-bottom: 6px;
+        }
+
+        .doc-page-section .docs-list-simple a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-main);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .doc-page-section .docs-list-simple a:hover {
+            color: var(--accent-hover);
+            padding-left: 6px;
+        }
+
+        .doc-page-section .docs-list-simple a svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        .doc-page-section .sub-section {
+            background-color: var(--bg-light);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .doc-page-section .sub-section h3 {
+            margin-top: 0;
+        }
+
+        .doc-columns {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .doc-columns {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .doc-columns {
+                grid-template-columns: 1fr 1.2fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================== ШАПКА ==================== -->
+    <header class="main-header">
+        <div class="container header-flex">
+            <a href="index.html" class="logo-block">
+                <div class="logo-icon">
+                    <i data-lucide="building-2"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title">ТСЖ «Династия»</span>
+                    <span class="logo-address">ул. Центральная, 6,8</span>
+                </div>
+            </a>
+            <div class="nav-block">
+                <nav class="main-nav" id="mainNav">
+                    <ul class="nav-list">
+                        <li><a href="index.html"><i data-lucide="home"></i>Главная</a></li>
+                        <li><a href="№" class="active"><i data-lucide="newspaper"></i>Новости</a></li>
+                        <li><a href="index.html#meetings"><i data-lucide="clipboard-list"></i>Собрания</a></li>
+                        <li><a href="dok.html"><i data-lucide="folder-open"></i>Документы</a></li>
+                    </ul>
+                </nav>
+
+                <button class="eye-toggle" id="eyeToggle" aria-label="Версия для слабовидящих">
+                    <i data-lucide="eye"></i>
+                </button>
+
+                <button class="burger-btn" id="burgerBtn" aria-label="Открыть меню">
+                    <i data-lucide="menu" class="icon-menu"></i>
+                    <i data-lucide="x" class="icon-close"></i>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- ==================== НОВОСТИ + ОБЪЯВЛЕНИЯ ==================== -->
+            <div class="info-grid" id="news">
+                <section class="news-section">
+                    <div class="section-header">
+                        <h2>
+                            <i data-lucide="newspaper"></i>
+                            Лента новостей
+                        </h2>
+                    </div>
+
+                    <article class="news-card">
+                        <div class="news-meta">
+                            <time datetime="2026-06-15">26 мая 2026</time>
+                        </div>
+                        <h3>Отключение горячей воды</h3>
+                        <p>27 мая 2026 с 9 00 до 15 00 будет отключено горячее водоснабжение. Ремонтные работы</p>
+
+                    </article>
+
+                    <article class="news-card">
+                        <div class="news-meta">
+                            <time datetime="2026-06-15">22 мая 2026</time>
+                        </div>
+                        <h3>Озеленение двора</h3>
+                        <p>Везем сирень и петунии ! Через час можно приходить и брать.
+                            Отдаем только тем , кто принес бюллетень )))))
+                            Посадочный материал для высадки только на нашей територии ! С указанием места высадки )
+                            озеленение в рамках месячника по благоустройству, все под отчет , пожалуйста .</p>
+
+                    </article>
+
+                    <article class="news-card">
+                        <div class="news-meta">
+                            <time datetime="2026-06-15">21 мая 2026</time>
+                        </div>
+                        <h3>Внимание мошенники</h3>
+                        <p>В сто тысяч миллионый раз объясняем : тсж НИКОГДА не просит никаких кодов - подтверждений ! В
+                            Максе рассылка сейчас от имени Лимоновой про " электронное обновление данных " - очередной
+                            развод . Отмечаем как спам и нажимаем кнопку " пожаловаться ".</p>
+
+                    </article>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ==================== ПОДВАЛ ==================== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>
+                        <i data-lucide="phone-call"></i>
+                        Контакты ТСЖ
+                    </h4>
+                    <ul class="footer-contacts">
+                        <li>
+                            <span class="icon"><i data-lucide="phone"></i></span>
+                            <div>
+                                <strong>Диспетчерская служба:</strong><br>
+                                <a href="tel:+79817310077" class="phone-highlight">+7 (981) 731-00-77</a>
+                                <span class="work-time">Круглосуточно</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon"><i data-lucide="mail"></i></span>
+                            <div>
+                                <strong>Email для обращений:</strong><br>
+                                <a href="mailto:dinastia-limonova@mail.ru">dinastia-limonova@mail.ru</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>
+                        <i data-lucide="map-pin"></i>
+                        Адрес правления
+                    </h4>
+                    <p class="footer-address">
+                        <strong>Фактический и юр. адрес:</strong><br>
+                        188643, Ленинградская область, Всеволожский район, г. Всеволожск, ул. Центральная, д. 6, оф. 9Н
+                        (пом. 9Н)
+                    </p>
+                </div>
+
+                <div class="footer-col footer-requisites">
+                    <h4>
+                        <i data-lucide="building"></i>
+                        Реквизиты организации
+                    </h4>
+
+                    <div class="footer-address">
+                        <div><span>ИНН:</span> 4703106103</div>
+                        <div><span>КПП:</span> 470301001</div>
+                        <div><span>ОГРН:</span> 1084703004484</div>
+                        <div><span>ОКПО:</span> 85170117</div>
+                    </div>
+                    <div class="footer-address">
+                        <strong>Расчётный счёт:</strong> № 40703810355410000032<br>
+                        <strong>Банк:</strong> Всеволожское отделение № 5542 Северо-Западный Банк Сбербанка РФ г.
+                        Санкт-Петербург<br>
+                        <strong>БИК:</strong> 044030653<br>
+                        <strong>Корр. счёт:</strong> 30101810500000000653
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container bottom-flex">
+                <p>&copy; 2026 ТСЖ «Династия». Все права защищены.</p>
+                <p>Официальный сайт раскрытия информации</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипты -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        // ==========================================================================
+        // ПОИСК ПО ДОКУМЕНТАМ
+        // ==========================================================================
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('docSearch');
+            if (!searchInput) return;
+
+            const allLinks = document.querySelectorAll('.doc-page-section .docs-list-simple a');
+            const noResults = document.createElement('div');
+            noResults.className = 'no-results';
+            noResults.style.display = 'none';
+            noResults.innerHTML = '<p style="text-align:center;padding:30px 0;color:var(--text-muted);"><i data-lucide="search" style="width:32px;height:32px;display:block;margin:0 auto 12px;"></i><strong>Ничего не найдено</strong><br>Попробуйте изменить запрос</p>';
+
+            const docContent = document.getElementById('docContent');
+            docContent.parentNode.insertBefore(noResults, docContent.nextSibling);
+
+            // Инициализация Lucide
+            setTimeout(() => {
+                if (window.lucide && typeof lucide.createIcons === 'function') {
+                    lucide.createIcons();
+                }
+            }, 100);
+
+            searchInput.addEventListener('input', function () {
+                const query = this.value.toLowerCase().trim();
+                let visibleCount = 0;
+
+                allLinks.forEach(link => {
+                    const text = link.textContent.toLowerCase();
+                    const parent = link.closest('.sub-section');
+
+                    if (query === '' || text.includes(query)) {
+                        link.style.display = '';
+                        visibleCount++;
+                        if (parent) parent.style.display = '';
+                    } else {
+                        link.style.display = 'none';
+                    }
+                });
+
+                // Скрываем пустые подразделы
+                document.querySelectorAll('.sub-section').forEach(section => {
+                    const visibleLinks = section.querySelectorAll('li a[style*="display: none"]');
+                    const allItems = section.querySelectorAll('li a');
+                    if (allItems.length > 0 && allItems.length === visibleLinks.length && query !== '') {
+                        section.style.display = 'none';
+                    } else {
+                        section.style.display = '';
+                    }
+                });
+
+                // Показываем/скрываем сообщение "Ничего не найдено"
+                if (visibleCount === 0 && query !== '') {
+                    noResults.style.display = 'block';
+                } else {
+                    noResults.style.display = 'none';
+                }
+
+                // Обновляем иконки
+                if (window.lucide && typeof lucide.createIcons === 'function') {
+                    lucide.createIcons();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

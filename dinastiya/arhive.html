@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТСЖ «Династия» — Архив документов</title>
+    <meta name="description" content="Архив документов ТСЖ Династия. Отчеты, собрания, сметы, планы за все годы.">
+
+    <!-- Normalize.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Собственные стили -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Критический CSS для предотвращения скрытия контента -->
+    <style>
+        /* Fallback стили на случай, если JS не загрузится */
+        [data-aos] {
+            opacity: 1 !important;
+            transform: none !important;
+            transition: none !important;
+        }
+
+        /* Показываем контент сразу */
+        .main-nav,
+        .hero,
+        .info-grid,
+        .meetings-section,
+        .counters-section,
+        .board-section {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+
+        /* Скрываем бургер-меню по умолчанию на десктопе */
+        @media (min-width: 969px) {
+            .burger-btn {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================== ШАПКА ==================== -->
+    <header class="main-header">
+        <div class="container header-flex">
+            <a href="index.html" class="logo-block">
+                <div class="logo-icon">
+                    <i data-lucide="building-2"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title">ТСЖ «Династия»</span>
+                    <span class="logo-address">ул. Центральная, 6,8</span>
+                </div>
+            </a>
+            <div class="nav-block">
+                <nav class="main-nav" id="mainNav">
+                    <ul class="nav-list">
+                        <li><a href="index.html"><i data-lucide="home"></i>Главная</a></li>
+                        <li><a href="news.html"><i data-lucide="newspaper"></i>Новости</a></li>
+                        <li><a href="index.html#meetings"><i data-lucide="clipboard-list"></i>Собрания</a></li>
+                        <li><a href="dok.html"><i data-lucide="folder-open"></i>Документы</a></li>
+                        </li>
+                    </ul>
+                </nav>
+
+                <button class="eye-toggle" id="eyeToggle" aria-label="Версия для слабовидящих">
+                    <i data-lucide="eye"></i>
+                </button>
+
+                <button class="burger-btn" id="burgerBtn" aria-label="Открыть меню">
+                    <i data-lucide="menu" class="icon-menu"></i>
+                    <i data-lucide="x" class="icon-close"></i>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- ==================== АРХИВ ДОКУМЕНТОВ ==================== -->
+            <section class="meetings-section" style="padding-top: 20px;">
+                <div class="meetings-header">
+                    <h2>
+                        <i data-lucide="archive"></i>
+                        Архив документов
+                    </h2>
+                    <p class="meetings-lead">Все опубликованные документы, отчёты, уведомления и материалы собраний за
+                        все годы.</p>
+                    <div class="docs-search">
+                        <i data-lucide="search"></i>
+                        <input type="text" id="docSearch" placeholder="Поиск по документам..."
+                            aria-label="Поиск документов">
+                    </div>
+                </div>
+
+                <!-- ========== 2025 ========== -->
+                <div class="meeting-block" data-year="2025">
+                    <div class="meeting-title-row">
+                        <span class="meeting-badge badge-important">
+                            <i data-lucide="star"></i>
+                            2025
+                        </span>
+                        <h3>Общее отчетное собрание членов товарищества 2025</h3>
+                    </div>
+
+                    <div class="docs-grid">
+                        <div class="doc-group">
+                            <h4 class="doc-group-title">
+                                <i data-lucide="baby"></i>
+                                Субсидия на детские площадки
+                            </h4>
+                            <ul class="docs-list">
+                                <li><a href="doki/power2025/Заключение -экспертиза на сметный расчет.pdf"
+                                        class="doc-link" target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="file-check-2"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Заключение экспертизы</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2025/ЛС-1 Ремонт проезда 01.07.25.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="file-spreadsheet"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Смета ремонта</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2025/Информация- разъяснения по собранию.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="info"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Разъяснения по собранию</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                            </ul>
+                        </div>
+
+                        <div class="doc-group">
+                            <h4 class="doc-group-title">
+                                <i data-lucide="clipboard-list"></i>
+                                Годовое собрание 2025
+                            </h4>
+                            <ul class="docs-list">
+                                <li><a href="doki/power2025/УВЕДОМЛЕНИЕ О СОБРАНИИ Д 6.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="bell-ring"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Уведомление — дом 6</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2025/УВЕДОМЛЕНИЕ О СОБРАНИИ Д8.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="bell-ring"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Уведомление — дом 8</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2025/2_obyav_uvedom_chlenu_poln_20_02_25.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="users"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Уведомление члену ТСН</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="meeting-results">
+                        <h4 class="doc-group-title">
+                            <i data-lucide="file-text"></i>
+                            Отчёты и планы 2025
+                        </h4>
+                        <ul class="docs-list">
+                            <li><a href="doki/power2025/Godovoy_otchyot_pravlenia_2024g.pdf" class="doc-link"
+                                    target="_blank" rel="noopener">
+                                    <span class="doc-icon"><i data-lucide="users"></i></span>
+                                    <span class="doc-info">
+                                        <span class="doc-name">Годовой отчёт правления 2024г</span>
+                                        <span class="doc-meta">PDF</span>
+                                    </span>
+                                    <i data-lucide="external-link" class="doc-action"></i>
+                                </a></li>
+                            <li><a href="doki/power2025/Zaklyuchenie_revizora_2024g.pdf" class="doc-link"
+                                    target="_blank" rel="noopener">
+                                    <span class="doc-icon"><i data-lucide="shield-check"></i></span>
+                                    <span class="doc-info">
+                                        <span class="doc-name">Заключение ревизора 2024г</span>
+                                        <span class="doc-meta">PDF</span>
+                                    </span>
+                                    <i data-lucide="external-link" class="doc-action"></i>
+                                </a></li>
+                            <li><a href="doki/power2025/Otchyot_po_godovomu_planu_soderzh_i_rem_2024.pdf"
+                                    class="doc-link" target="_blank" rel="noopener">
+                                    <span class="doc-icon"><i data-lucide="home"></i></span>
+                                    <span class="doc-info">
+                                        <span class="doc-name">Отчёт по содержанию и ремонту 2024</span>
+                                        <span class="doc-meta">PDF</span>
+                                    </span>
+                                    <i data-lucide="external-link" class="doc-action"></i>
+                                </a></li>
+                            <li><a href="doki/power2025/Otchyot_po_smete_dokhodov_i_raskhodov_2024g.pdf"
+                                    class="doc-link" target="_blank" rel="noopener">
+                                    <span class="doc-icon"><i data-lucide="wallet"></i></span>
+                                    <span class="doc-info">
+                                        <span class="doc-name">Отчёт по смете 2024г</span>
+                                        <span class="doc-meta">PDF</span>
+                                    </span>
+                                    <i data-lucide="external-link" class="doc-action"></i>
+                                </a></li>
+                            <li><a href="doki/power2025/Otchyot_po_tekuschemu_remontu_2024g.pdf" class="doc-link"
+                                    target="_blank" rel="noopener">
+                                    <span class="doc-icon"><i data-lucide="wrench"></i></span>
+                                    <span class="doc-info">
+                                        <span class="doc-name">Отчёт по текущему ремонту 2024г</span>
+                                        <span class="doc-meta">PDF</span>
+                                    </span>
+                                    <i data-lucide="external-link" class="doc-action"></i>
+                                </a></li>
+                            <li><a href="doki/power2025/Otchyot_sredstv_kap_rem_2024g.pdf" class="doc-link"
+                                    target="_blank" rel="noopener">
+                                    <span class="doc-icon"><i data-lucide="hard-hat"></i></span>
+                                    <span class="doc-info">
+                                        <span class="doc-name">Отчёт средств кап.ремонта 2024г</span>
+                                        <span class="doc-meta">PDF</span>
+                                    </span>
+                                    <i data-lucide="external-link" class="doc-action"></i>
+                                </a></li>
+                            <li><a href="doki/power2025/Plan_tekuschego_remonta_2025g.pdf" class="doc-link"
+                                    target="_blank" rel="noopener">
+                                    <span class="doc-icon"><i data-lucide="calendar"></i></span>
+                                    <span class="doc-info">
+                                        <span class="doc-name">План текущего ремонта 2025г</span>
+                                        <span class="doc-meta">PDF</span>
+                                    </span>
+                                    <i data-lucide="external-link" class="doc-action"></i>
+                                </a></li>
+                            <li><a href="doki/power2025/Smeta_dokhodov_i_raskhodov_2025g.pdf" class="doc-link"
+                                    target="_blank" rel="noopener">
+                                    <span class="doc-icon"><i data-lucide="calculator"></i></span>
+                                    <span class="doc-info">
+                                        <span class="doc-name">Смета доходов и расходов 2025г</span>
+                                        <span class="doc-meta">PDF</span>
+                                    </span>
+                                    <i data-lucide="external-link" class="doc-action"></i>
+                                </a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ========== 2024 ========== -->
+                <div class="meeting-block" data-year="2024">
+                    <div class="meeting-title-row">
+                        <span class="meeting-badge badge-active">
+                            <i data-lucide="check-circle-2"></i>
+                            2024
+                        </span>
+                        <h3>Общее отчетное собрание членов товарищества 2024</h3>
+                    </div>
+
+                    <div class="docs-grid">
+                        <div class="doc-group">
+                            <h4 class="doc-group-title">
+                                <i data-lucide="bell-ring"></i>
+                                Уведомления
+                            </h4>
+                            <ul class="docs-list">
+                                <li><a href="doki/power2024/ОБЪЯВЛЕНИЕ УВЕДОМЛЕНИЕ.pdf" class="doc-link" target="_blank"
+                                        rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="file-text"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Уведомление о собрании 2024</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                            </ul>
+                        </div>
+                        <div class="doc-group">
+                            <h4 class="doc-group-title">
+                                <i data-lucide="file-text"></i>
+                                Отчёты 2023
+                            </h4>
+                            <ul class="docs-list">
+                                <li><a href="doki/power2024/отчет.pdf" class="doc-link" target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="wrench"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Отчёт по текущему ремонту 2023</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2024/Выполнение сметы 2023.pdf" class="doc-link" target="_blank"
+                                        rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="wallet"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Выполнение сметы 2023</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2024/ОТЧЁТ 2023г движ ден средств.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="move"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Движение денежных средств 2023</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2024/Отчет по счетам КапРем 2023.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="hard-hat"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Отчёт по кап.ремонту 2023</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                            </ul>
+                        </div>
+                        <div class="doc-group">
+                            <h4 class="doc-group-title">
+                                <i data-lucide="calendar"></i>
+                                Планы 2024
+                            </h4>
+                            <ul class="docs-list">
+                                <li><a href="doki/power2024/план ремонта.pdf" class="doc-link" target="_blank"
+                                        rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="wrench"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">План текущего ремонта 2024</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2024/Проект сметы 2024.pdf" class="doc-link" target="_blank"
+                                        rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="calculator"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Проект сметы 2024</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========== 2023 ========== -->
+                <div class="meeting-block" data-year="2023">
+                    <div class="meeting-title-row">
+                        <span class="meeting-badge badge-active">
+                            <i data-lucide="check-circle-2"></i>
+                            2023
+                        </span>
+                        <h3>Собрания 2023 года</h3>
+                    </div>
+
+                    <div class="docs-grid">
+                        <div class="doc-group">
+                            <h4 class="doc-group-title">
+                                <i data-lucide="users"></i>
+                                Отчетно-выборное собрание
+                            </h4>
+                            <ul class="docs-list">
+                                <li><a href="doki/power2023/объявление уведомление члену краткая форма.pdf"
+                                        class="doc-link" target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="bell-ring"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Уведомление о собрании 2023</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2023/Отчет о деятельности правления за 2022 г.pdf"
+                                        class="doc-link" target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="users"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Отчёт правления за 2022</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2023/Отчет по выполнению сметы за 2022 г.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="wallet"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Отчёт по смете за 2022</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2023/Отчет ревизора за 2022 г.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="shield-check"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Отчёт ревизора за 2022</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                            </ul>
+                        </div>
+                        <div class="doc-group">
+                            <h4 class="doc-group-title">
+                                <i data-lucide="video"></i>
+                                Внеочередное собрание (видеонаблюдение)
+                            </h4>
+                            <ul class="docs-list">
+                                <li><a href="doki/power2023-2/2 объявление уведомление полное 6 .pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="bell-ring"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Уведомление — дом 6</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2023-2/2 объявление уведомление полное 8 .pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="bell-ring"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Уведомление — дом 8</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2023-2/Тех задание сист видеонабл 30.05.23.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="file-code"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">ТЗ на видеонаблюдение</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2023-2/КП видеонабл проездов 30.05.23.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="file-spreadsheet"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">КП на видеонаблюдение</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========== 2022 ========== -->
+                <div class="meeting-block" data-year="2022">
+                    <div class="meeting-title-row">
+                        <span class="meeting-badge badge-active">
+                            <i data-lucide="check-circle-2"></i>
+                            2022
+                        </span>
+                        <h3>Собрания 2022 года</h3>
+                    </div>
+
+                    <div class="docs-grid">
+                        <div class="doc-group">
+                            <h4 class="doc-group-title">
+                                <i data-lucide="users"></i>
+                                Отчетное собрание
+                            </h4>
+                            <ul class="docs-list">
+                                <li><a href="doki/power2022/1 объявление уведомление члену полн.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="bell-ring"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Уведомление члену ТСН</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2022/Объявление о результатах собрания.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="pie-chart"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Результаты собрания</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                            </ul>
+                        </div>
+                        <div class="doc-group">
+                            <h4 class="doc-group-title">
+                                <i data-lucide="hard-hat"></i>
+                                Кап.ремонт кровли (д. 8)
+                            </h4>
+                            <ul class="docs-list">
+                                <li><a href="doki/power2022/2 объявление уведомление краткое .pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="bell-ring"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Уведомление о собрании</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2022/СМЕТА КР кровля Ц8 (на6 п-ов) 06.07.22.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="calculator"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Смета на кап.ремонт кровли</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========== 2021 ========== -->
+                <div class="meeting-block" data-year="2021">
+                    <div class="meeting-title-row">
+                        <span class="meeting-badge badge-active">
+                            <i data-lucide="check-circle-2"></i>
+                            2021
+                        </span>
+                        <h3>Отчетно-выборное собрание 2021</h3>
+                    </div>
+
+                    <div class="docs-grid">
+                        <div class="doc-group">
+                            <h4 class="doc-group-title">
+                                <i data-lucide="bell-ring"></i>
+                                Уведомления
+                            </h4>
+                            <ul class="docs-list">
+                                <li><a href="doki/power2021/1 объявление_ уведомление. ОСЧ.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="file-text"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Объявление-уведомление</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2021/1 объявление_ уведомление МКД 6. ОСС.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="file-text"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Уведомление — дом 6</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2021/1 объявление_ уведомление МКД 8. ОСС.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="file-text"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Уведомление — дом 8</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                            </ul>
+                        </div>
+                        <div class="doc-group">
+                            <h4 class="doc-group-title">
+                                <i data-lucide="file-text"></i>
+                                Отчёты и планы
+                            </h4>
+                            <ul class="docs-list">
+                                <li><a href="doki/power2021/Отчёт выполн плана тек рем2020.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="wrench"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Отчёт по текущему ремонту 2020</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2021/Отчёт выполн сметы 2020.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="wallet"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Отчёт по смете 2020</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2021/План тек рем 2021.pdf" class="doc-link" target="_blank"
+                                        rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="calendar"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">План текущего ремонта 2021</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2021/Проект сметы 2021.pdf" class="doc-link" target="_blank"
+                                        rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="calculator"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Проект сметы 2021</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========== 2020 ========== -->
+                <div class="meeting-block" data-year="2020">
+                    <div class="meeting-title-row">
+                        <span class="meeting-badge badge-active">
+                            <i data-lucide="check-circle-2"></i>
+                            2020
+                        </span>
+                        <h3>Отчетно-выборное собрание 2020</h3>
+                    </div>
+
+                    <div class="docs-grid">
+                        <div class="doc-group">
+                            <h4 class="doc-group-title">
+                                <i data-lucide="bell-ring"></i>
+                                Уведомления и результаты
+                            </h4>
+                            <ul class="docs-list">
+                                <li><a href="doki/power2020/11_obyavlenie_o_rezultatakh.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="pie-chart"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Результаты голосования</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2020/1_obyavlenie_uvedomlenie_chlenu_TSN.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="file-text"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Уведомление члену ТСН</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                            </ul>
+                        </div>
+                        <div class="doc-group">
+                            <h4 class="doc-group-title">
+                                <i data-lucide="file-text"></i>
+                                Отчёты и планы
+                            </h4>
+                            <ul class="docs-list">
+                                <li><a href="doki/power2020/Otchet_pravlenia_opisat_chast_za_2019_g.pdf"
+                                        class="doc-link" target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="users"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Отчёт правления 2019</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2020/Otchet_revizora_za_2019_g.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="shield-check"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Отчёт ревизора 2019</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2020/Proekt_smety_na_2020_g.pdf" class="doc-link" target="_blank"
+                                        rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="calculator"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Проект сметы 2020</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========== 2019 ========== -->
+                <div class="meeting-block" data-year="2019">
+                    <div class="meeting-title-row">
+                        <span class="meeting-badge badge-active">
+                            <i data-lucide="check-circle-2"></i>
+                            2019
+                        </span>
+                        <h3>Отчетно-выборное собрание 2019</h3>
+                    </div>
+
+                    <div class="docs-grid">
+                        <div class="doc-group">
+                            <h4 class="doc-group-title">
+                                <i data-lucide="bell-ring"></i>
+                                Уведомления
+                            </h4>
+                            <ul class="docs-list">
+                                <li><a href="doki/power2019/1_obyavlenie_uvedomlenie_chlenu_poln (2).pdf"
+                                        class="doc-link" target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="file-text"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Объявление-уведомление</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2019/11_obyavlenie_o_rezultatakh2019.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="pie-chart"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Результаты собрания</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                            </ul>
+                        </div>
+                        <div class="doc-group">
+                            <h4 class="doc-group-title">
+                                <i data-lucide="file-text"></i>
+                                Отчёты и планы
+                            </h4>
+                            <ul class="docs-list">
+                                <li><a href="doki/power2019/Otchet_pravlenia_opis_chast_za_18_god.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="users"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Отчёт правления 2018</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2019/PLAN_godovoy_soderzh_i_tek_rem__na_2019.pdf"
+                                        class="doc-link" target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="calendar"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">План на 2019 год</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2019/Proekt_smety_na_2019_god.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="calculator"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Проект сметы 2019</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ========== 2017 ========== -->
+                <div class="meeting-block" data-year="2017">
+                    <div class="meeting-title-row">
+                        <span class="meeting-badge badge-active">
+                            <i data-lucide="check-circle-2"></i>
+                            2017
+                        </span>
+                        <h3>Отчетно-выборное собрание 2017</h3>
+                    </div>
+
+                    <div class="docs-grid">
+                        <div class="doc-group">
+                            <h4 class="doc-group-title">
+                                <i data-lucide="bell-ring"></i>
+                                Уведомления и результаты
+                            </h4>
+                            <ul class="docs-list">
+                                <li><a href="doki/power2017/obyavlenie_o_rezultatakh_sobrania_chlenov_tszh_17_god.pdf"
+                                        class="doc-link" target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="pie-chart"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Результаты собрания</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                            </ul>
+                        </div>
+                        <div class="doc-group">
+                            <h4 class="doc-group-title">
+                                <i data-lucide="file-text"></i>
+                                Отчёты и планы
+                            </h4>
+                            <ul class="docs-list">
+                                <li><a href="doki/power2017/Otchet_pravlenia_za_16_god.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="users"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Отчёт правления 2016</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                                <li><a href="doki/power2017/Otchet_revizora_za_2016.pdf" class="doc-link"
+                                        target="_blank" rel="noopener">
+                                        <span class="doc-icon"><i data-lucide="shield-check"></i></span>
+                                        <span class="doc-info">
+                                            <span class="doc-name">Отчёт ревизора 2016</span>
+                                            <span class="doc-meta">PDF</span>
+                                        </span>
+                                        <i data-lucide="external-link" class="doc-action"></i>
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ==================== НАВИГАЦИЯ В АРХИВЕ ==================== -->
+                <div class="meetings-footer" style="margin-top: 40px;">
+                    <a href="index.html" class="btn-outline btn-archive">
+                        <i data-lucide="arrow-left"></i>
+                        Вернуться на главную
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- ==================== ПОДВАЛ ==================== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>
+                        <i data-lucide="phone-call"></i>
+                        Контакты ТСЖ
+                    </h4>
+                    <ul class="footer-contacts">
+                        <li>
+                            <span class="icon"><i data-lucide="phone"></i></span>
+                            <div>
+                                <strong>Диспетчерская служба:</strong><br>
+                                <a href="tel:+79817310077" class="phone-highlight">+7 (981) 731-00-77</a>
+                                <span class="work-time">Круглосуточно</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon"><i data-lucide="mail"></i></span>
+                            <div>
+                                <strong>Email для обращений:</strong><br>
+                                <a href="mailto:dinastia-limonova@mail.ru">dinastia-limonova@mail.ru</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>
+                        <i data-lucide="map-pin"></i>
+                        Адрес правления
+                    </h4>
+                    <p class="footer-address">
+                        <strong>Фактический и юр. адрес:</strong><br>
+                        188643, Ленинградская область, Всеволожский район, г. Всеволожск, ул. Центральная, д. 6, оф. 9Н
+                        (пом. 9Н)
+                    </p>
+                </div>
+
+                <div class="footer-col footer-requisites">
+                    <h4>
+                        <i data-lucide="building"></i>
+                        Реквизиты организации
+                    </h4>
+
+                    <div class="footer-address">
+                        <div><span>ИНН:</span> 4703106103</div>
+                        <div><span>КПП:</span> 470301001</div>
+                        <div><span>ОГРН:</span> 1084703004484</div>
+                        <div><span>ОКПО:</span> 85170117</div>
+                    </div>
+                    <div class="footer-address">
+                        <strong>Расчётный счёт:</strong> № 40703810355410000032<br>
+                        <strong>Банк:</strong> Всеволожское отделение № 5542 Северо-Западный Банк Сбербанка РФ г.
+                        Санкт-Петербург<br>
+                        <strong>БИК:</strong> 044030653<br>
+                        <strong>Корр. счёт:</strong> 30101810500000000653
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container bottom-flex">
+                <p>&copy; 2026 ТСЖ «Династия». Все права защищены.</p>
+                <p>Официальный сайт раскрытия информации</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипты -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        // ==========================================================================
+        // ПОИСК ПО ДОКУМЕНТАМ
+        // ==========================================================================
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('docSearch');
+            if (!searchInput) return;
+
+            const allDocLinks = document.querySelectorAll('.doc-link');
+            const allMeetingBlocks = document.querySelectorAll('.meeting-block');
+            const noResults = document.createElement('div');
+            noResults.className = 'no-results';
+            noResults.innerHTML = '<p><i data-lucide="search" style="width:32px;height:32px;color:var(--text-muted);margin-bottom:12px;"></i><br><strong>Ничего не найдено</strong><br>Попробуйте изменить запрос</p>';
+
+            const meetingsContainer = document.querySelector('.meetings-section');
+            meetingsContainer.appendChild(noResults);
+
+            // Инициализация Lucide для новых элементов
+            setTimeout(() => {
+                if (window.lucide && typeof lucide.createIcons === 'function') {
+                    lucide.createIcons();
+                }
+            }, 100);
+
+            searchInput.addEventListener('input', function () {
+                const query = this.value.toLowerCase().trim();
+                let totalVisible = 0;
+
+                // Сначала показываем все блоки
+                allMeetingBlocks.forEach(block => block.classList.remove('hidden'));
+
+                // Затем фильтруем ссылки
+                allDocLinks.forEach(link => {
+                    const text = link.textContent.toLowerCase();
+                    const meta = link.querySelector('.doc-meta')?.textContent?.toLowerCase() || '';
+                    const fullText = text + ' ' + meta;
+
+                    if (query === '' || fullText.includes(query)) {
+                        link.classList.remove('hidden');
+                        // Показываем родительские блоки
+                        let parent = link.closest('.meeting-block');
+                        if (parent) parent.classList.remove('hidden');
+                    } else {
+                        link.classList.add('hidden');
+                    }
+                });
+
+                // Скрываем блоки, у которых нет видимых ссылок
+                allMeetingBlocks.forEach(block => {
+                    const visibleLinks = block.querySelectorAll('.doc-link:not(.hidden)');
+                    const hasChildren = block.querySelectorAll('.doc-group').length > 0;
+
+                    if (visibleLinks.length === 0 && hasChildren) {
+                        block.classList.add('hidden');
+                    } else {
+                        block.classList.remove('hidden');
+                    }
+                });
+
+                // Проверяем, есть ли видимые блоки
+                const visibleBlocks = document.querySelectorAll('.meeting-block:not(.hidden)');
+                totalVisible = visibleBlocks.length;
+
+                if (totalVisible === 0 && query !== '') {
+                    noResults.classList.add('visible');
+                } else {
+                    noResults.classList.remove('visible');
+                }
+
+                // Обновляем иконки
+                if (window.lucide && typeof lucide.createIcons === 'function') {
+                    lucide.createIcons();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

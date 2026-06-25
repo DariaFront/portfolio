@@ -1,0 +1,588 @@
+/* ========== ПЕРЕМЕННЫЕ ========== */
+:root {
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.05);
+    --transition: all 0.3s ease;
+}
+
+/* ========== БАЗОВЫЕ СТИЛИ ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--gray-light);
+}
+
+/* ========== ОСНОВНОЙ КАРКАС ========== */
+.catalog {
+    max-width: 1280px;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 24px;
+    box-shadow: var(--shadow-lg);
+    padding: 28px 32px;
+}
+
+/* Заголовок */
+.catalog__header h1 {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.2;
+    color: var(--dark);
+    margin-bottom: 4px;
+}
+
+.catalog__subhead {
+    font-size: 14px;
+    color: #5e6f88;
+    margin-bottom: 28px;
+}
+
+/* ========== НАВИГАЦИОННЫЕ ВКЛАДКИ ========== */
+.tabs {
+    display: flex;
+    gap: 32px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+}
+
+.tab {
+    font-weight: 500;
+    font-size: 16px;
+    color: #6f7d98;
+    padding-bottom: 12px;
+    border-bottom: 2px solid transparent;
+    cursor: default;
+    transition: var(--transition);
+}
+
+.tab.active {
+    color: var(--dark);
+    border-bottom-color: var(--dark);
+    font-weight: 600;
+}
+
+/* ========== СТРОКА ПОИСКА ========== */
+.search-section {
+    margin-bottom: 28px;
+}
+
+.search-input-wrapper {
+    position: relative;
+    max-width: 500px;
+}
+
+.search-input-wrapper i {
+    position: absolute;
+    left: 16px;
+    top: 13px;
+    color: #9aa9bc;
+    font-size: 12px;
+}
+
+.search-input-wrapper input {
+    width: 100%;
+    padding: 14px 20px 14px 48px;
+    border-radius: 60px;
+    border: 1px solid #d0d9e8;
+    background-color: var(--white);
+    font-size: 14px;
+    color: #1f2a41;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.search-input-wrapper input::placeholder {
+    color: #8f9fb2;
+    font-weight: 400;
+}
+
+/* ========== ОСНОВНАЯ СЕТКА ========== */
+.catalog__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 8px;
+    flex-wrap: wrap;
+}
+
+/* ========== ФИЛЬТРЫ ========== */
+.filters {
+    display: none;
+    flex: 0 0 260px;
+}
+
+.filter-block {
+    margin-bottom: 24px;
+}
+
+.filter-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: #1f2a41;
+    margin-bottom: 16px;
+    letter-spacing: -0.2px;
+}
+
+.filter-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #2f3e5a;
+}
+
+.filter-item span:first-child {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-tag {
+    background-color: #eef2f6;
+    padding: 4px 10px;
+    border-radius: 30px;
+    font-size: 12px;
+    color: #1f2a41;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.filter-tag i {
+    font-size: 12px;
+    color: #7c8aa5;
+}
+
+.clear-all {
+    color: #b94a4a;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: default;
+    margin-left: 8px;
+}
+
+.filter-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+    font-size: 14px;
+}
+
+.filter-check i {
+    color: #acb8cc;
+    width: 18px;
+}
+
+.region-item,
+.format-item {
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dashed-line {
+    border-bottom: 1px dashed #cad1de;
+    margin: 20px 0 18px;
+}
+
+.buttons-line {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    margin-top: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-secondary {
+    background-color: white;
+    border-color: #cad1de;
+    color: #1f2a41;
+}
+
+/* ========== РЕЗУЛЬТАТЫ ========== */
+.results {
+    flex: 1;
+    min-width: 300px;
+}
+
+.results-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+}
+
+.found {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--dark);
+}
+
+.found small {
+    font-weight: 400;
+    font-size: 12px;
+    color: #5e6f88;
+    margin-left: 6px;
+}
+
+.results-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.clear-link {
+    color: #9aa9bc;
+    font-size: 14px;
+    border-bottom: 1px dashed #b8c4d6;
+    cursor: default;
+}
+
+.settings-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #2f3e5a;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* ========== КАРТОЧКА ПОСТАВЩИКА ========== */
+.supplier-card {
+    display: flex;
+    gap: 16px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.card-logo {
+    flex: 0 0 80px;
+}
+
+.card-logo img {
+    width: 80px;
+    object-fit: cover;
+    background-color: #f0f3f8;
+    border: 1px solid #edf2f9;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 200px;
+    width: calc(100% - 80px);
+}
+
+/* Заголовок карточки */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.card-header .company-name {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.company-name {
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--dark);
+    margin-bottom: 6px;
+}
+
+/* Бейдж с рейтингом */
+.rating-badge {
+    background: var(--lightBlue);
+    padding: 6px 12px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--dark);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+}
+
+.rating-star {
+    color: var(--blue-900);
+    margin-left: 2px;
+    font-size: 14px;
+}
+
+/* Бейдж проверенного поставщика */
+.verified-badge {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 8px;
+    color: var(--success);
+    font-size: 18px;
+}
+
+.verified-badge i {
+    color: var(--success);
+}
+
+.verified-badge .verified-text {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--success);
+    margin-left: 4px;
+}
+
+/* Категории */
+.company-badges {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.badge-cat {
+    background: var(--lightBlue);
+    color: var(--blue-900);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.badge-text {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--blue-hover);
+    font-size: 14px;
+}
+
+/* Мета информация */
+.meta-line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+    margin: 14px 0 10px;
+    font-size: 14px;
+    color: #4e627c;
+}
+
+.meta-line i {
+    margin-right: 6px;
+    color:var(--muted);
+    width: 16px;
+}
+
+/* Контакты */
+.contacts-row {
+    display: flex;
+    gap: 16px;
+    min-width: 240px;
+    width: 100%;
+    background: var(--lightBlue);
+    border-radius: var(8px);
+    padding: 16px;
+}
+
+.contact-item {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* Действия с карточкой */
+.card-actions {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    padding: 10px 24px;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 14px;
+    background: white;
+    border: 1px solid #cfdae8;
+    color: var(--blue-hover);
+    cursor: default;
+    transition: none;
+}
+
+.action-btn.dark {
+    background-color: var(--dark);
+    border-color: var(--dark);
+    color: white;
+}
+
+/* Блок с кнопками */
+.btn-sup {
+    display: flex;
+    font-size: 14px;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.btn-sup-block {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+/* Кнопки */
+.btn--chat {
+    width: 80px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius:6px;
+    color: var(--muted);
+    background: white;
+    cursor: pointer;
+}
+
+.btn--icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e2e8f0;
+    border-radius:6px;
+    color: var(--muted);
+    background: white;
+    cursor: pointer;
+}
+
+.btn--chat:hover,
+.btn--icon:hover,
+.btn--primary:hover,
+.request-card__btn--primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(11, 99, 168, 0.3);
+    color: var(--blue-hover);
+}
+
+.btn--primary:hover,
+.request-card__btn--primary:hover {
+    background: var(--blue-hover);
+    color: white;
+}
+
+/* Дропдаун меню */
+.dropdown-menu,
+.btn-card {
+    position: absolute;
+    top: 54px;
+    right: 0;
+    width: 214px;
+    display: none;
+    flex-direction: column;
+    font-size: 12px;
+    gap: 8px;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: var(8px);
+    background: white;
+    box-shadow: var(--shadow-md);
+    z-index: 1000;
+}
+
+.dropdown-menu a,
+.btn-card a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 8px;
+    color: var(--muted);
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.dropdown-menu a:hover,
+.btn-card a:hover {
+    background: var(--lightBlue);
+    color: var(--blue-900);
+}
+
+/* Ховер эффекты для карточек */
+
+
+/* Список поставщиков */
+.supplier-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* ========== ВСПОМОГАТЕЛЬНЫЕ ЭЛЕМЕНТЫ ========== */
+.text-mono {
+    font-size: 13px;
+    color: #5d718b;
+}
+
+.grey-dot {
+    width: 4px;
+    height: 4px;
+    background: #b9c4d6;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 6px;
+}
+
+.flex-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+i.fa-regular,
+i.fas,
+i.far {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.search {
+    width: 100%;
+}
+
+/* ========== МЕДИА ЗАПРОСЫ ========== */
+@media (max-width: 768px) {
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .rating-badge {
+        align-self: flex-start;
+    }
+}

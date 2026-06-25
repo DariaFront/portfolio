@@ -1,0 +1,636 @@
+       .registration-wrapper {
+           display: flex;
+           justify-content: center;
+           min-height: calc(100vh - 400px);
+       }
+
+       .registration-wrapper .container {
+           display: flex;
+           justify-content: center;
+           padding: 0 calc(var(--base-gap) * 5.25);
+           max-width: calc(var(--base-font-size) * 90);
+           width: 100%;
+           flex-direction: column;
+       }
+
+       .registration-wrapper .title__block {
+           margin-bottom: 2rem;
+       }
+
+       .registration-wrapper .title {
+           padding: 0;
+           margin: 0 0 32px 0;
+           font-size: calc(var(--base-font-size) * 3.5);
+           line-height: calc(var(--base-font-size) * 3.5);
+           color: var(--newGray);
+       }
+
+       .registration-form {
+           display: flex;
+           flex-direction: column;
+           align-self: center;
+           gap: 2rem;
+           width: 100%;
+           max-width: 800px;
+           margin-bottom: 2rem;
+       }
+
+       .role-selector,
+       .form-section,
+       .regStart-section {
+           background-color: var(--lightBlue);
+           border-radius: 1em;
+           padding: 2em;
+       }
+
+       .role-selector input[type="radio"] {
+           width: auto;
+           margin-bottom: 0;
+       }
+
+       .regStart-section {
+           display: flex;
+           flex-direction: column;
+           height: 100%;
+           margin-bottom: auto;
+           justify-content: space-between;
+           background: linear-gradient(135deg, var(--lightBlue) 20%, #d3ecff 105%);
+           box-shadow: 0 0 10px rgba(73, 73, 77, 0.2);
+           background-clip: padding-box;
+           position: relative;
+       }
+
+
+       .form-section h2 {
+           margin-top: 0;
+           margin-bottom: 1.5rem;
+           font-size: calc(var(--base-font-size) * 1.5);
+           color: var(--grafite);
+           font-weight: 700;
+       }
+
+       .form-grid {
+           display: grid;
+           grid-template-columns: repeat(2, 1fr);
+           gap: 1rem;
+       }
+
+       .form-grid .full-width {
+           grid-column: 1 / -1;
+       }
+
+       .form-field {
+           display: flex;
+           flex-direction: column;
+           gap: 0.25rem;
+           position: relative;
+       }
+
+       .form-field label {
+           font-size: calc(var(--base-font-size) * 0.9);
+           color: var(--grafite);
+           font-weight: 500;
+       }
+
+       .form-field label .required {
+           color: var(--error-color-4);
+           margin-left: 2px;
+       }
+
+       .form-field input,
+       .form-field select {
+           padding: 0.75em 1em;
+           font-family: inherit;
+           font-size: 90%;
+           line-height: 1.15;
+           width: 100%;
+           min-height: 40px;
+           border-radius: 8px;
+           border: 1px solid var(--item-border);
+           background-color: white;
+           outline: none;
+           transition: border-color 0.3s ease;
+       }
+
+       .form-field input:focus,
+       .form-field select:focus {
+           border-color: var(--base-color-1);
+       }
+
+       /* Стили для автокомплита */
+       .ui-autocomplete {
+           max-height: 200px;
+           overflow-y: auto;
+           overflow-x: hidden;
+           background-color: white;
+           border: 1px solid var(--item-border);
+           border-radius: 8px;
+           font-family: var(--base-font);
+           z-index: 1000;
+       }
+
+       .ui-menu-item {
+           padding: 8px 12px;
+           cursor: pointer;
+           border-bottom: 1px solid var(--item-border);
+       }
+
+       .ui-menu-item:last-child {
+           border-bottom: none;
+       }
+
+       .ui-menu-item:hover,
+       .ui-state-focus {
+           background-color: var(--lightBlue) !important;
+           border: none !important;
+           margin: 0 !important;
+       }
+
+       .company-suggestion {
+           display: flex;
+           flex-direction: column;
+       }
+
+       .company-suggestion .company-name {
+           font-weight: bold;
+           color: var(--grafite);
+       }
+
+       .company-suggestion .company-details {
+           font-size: 0.85rem;
+           color: var(--sub-text-color);
+       }
+
+       .employee-card {
+           background-color: white;
+           border-radius: 0.5rem;
+           padding: 1.5rem;
+           border: 1px solid var(--item-border);
+       }
+
+       .employee-card h3 {
+           margin-top: 0;
+           margin-bottom: 1rem;
+           font-size: calc(var(--base-font-size) * 1.1);
+           color: var(--grafite);
+       }
+
+       .form-actions,
+       .btn-actions {
+           display: flex;
+           gap: 1rem;
+           margin-top: 1rem;
+       }
+
+       .btn-actions {
+           flex-direction: column;
+       }
+
+       .reg-link {
+           display: flex;
+       }
+
+       .registration__text {
+           margin: 2em 0;
+       }
+
+       .submit-btn {
+           padding: 1rem 2rem;
+           font-size: calc(var(--base-font-size) * 1);
+           color: #fff;
+           border: 1px solid var(--base-color-6);
+           background: linear-gradient(to right, var(--base-color-1), var(--base-color-2));
+           border-radius: 0;
+           outline: none;
+           cursor: pointer;
+           transition: border-color 0.5s ease, background-color 0.5s ease;
+           min-width: 200px;
+       }
+
+       .submit-btn:hover {
+           color: #fff;
+           background: var(--base-color-2);
+           border-color: var(--base-color-2);
+       }
+
+
+       .select-multiple {
+           min-height: 100px;
+       }
+
+       .hint {
+           font-size: calc(var(--base-font-size) * 0.8);
+           color: var(--sub-text-color);
+           margin-top: 0.25rem;
+       }
+
+       .loading-indicator {
+           position: absolute;
+           right: 10px;
+           top: 35px;
+           color: var(--sub-text-color);
+           font-size: 0.85rem;
+       }
+
+       .reg_button {
+           display: flex;
+           justify-content: center;
+           padding: var(--base-font-size) calc(var(--base-font-size) * 1.5);
+           width: 100%;
+           font-size: calc(var(--base-font-size) * 1);
+           color: #fff;
+           border: 1px solid var(--base-color-6);
+           border-radius: 4px;
+           background: linear-gradient(to right, var(--base-color-1), var(--base-color-2));
+           outline: none;
+           transition: border-color 0.5s ease, background-color 0.5s ease;
+       }
+
+       .reset-btn {
+           display: flex;
+           justify-content: center;
+           padding: var(--base-font-size) calc(var(--base-font-size) * 1.5);
+           width: 100%;
+           color: var(--base-color-2d);
+           cursor: pointer;
+           border: 1px solid var(--base-color-2d);
+           font-size: calc(var(--base-font-size) * 1);
+           border-radius: 4px;
+           background: transparent;
+           outline: none;
+           transition: border-color 0.5s ease, color 0.5s ease, background-color 0.5s ease;
+       }
+
+
+       .form-field input,
+       .form-field select,
+       .form-field .select2-container .select2-selection {
+           padding: 0.5em 0.75em;
+           min-height: 36px;
+           font-size: 14px;
+       }
+
+       /* Стили для множественного выбора */
+       .select2-container {
+           width: 100% !important;
+       }
+
+       .select2-selection {
+           min-height: 36px !important;
+           border: 1px solid var(--item-border) !important;
+           border-radius: 6px !important;
+           padding: 2px !important;
+       }
+
+       .select2-selection__choice {
+           background-color: var(--lightBlue) !important;
+           border: 1px solid var(--base-color-1) !important;
+           border-radius: 4px !important;
+           padding: 2px 6px !important;
+           margin: 2px !important;
+           font-size: 13px !important;
+       }
+
+       .select2-selection__choice__remove {
+           color: var(--error-color-4) !important;
+           margin-right: 4px !important;
+           font-size: 14px !important;
+       }
+
+       .select2-selection--multiple .select2-selection__rendered {
+           display: flex !important;
+           flex-wrap: wrap !important;
+           gap: 3px !important;
+           margin: 0 0 12px 0;
+       }
+
+       /* Настройка выпадающих списков - всегда вниз */
+       .select2-dropdown {
+           border: 1px solid var(--item-border) !important;
+           border-radius: 6px !important;
+           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+           margin-top: 2px !important;
+       }
+
+       .select2-container--open .select2-dropdown--below {
+           border-top-left-radius: 6px !important;
+           border-top-right-radius: 6px !important;
+       }
+
+       /* Отключаем автоматическое позиционирование вверх */
+       .select2-container--open.select2-container--above .select2-dropdown {
+           border-bottom-left-radius: 6px !important;
+           border-bottom-right-radius: 6px !important;
+       }
+
+       /* Принудительное позиционирование вниз */
+       .select2-container--open .select2-dropdown {
+           top: 100% !important;
+           bottom: auto !important;
+       }
+
+       .select2-results__option {
+           padding: 6px 10px !important;
+           font-size: 14px !important;
+       }
+
+       .select2-results__option--selected {
+           background-color: var(--lightBlue) !important;
+       }
+
+       .select2-results__option--highlighted {
+           background: linear-gradient(to right, var(--base-color-1), var(--base-color-2)) !important;
+           color: white !important;
+       }
+
+       /* Стили для автокомплита */
+       .ui-autocomplete {
+           max-height: 250px;
+           overflow-y: auto;
+           overflow-x: hidden;
+           background-color: white;
+           border: 1px solid var(--item-border);
+           border-radius: 6px;
+           font-family: var(--base-font);
+           font-size: 14px;
+           z-index: 1000;
+       }
+
+       .ui-menu-item {
+           padding: 6px 10px;
+           cursor: pointer;
+           border-bottom: 1px solid var(--item-border);
+           font-size: 14px;
+       }
+
+       .ui-menu-item:last-child {
+           border-bottom: none;
+       }
+
+       .ui-menu-item:hover,
+       .ui-state-focus {
+           background-color: var(--lightBlue) !important;
+           border: none !important;
+           margin: 0 !important;
+       }
+
+       .company-suggestion {
+           display: flex;
+           flex-direction: column;
+       }
+
+       .company-suggestion .company-name {
+           font-weight: bold;
+           color: var(--grafite);
+           font-size: 14px;
+       }
+
+       .company-suggestion .company-details {
+           font-size: 12px;
+           color: var(--sub-text-color);
+       }
+
+       /* Уменьшаем отступы в карточке сотрудника */
+       .employee-card {
+           padding: 1rem;
+       }
+
+       .form-grid {
+           gap: 0.75rem;
+       }
+
+       .form-field label {
+           font-size: 13px;
+       }
+
+       .hint {
+           font-size: 11px;
+       }
+
+       /* Уменьшаем кнопки */
+       .reg_button,
+       .reset-btn {
+           padding: 0.6rem 1.5rem;
+           font-size: 14px;
+           min-width: 180px;
+       }
+
+       /* Поля с множественным выбором */
+       .multiselect-field {
+           grid-column: 1 / -1;
+       }
+
+       .select2-container--default .select2-search--inline .select2-search__field {
+           margin: 8px 0 0 0;
+       }
+
+               /* Стили для модального окна */
+        .modal-overlay {
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-window {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: modalFadeIn 0.3s ease;
+        }
+
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(to right, var(--base-color-1), var(--base-color-2));
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-icon svg {
+            width: 40px;
+            height: 40px;
+            fill: white;
+        }
+
+        .modal-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #686868;
+            margin-bottom: 1rem;
+        }
+
+        .modal-link{
+            font-size: 16x;
+            font-weight: 600;
+            color: var(--grafite);
+            margin-bottom: 1rem;
+        }
+
+        .modal-text {
+            font-size: 16px;
+            color: var(--newGray);
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .modal-text p {
+            margin: 0.5rem 0;
+        }
+
+        .modal-button {
+            padding: 0.75rem 2rem;
+            font-size: 16px;
+            color: #fff;
+            border: 1px solid var(--base-color-6);
+            background: linear-gradient(to right, var(--base-color-1), var(--base-color-2));
+            border-radius: 0;
+            outline: none;
+            cursor: pointer;
+            transition: border-color 0.5s ease, background-color 0.5s ease;
+            min-width: 200px;
+            margin-top: 1rem;
+        }
+
+        .modal-button:hover {
+            color: #fff;
+            background: var(--base-color-2);
+            border-color: var(--base-color-2);
+        }
+
+        /* Стили для переключателя ролей */
+
+        .role-selector label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+
+
+        .role-options {
+            display: flex;
+            gap: 2rem;
+            margin-top: 0.5rem;
+        }
+
+       /* Адаптация для мобильных устройств */
+       @media (max-width: 750px) {
+
+           .form-field input,
+           .form-field select,
+           .form-field .select2-container .select2-selection {
+               font-size: 13px;
+               min-height: 34px;
+           }
+
+           .reg_button,
+           .reset-btn {
+               width: 100%;
+               padding: 0.5rem 1rem;
+               font-size: 13px;
+           }
+       }
+
+       @media (max-width: 750px) {
+           .registration-wrapper .title {
+               font-size: 32px;
+               line-height: 1em;
+           }
+
+           .form-section h2 {
+               line-height: 1em;
+           }
+
+           .registration-wrapper .container {
+               padding: 0 calc(var(--base-gap) * 2);
+           }
+
+           .reg_button,
+           .reset-btn {
+               align-self: center;
+               padding: var(--base-font-size) calc(var(--base-font-size) * 1.5);
+               font-size: calc(var(--base-font-size) * 0.75);
+               width: 100%;
+           }
+
+
+           .form-grid {
+               grid-template-columns: 1fr;
+           }
+
+           .form-section {
+               padding: 1.5em;
+           }
+
+           .form-actions,
+           .btn-actions {
+               flex-direction: column;
+           }
+
+           .submit-btn,
+           .reset-btn {
+               width: 100%;
+           }
+
+            .modal-window {
+                padding: 1.5rem;
+            }
+
+            .modal-title {
+                font-size: 20px;
+            }
+
+            .modal-text {
+                font-size: 14px;
+            }
+
+            .modal-button {
+                width: 100%;
+                padding: 0.6rem 1rem;
+                font-size: 14px;
+            }
+       }
+
+       @media (any-hover: hover) {
+
+           .regisration_page:hover,
+           .reg_button:hover {
+               color: #fff;
+               background: var(--base-color-2);
+               border-color: var(--base-color-2);
+           }
+
+           .reset-btn:hover {
+               color: #fff;
+               background: var(--base-color-2);
+               border-color: var(--base-color-2);
+           }
+       }

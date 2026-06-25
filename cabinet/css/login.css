@@ -1,0 +1,188 @@
+.login_page {
+    padding: 0 0 calc(var(--base-gap) * 1.5) 0;
+}
+
+.login_page .title {
+    padding: 0;
+    margin: 0 0 32px 0;
+    font-size: calc(var(--base-font-size) * 3.5);
+    line-height: calc(var(--base-font-size) * 3.5);
+    color: var(--newGray);
+}
+
+.login-wrapper .container {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    padding: 0 calc(var(--base-gap) * 5.25);
+    max-width: calc(var(--base-font-size) * 90);
+    width: 100%;
+    flex-direction: column;
+}
+
+.login_page .login_button {
+    padding: var(--base-font-size) calc(var(--base-font-size) * 1.5);
+    width: calc(var(--base-font-size) * 22.0);
+    font-size: calc(var(--base-font-size) * 1);
+    color: #fff;
+    border: 1px solid var(--base-color-6);
+    background: linear-gradient(to right, var(--base-color-1), var(--base-color-2));
+    border-radius: 0;
+    outline: none;
+    transition: border-color 0.5s ease, background-color 0.5s ease;
+}
+
+.login_page .section_title {
+    display: block;
+    margin: 0;
+    font-size: calc(var(--base-font-size) * 2);
+    line-height: calc(var(--base-font-line-height) * 2);
+    font-weight: 700;
+    color: var(--grafite);
+}
+
+.login_page .login_form {
+
+    display: flex;
+    justify-content: space-between;
+    justify-self: center;
+    padding: calc(var(--base-gap) * 2);
+    gap: 2em;
+    align-self: start;
+    max-width: 600px;
+    width: 100%;
+    color: var(--newGray);
+}
+
+.login_by_way {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    background-color: var(--lightBlue);
+    border-radius: 1em;
+}
+
+.login_page .login_form .data_field {
+    width: 100%;
+}
+
+.login_page .login_form .data_field .input_field .login_way {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 2em;
+    margin-bottom: 1em;
+}
+
+
+
+.login_page .login_form .data_field .input_field .chose_way.checked {
+    padding: 8px 16px;
+    border: 1px solid var(--newGray);
+    border-radius: 8px;
+    border-bottom: 0px;
+}
+
+.login_page .login_form .data_field .input_field .chose_way:not(checked) {
+    border-bottom: 1px dashed var(--newGray);
+    cursor: pointer;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    padding: 1em;
+    font-family: inherit;
+    font-size: 90%;
+    line-height: 1.15;
+    margin: 0;
+    width: 100%;
+    min-height: 32px;
+    border-radius: 8px;
+    border: 0px solid #fff;
+    margin-bottom: 1em;
+    outline: none;
+
+}
+
+.login_page .restore {
+    display: flex;
+    justify-content: center;
+}
+
+.login_page .action {
+    display: flex;
+    justify-content: center;
+}
+
+.login_page .restore_pass {
+    font-size: var(--base-font-size);
+    color: var(--grafite);
+
+}
+
+.login_page .confedential {
+    color: var(--item-border);
+    text-decoration: underline;
+    margin-bottom: 32px;
+}
+
+
+
+
+@media (max-width: 1020px) {
+    .login_page .container {
+        padding: 0 calc(var(--base-gap) * 3.5);
+    }
+}
+
+@media (max-width: 750px) {
+
+    .login-wrapper .container {
+        padding: 0 calc(var(--base-gap) * 2);
+    }
+
+    .login_page .login_button {
+        align-self: center;
+        padding: var(--base-font-size) calc(var(--base-font-size) * 1.5);
+        max-width: calc(var(--base-font-size) * 20);
+        font-size: calc(var(--base-font-size) * 0.75);
+        width: 100%;
+    }
+
+    .login_page .login_form {
+        padding: calc(var(--base-gap) * 2) 0;
+    }
+
+    .login_page .login_form .data_field .input_field .login_way {
+        flex-direction: column;
+        row-gap: 1em;
+    }
+
+    .login_page .login_form .data_field .input_field .chose_way:not(checked) {
+        border-bottom: none;
+    }
+}
+
+@media (any-hover: hover) {
+
+    .login_page .login_button:hover {
+        color: #fff;
+        background: var(--base-color-2);
+        border-color: var(--base-color-2);
+    }
+
+
+    .login_page .confedential a:hover,
+    .login_page .restore_pass:hover {
+        color: var(--base-color-2);
+    }
+
+    .login_page .login_form .data_field .input_field .chose_way:not(checked):hover {
+        color: var(--base-color-2);
+        border-bottom: 1px dashed var(--base-color-2);
+    }
+
+}

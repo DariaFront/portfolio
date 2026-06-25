@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТСЖ «Династия» — Документы и подрядчики</title>
+    <meta name="description" content="Правоустанавливающие документы ТСЖ Династия, подрядчики, правила проживания.">
+
+    <!-- Normalize.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Собственные стили -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Критический CSS для предотвращения скрытия контента -->
+    <style>
+        /* Fallback стили на случай, если JS не загрузится */
+        [data-aos] {
+            opacity: 1 !important;
+            transform: none !important;
+            transition: none !important;
+        }
+
+        /* Показываем контент сразу */
+        .main-nav,
+        .hero,
+        .info-grid,
+        .meetings-section,
+        .counters-section,
+        .board-section {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+
+        /* Скрываем бургер-меню по умолчанию на десктопе */
+        @media (min-width: 969px) {
+            .burger-btn {
+                display: none !important;
+            }
+        }
+
+        /* Дополнительные стили для страницы документов */
+        .doc-page-section {
+            padding: 40px 0 60px;
+        }
+
+        .doc-page-section h2 {
+            margin-top: 40px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .doc-page-section h2:first-of-type {
+            margin-top: 0;
+        }
+
+        .doc-page-section h3 {
+            margin-top: 28px;
+            font-size: 1.2rem;
+            color: var(--accent-color);
+        }
+
+        .doc-page-section .doc-link {
+            margin-bottom: 4px;
+        }
+
+        .doc-page-section .docs-list-simple {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 16px 0;
+        }
+
+        .doc-page-section .docs-list-simple li {
+            margin-bottom: 6px;
+        }
+
+        .doc-page-section .docs-list-simple a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-main);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .doc-page-section .docs-list-simple a:hover {
+            color: var(--accent-hover);
+            padding-left: 6px;
+        }
+
+        .doc-page-section .docs-list-simple a svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        .doc-page-section .sub-section {
+            background-color: var(--bg-light);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .doc-page-section .sub-section h3 {
+            margin-top: 0;
+        }
+
+        .doc-columns {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        @media (min-width: 768px) {
+            .doc-columns {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .doc-columns {
+                grid-template-columns: 1fr 1.2fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ==================== ШАПКА ==================== -->
+    <header class="main-header">
+        <div class="container header-flex">
+            <a href="index.html" class="logo-block">
+                <div class="logo-icon">
+                    <i data-lucide="building-2"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title">ТСЖ «Династия»</span>
+                    <span class="logo-address">ул. Центральная, 6,8</span>
+                </div>
+            </a>
+            <div class="nav-block">
+                <nav class="main-nav" id="mainNav">
+                    <ul class="nav-list">
+                        <li><a href="index.html"><i data-lucide="home"></i>Главная</a></li>
+                        <li><a href="news.html"><i data-lucide="newspaper"></i>Новости</a></li>
+                        <li><a href="index.html#meetings"><i data-lucide="clipboard-list"></i>Собрания</a></li>
+                        <li><a href="#" class="active"><i data-lucide="folder-open"></i>Документы</a></li>
+                    </ul>
+                </nav>
+
+                <button class="eye-toggle" id="eyeToggle" aria-label="Версия для слабовидящих">
+                    <i data-lucide="eye"></i>
+                </button>
+
+                <button class="burger-btn" id="burgerBtn" aria-label="Открыть меню">
+                    <i data-lucide="menu" class="icon-menu"></i>
+                    <i data-lucide="x" class="icon-close"></i>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="doc-page-section">
+                <!-- ==================== ЗАГОЛОВОК ==================== -->
+                <div class="meetings-header" style="margin-bottom: 40px;">
+                    <h2>
+                        <i data-lucide="file-text"></i>
+                        Документы и информация
+                    </h2>
+                    <p class="meetings-lead">Правоустанавливающие документы, правила, подрядные организации и
+                        нормативные
+                        акты.</p>
+                    <div class="docs-search" style="max-width: 480px;">
+                        <i data-lucide="search"></i>
+                        <input type="text" id="docSearch" placeholder="Поиск по документам..."
+                            aria-label="Поиск документов">
+                    </div>
+                </div>
+
+                <div class="doc-columns" id="docContent">
+                    <!-- ==================== ЛЕВАЯ КОЛОНКА ==================== -->
+                    <div class="doc-left">
+
+                        <!-- Правила -->
+                        <div class="sub-section">
+                            <h3><i data-lucide="book-open"
+                                    style="width:20px;height:20px;display:inline-block;vertical-align:middle;margin-right:8px;"></i>Правила
+                            </h3>
+                            <ul class="docs-list-simple">
+                                <li><a href="doki/power2016/Pravila_prozhivania_v_TSZh_Dinastia.pdf" target="_blank"
+                                        rel="noopener"><i data-lucide="file-text"></i>Правила проживания в
+                                        многоквартирных
+                                        домах ТСН (Ж) «Династия»</a></li>
+                                <li><a href="doki/power2016/Pravila_pozharnoy_bezopasnosti_zhilogo_mnogokvartirnogo_doma.pdf"
+                                        target="_blank" rel="noopener"><i data-lucide="file-text"></i>Правила пожарной
+                                        безопасности жилого многоквартирного дома</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Подрядчики -->
+                        <div class="sub-section">
+                            <h3><i data-lucide="briefcase"
+                                    style="width:20px;height:20px;display:inline-block;vertical-align:middle;margin-right:8px;"></i>Подрядные
+                                организации</h3>
+                            <ul class="docs-list-simple">
+                                <li><a href="../doki/pdr/Атлант.pdf" target="_blank" rel="noopener"><i
+                                            data-lucide="file-text"></i>ООО "Атлант" (обслуживание коммерческих
+                                        помещений)</a></li>
+                                <li><a href="../doki/pdr/леноблгаз.pdf" target="_blank" rel="noopener"><i
+                                            data-lucide="file-text"></i>ОАО "Леноблгаз"</a></li>
+                                <li><a href="../doki/pdr/Линдстрем.pdf" target="_blank" rel="noopener"><i
+                                            data-lucide="file-text"></i>ЗАО "Линдстрем" (коврики у лифтов)</a></li>
+                                <li><a href="../doki/pdr/Миродом.pdf" target="_blank" rel="noopener"><i
+                                            data-lucide="file-text"></i>ООО "Миродом" (домофон)</a></li>
+                                <li><a href="../doki/pdr/МУП_КПСС.pdf" target="_blank" rel="noopener"><i
+                                            data-lucide="file-text"></i>МУП КПСС (начисление квитанций)</a></li>
+                                <li><a href="../doki/pdr/ООО_Всевклининг.pdf" target="_blank" rel="noopener"><i
+                                            data-lucide="file-text"></i>ООО "Всевклининг" (уборка до 30.09)</a></li>
+                                <li><a href="../doki/pdr/ООО_Жилсервис.pdf" target="_blank" rel="noopener"><i
+                                            data-lucide="file-text"></i>ООО "Жилсервис" (инженерное обслуживание)</a>
+                                </li>
+                                <li><a href="../doki/pdr/Трилайн.pdf" target="_blank" rel="noopener"><i
+                                            data-lucide="file-text"></i>ООО "Трилайн" (вывоз ТБО)</a></li>
+                                <li><a href="../doki/pdr/Унифрог.pdf" target="_blank" rel="noopener"><i
+                                            data-lucide="file-text"></i>ООО "Унифрог" (уборка крыш от снега
+                                        2012-2013)</a>
+                                </li>
+                                <li><a href="../doki/pdr/Волна.pdf" target="_blank" rel="noopener"><i
+                                            data-lucide="file-text"></i>ООО "Волна" (обслуживание лифтов)</a></li>
+                                <li><a href="../doki/pdr/связьмонтаж.pdf" target="_blank" rel="noopener"><i
+                                            data-lucide="file-text"></i>ООО "Связьмонтаж" (телевидение)</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Дополнительные документы подрядчиков -->
+                        <div class="sub-section">
+                            <h3><i data-lucide="file-spreadsheet"
+                                    style="width:20px;height:20px;display:inline-block;vertical-align:middle;margin-right:8px;"></i>Документы
+                                подрядчиков</h3>
+                            <ul class="docs-list-simple">
+                                <li><a href="../doki/pdr/Волна диспетчиризация.pdf" target="_blank" rel="noopener"><i
+                                            data-lucide="file-text"></i>Волна диспетчиризация</a></li>
+                                <li><a href="../doki/pdr/ДС на окраску газонного забора Всевклининг.pdf" target="_blank"
+                                        rel="noopener"><i data-lucide="file-text"></i>Окраска газонного забора</a></li>
+                                <li><a href="../doki/pdr/Жилсервис замена стояка ГВС.pdf" target="_blank"
+                                        rel="noopener"><i data-lucide="file-text"></i>Жилсервис — замена стояка ГВС</a>
+                                </li>
+                                <li><a href="../doki/pdr/Жилсервис ремонт ИТП.pdf" target="_blank" rel="noopener"><i
+                                            data-lucide="file-text"></i>Жилсервис — ремонт ИТП</a></li>
+                                <li><a href="../doki/pdr/комстар-регионы.pdf" target="_blank" rel="noopener"><i
+                                            data-lucide="file-text"></i>Комстар-регионы</a></li>
+                                <li><a href="../doki/pdr/ООО Делу времяpdf.pdf" target="_blank" rel="noopener"><i
+                                            data-lucide="file-text"></i>ООО "Делу время"</a></li>
+                                <li><a href="../doki/pdr/СЗКИ реконструкция сисметы ГВС 8 д..pdf" target="_blank"
+                                        rel="noopener"><i data-lucide="file-text"></i>СЗКИ — реконструкция системы ГВС
+                                        (д.
+                                        8)</a></li>
+                                <li><a href="../doki/pdr/СЗКИ Узлы учета.pdf" target="_blank" rel="noopener"><i
+                                            data-lucide="file-text"></i>СЗКИ — узлы учета</a></li>
+                                <li><a href="../doki/pdr/Тепловые сети вода.pdf" target="_blank" rel="noopener"><i
+                                            data-lucide="file-text"></i>Тепловые сети</a></li>
+                                <li><a href="../doki/pdr/Унифрог ремонт дефлектора.pdf" target="_blank"
+                                        rel="noopener"><i data-lucide="file-text"></i>Унифрог — ремонт дефлектора</a>
+                                </li>
+                                <li><a href="../doki/pdr/Унифрог чистка водостака.pdf" target="_blank" rel="noopener"><i
+                                            data-lucide="file-text"></i>Унифрог — чистка водосточных труб</a></li>
+                                <li><a href="../doki/pdr/Центр гигиены и эпидемиологии.pdf" target="_blank"
+                                        rel="noopener"><i data-lucide="file-text"></i>Центр гигиены и эпидемиологии</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <!-- ==================== ПРАВАЯ КОЛОНКА ==================== -->
+                    <div class="doc-right">
+
+                        <!-- Правоустанавливающие документы -->
+                        <div class="sub-section">
+                            <h3><i data-lucide="scale"
+                                    style="width:20px;height:20px;display:inline-block;vertical-align:middle;margin-right:8px;"></i>Правоустанавливающие
+                                документы</h3>
+                            <ul class="docs-list-simple">
+                                <li><a href="doki/scan/1230002.pdf" target="_blank" rel="noopener"><i
+                                            data-lucide="file-check-2"></i>Свидетельство о постановке на учет в
+                                        налоговой</a></li>
+                                <li><a href="doki/scan/1230004.pdf" target="_blank" rel="noopener"><i
+                                            data-lucide="file-check-2"></i>Свидетельство о государственной регистрации
+                                        юридического лица</a></li>
+                                <li><a href="doki/scan/1230003.pdf" target="_blank" rel="noopener"><i
+                                            data-lucide="file-check-2"></i>Свидетельство о внесении в ЕГРЮЛ №312-ФЗ</a>
+                                </li>
+                                <li><a href="doki/scan/1230001.pdf" target="_blank" rel="noopener"><i
+                                            data-lucide="file-check-2"></i>Свидетельство о внесении в ЕГРЮЛ</a></li>
+                                <li><a href="doki/scan/свидетельства.PDF" target="_blank" rel="noopener"><i
+                                            data-lucide="file-check-2"></i>Свидетельство</a></li>
+                                <li><a href="doki/scan/ustavnye_dinastia.pdf" target="_blank" rel="noopener"><i
+                                            data-lucide="file-check-2"></i>Уставные документы и устав</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Постановления Правительства РФ -->
+                        <div class="sub-section">
+                            <h3><i data-lucide="book"
+                                    style="width:20px;height:20px;display:inline-block;vertical-align:middle;margin-right:8px;"></i>Постановления
+                                Правительства РФ</h3>
+                            <ul class="docs-list-simple">
+                                <li><a href="doki/osnov/Postanovlenie_Pravitelstva_RF_ot_13_08_2006_N_491.pdf"
+                                        target="_blank" rel="noopener"><i data-lucide="scale"></i>Постановление №491 от
+                                        13.08.2006<br><span style="font-size:0.8rem;color:var(--text-muted);">Об
+                                            утверждении
+                                            Правил содержания общего имущества</span></a></li>
+                                <li><a href="doki/osnov/Postanovlenie_Pravitelstva_RF_ot_06_05_2011_N_354.pdf"
+                                        target="_blank" rel="noopener"><i data-lucide="scale"></i>Постановление №354 от
+                                        06.05.2011<br><span style="font-size:0.8rem;color:var(--text-muted);">О
+                                            предоставлении коммунальных услуг</span></a></li>
+                                <li><a href="doki/osnov/Postanovlenie_Pravitelstva_RF_ot_03_04_2013_N_290.pdf"
+                                        target="_blank" rel="noopener"><i data-lucide="scale"></i>Постановление №290 от
+                                        03.04.2013<br><span style="font-size:0.8rem;color:var(--text-muted);">О
+                                            минимальном
+                                            перечне услуг и работ</span></a></li>
+                                <li><a href="doki/osnov/Postanovlenie_Gosstroya_RF_ot_27_09_2003_N_170_Ob_utverzhdenii.pdf"
+                                        target="_blank" rel="noopener"><i data-lucide="scale"></i>Постановление №170 от
+                                        27.09.2003<br><span style="font-size:0.8rem;color:var(--text-muted);">Об
+                                            утверждении
+                                            Правил и норм технической эксплуатации жилищного фонда</span></a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ==================== НАВИГАЦИЯ ==================== -->
+                <div class="meetings-footer">
+                    <a href="index.html" class="btn-outline btn-archive">
+                        <i data-lucide="arrow-left"></i>
+                        Вернуться на главную
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ==================== ПОДВАЛ ==================== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>
+                        <i data-lucide="phone-call"></i>
+                        Контакты ТСЖ
+                    </h4>
+                    <ul class="footer-contacts">
+                        <li>
+                            <span class="icon"><i data-lucide="phone"></i></span>
+                            <div>
+                                <strong>Диспетчерская служба:</strong><br>
+                                <a href="tel:+79817310077" class="phone-highlight">+7 (981) 731-00-77</a>
+                                <span class="work-time">Круглосуточно</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="icon"><i data-lucide="mail"></i></span>
+                            <div>
+                                <strong>Email для обращений:</strong><br>
+                                <a href="mailto:dinastia-limonova@mail.ru">dinastia-limonova@mail.ru</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>
+                        <i data-lucide="map-pin"></i>
+                        Адрес правления
+                    </h4>
+                    <p class="footer-address">
+                        <strong>Фактический и юр. адрес:</strong><br>
+                        188643, Ленинградская область, Всеволожский район, г. Всеволожск, ул. Центральная, д. 6, оф. 9Н
+                        (пом. 9Н)
+                    </p>
+                </div>
+
+                <div class="footer-col footer-requisites">
+                    <h4>
+                        <i data-lucide="building"></i>
+                        Реквизиты организации
+                    </h4>
+
+                    <div class="footer-address">
+                        <div><span>ИНН:</span> 4703106103</div>
+                        <div><span>КПП:</span> 470301001</div>
+                        <div><span>ОГРН:</span> 1084703004484</div>
+                        <div><span>ОКПО:</span> 85170117</div>
+                    </div>
+                    <div class="footer-address">
+                        <strong>Расчётный счёт:</strong> № 40703810355410000032<br>
+                        <strong>Банк:</strong> Всеволожское отделение № 5542 Северо-Западный Банк Сбербанка РФ г.
+                        Санкт-Петербург<br>
+                        <strong>БИК:</strong> 044030653<br>
+                        <strong>Корр. счёт:</strong> 30101810500000000653
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container bottom-flex">
+                <p>&copy; 2026 ТСЖ «Династия». Все права защищены.</p>
+                <p>Официальный сайт раскрытия информации</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Скрипты -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        // ==========================================================================
+        // ПОИСК ПО ДОКУМЕНТАМ
+        // ==========================================================================
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('docSearch');
+            if (!searchInput) return;
+
+            const allLinks = document.querySelectorAll('.doc-page-section .docs-list-simple a');
+            const noResults = document.createElement('div');
+            noResults.className = 'no-results';
+            noResults.style.display = 'none';
+            noResults.innerHTML = '<p style="text-align:center;padding:30px 0;color:var(--text-muted);"><i data-lucide="search" style="width:32px;height:32px;display:block;margin:0 auto 12px;"></i><strong>Ничего не найдено</strong><br>Попробуйте изменить запрос</p>';
+
+            const docContent = document.getElementById('docContent');
+            docContent.parentNode.insertBefore(noResults, docContent.nextSibling);
+
+            // Инициализация Lucide
+            setTimeout(() => {
+                if (window.lucide && typeof lucide.createIcons === 'function') {
+                    lucide.createIcons();
+                }
+            }, 100);
+
+            searchInput.addEventListener('input', function () {
+                const query = this.value.toLowerCase().trim();
+                let visibleCount = 0;
+
+                allLinks.forEach(link => {
+                    const text = link.textContent.toLowerCase();
+                    const parent = link.closest('.sub-section');
+
+                    if (query === '' || text.includes(query)) {
+                        link.style.display = '';
+                        visibleCount++;
+                        if (parent) parent.style.display = '';
+                    } else {
+                        link.style.display = 'none';
+                    }
+                });
+
+                // Скрываем пустые подразделы
+                document.querySelectorAll('.sub-section').forEach(section => {
+                    const visibleLinks = section.querySelectorAll('li a[style*="display: none"]');
+                    const allItems = section.querySelectorAll('li a');
+                    if (allItems.length > 0 && allItems.length === visibleLinks.length && query !== '') {
+                        section.style.display = 'none';
+                    } else {
+                        section.style.display = '';
+                    }
+                });
+
+                // Показываем/скрываем сообщение "Ничего не найдено"
+                if (visibleCount === 0 && query !== '') {
+                    noResults.style.display = 'block';
+                } else {
+                    noResults.style.display = 'none';
+                }
+
+                // Обновляем иконки
+                if (window.lucide && typeof lucide.createIcons === 'function') {
+                    lucide.createIcons();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

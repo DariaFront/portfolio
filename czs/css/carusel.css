@@ -1,0 +1,250 @@
+/* ============ PHOTO CAROUSEL ============ */
+.photo-carousel-section {
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.photo-carousel {
+    --photos-per-view: 3;
+    --carousel-gap: 20px;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.carousel-track-container {
+    flex: 1;
+    overflow: hidden;
+    border-radius: var(--radius-sm, 8px);
+    min-width: 0; /* критично для flexbox */
+}
+
+.carousel-track {
+    display: flex;
+    gap: var(--carousel-gap);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.carousel-slide {
+    /* Ширина считается через CSS-переменные — всегда синхронно с JS */
+    flex: 0 0 calc((100% - var(--carousel-gap) * (var(--photos-per-view) - 1)) / var(--photos-per-view));
+    border-radius: var(--radius-md, 12px);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm, 0 2px 8px rgba(0, 0, 0, 0.08));
+    aspect-ratio: 16 / 10;
+    cursor: pointer;
+    background: #eef1f6;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.carousel-slide:hover img,
+.carousel-slide:focus-visible img {
+    transform: scale(1.05);
+}
+
+.carousel-slide:focus-visible {
+    outline: 3px solid var(--primary-blue, #1e5bd1);
+    outline-offset: 2px;
+}
+
+/* Кнопки */
+.carousel-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--white, #fff);
+    border: 2px solid var(--secondary-blue-border, #d0d7e2);
+    color: var(--primary-blue, #1e5bd1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.carousel-btn:hover:not(:disabled) {
+    background: var(--primary-blue, #1e5bd1);
+    color: var(--white, #fff);
+    border-color: var(--primary-blue, #1e5bd1);
+    transform: scale(1.08);
+}
+
+.carousel-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+/* Точки */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--secondary-blue-border, #d0d7e2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    padding: 0;
+}
+
+.carousel-dot.active {
+    background: var(--primary-blue, #1e5bd1);
+    width: 28px;
+    border-radius: 4px;
+}
+
+.carousel-dot:hover {
+    background: var(--primary-blue-hover, #1748a8);
+}
+
+/* ============ BREAKPOINTS ============ */
+/* Планшет */
+@media (max-width: 1024px) {
+    .photo-carousel {
+        --photos-per-view: 2;
+        --carousel-gap: 16px;
+    }
+}
+
+/* Мобильный */
+@media (max-width: 640px) {
+    .photo-carousel {
+        --photos-per-view: 1;
+        --carousel-gap: 12px;
+        gap: 8px;
+    }
+    .carousel-slide {
+        aspect-ratio: 16 / 9;
+    }
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+    }
+    .carousel-btn svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* ============ LIGHTBOX ============ */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.lightbox-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(4px);
+}
+
+.lightbox-content {
+    position: relative;
+    z-index: 2;
+    max-width: 90vw;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-caption {
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+}
+
+.lightbox-counter {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+.lightbox-close,
+.lightbox-nav {
+    position: absolute;
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox-close:hover,
+.lightbox-nav:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.1);
+}
+
+.lightbox-close {
+    top: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+}
+
+.lightbox-nav {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 56px;
+}
+
+.lightbox-nav:hover {
+    transform: translateY(-50%) scale(1.1);
+}
+
+.lightbox-prev { left: 20px; }
+.lightbox-next { right: 20px; }
+
+@media (max-width: 640px) {
+    .lightbox-close { width: 40px; height: 40px; top: 12px; right: 12px; }
+    .lightbox-nav { width: 44px; height: 44px; }
+    .lightbox-prev { left: 8px; }
+    .lightbox-next { right: 8px; }
+}

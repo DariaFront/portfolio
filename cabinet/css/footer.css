@@ -1,0 +1,143 @@
+.footer {
+    width: 100%;
+    padding: var(--base-gap) 0;
+    background-color: var(--newGray);
+}
+
+.footer__wrapper {
+    display: grid;
+    width: 100%;
+    justify-content: space-between;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 64px 48px;
+    column-gap: calc(var(--base-gap) * 2);
+    color: #fff;
+}
+
+.footer .container {
+    display: flex;
+    justify-self: center;
+    padding: 0 calc(var(--base-gap) * 5.25);
+    max-width: calc(var(--base-font-size) * 90);
+    width: 100%;
+}
+
+.footer__block-name {
+    grid-column: 1/2;
+    text-transform: uppercase;
+}
+
+.footer__block-text {
+    grid-column: 1/2;
+}
+
+.footer__block-contact {
+    grid-column: 2/3;
+    grid-row: 1;
+}
+
+.footer__block-contact p {
+    padding: 0;
+    margin: 0 0 8px 0;
+}
+
+.footer__block-icon {
+    display: flex;
+    grid-column: 2/3;
+    align-items: center;
+}
+
+.footer__icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+}
+
+.footer__link{
+    outline: none;
+    transition: color .5s;
+}
+
+.clickable-phone {
+    display: inline-block;
+    color: #fff; 
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.clickable-phone:hover,
+.clickable-phone:focus {
+    color: var(--base-color-2); 
+}
+
+.footer .footer__block-contact a{
+    outline: none;
+}
+
+.conf__link{
+display: block;
+margin: 8px 0;
+}
+
+
+@media (max-width: 1020px) {
+    .footer.container {
+        padding: 0 calc(var(--base-gap) * 2) 0 calc(var(--base-gap) * 4);
+    }
+
+    .footer__wrapper {
+        padding-left: 16px;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .footer .container {
+        padding: 0 calc(var(--base-gap) * 2) 0 calc(var(--base-gap) * 4);
+    }
+
+    .footer__wrapper {
+        grid-template-rows: repeat(4, auto);
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: var(--base-gap);
+        font-size: calc(var(--base-font-size) * 0.75);
+    }
+
+    .footer__block-name {
+        grid-column: 1/2;
+        grid-row: 1;
+    }
+
+    .footer__block-text {
+        grid-column: 1/2;
+        grid-row: 2;
+    }
+
+    .footer__block-contact {
+        grid-column: 1/2;
+        grid-row: 3;
+    }
+
+    .footer__block-icon {
+        grid-column: 1/2;
+        grid-row: 4;
+    }
+}
+
+@media (max-width: 430px) {
+    .vendor_page .main .container {
+        padding: 0 8px 0 48px;
+    }
+}
+
+@media (any-hover: hover) {
+    .footer .footer__block-contact a:focus-visible,
+    .footer__link:hover,
+    .footer__link:focus-visible {
+        color: var(--base-color-2);
+    }
+
+   
+}

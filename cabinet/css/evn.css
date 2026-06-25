@@ -1,0 +1,899 @@
+.filtr-icn {
+    width: 22px;
+    height: 48px;
+    color: var(--blue-900);
+}
+
+.container {
+    display: flex;
+    padding: 0 84px;
+    max-width: 1440px;
+    width: 100%;
+}
+
+.new,
+.last,
+.future {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+.new__title-main,
+.last__title-main,
+.future__title-main {
+    position: relative;
+    margin: 0;
+    font-size: 24px;
+    color: var(--dark);
+    font-weight: 400;
+}
+
+.new__title-main {
+    margin-bottom: 0;
+}
+
+.new__block-info,
+.new__block-tel {
+    width: 100%;
+    border-radius: 8px;
+    color: var(--blue-900);
+}
+
+.new__block-info {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 32px;
+    padding-left: 256px;
+    height: 224px;
+    background-image: url(../img/звездаФон.png);
+    background-size: cover;
+    color: var(--grafite);
+}
+
+.new__block-info p {
+    margin: 0;
+    padding: 0;
+    line-height: 24px;
+}
+
+.new__block-tel p {
+    margin: 0 0 32px 0;
+    padding: 0;
+    width: 384px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.new__block-tel {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 32px;
+    height: 224px;
+    background-image: url(../img/телФон\ копия.jpg);
+    background-size: cover;
+    background-position-x: right;
+    color: var(--grafite);
+}
+
+.last__title-main::after,
+.new__title-main::after,
+.future__title-main::after {
+    content: '';
+    position: absolute;
+    background-color: var(--blue-900);
+    animation: grow 5s ease-out forwards;
+}
+
+.new__img {
+    width: 40px;
+    height: 40px;
+    color: var(--blue-900);
+    background-color: var(--lightBlue);
+    border-radius: 50%;
+    transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+.event__list,
+.last__list,
+.future__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.event__item,
+.future__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc((100% - 32px) / 2);
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.event__block {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.event__block-data {
+    display: flex;
+    gap: 16px;
+}
+
+.event__img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--border);
+    color: var(--blue-900);
+}
+
+.event__block-title {
+    margin-left: 64px;
+    margin-bottom: 20px;
+}
+
+.event__title-name {
+    margin: 0;
+    padding: 0;
+    color: var(--grafite);
+    margin-bottom: 16px;
+    font-size: 16px;
+}
+
+.event__title {
+    margin: 0;
+    padding: 0;
+    line-height: 24px;
+    font-weight: 700;
+    color: var(--blue-900);
+    margin-bottom: 8px;
+}
+
+.event__title-plase {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: var(--blue-900);
+}
+
+.event__block-time {
+    margin-bottom: 16px;
+}
+
+.event__text {
+    margin: 0;
+    padding: 0;
+    color: var(--newGray);
+}
+
+.event__text:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.event__span {
+    font-size: 12px;
+}
+
+.event__block-role {
+    margin-top: auto;
+    margin-left: 64px;
+}
+
+.event__button {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    padding-right: 8px;
+    gap: 8px;
+    height: 80px;
+    background-color: var(--blue-900);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: all 0.5s ease;
+}
+
+.event__button-img {
+    text-align: center;
+    vertical-align: middle;
+    border-bottom-left-radius: 8px;
+}
+
+.event__button-img img {
+    max-height: 80px;
+    border-bottom-left-radius: 8px;
+}
+
+.event__btn-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--border);
+    color: var(--blue-900);
+}
+
+.event__btn {
+    position: relative;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    align-self: center;
+    padding: 8px;
+    width: 100%;
+    height: 56px;
+    background-color: #fff;
+    border-radius: 6px;
+    color: var(--blue-900);
+}
+
+.event__btn-text {
+    display: block;
+}
+
+.event__link .event__button,
+.event__link .event__title,
+.event__link:hover .event__btn,
+.event__link:hover .event__btn-img {
+    border: 1px solid transparent;
+    transition: color 0.5s ease;
+}
+
+.banner__button {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 8px;
+    width: 224px;
+    color: var(--blue-900);
+    background-color: #fff;
+    border-radius: 6px;
+    transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+.last__item {
+    display: flex;
+    flex-direction: column;
+    width: calc((100% - 64px) / 3);
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid var(--border);
+}
+
+.last__block-img {
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.last__img {
+    min-width: 100px;
+    width: 100%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.last__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 20px;
+}
+
+.last__description {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.last__data {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    color: var(--grafite);
+}
+
+.last__data span {
+    display: block;
+    color: var(--newGray);
+    margin-bottom: 8px;
+}
+
+.last__subtitle {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 8px;
+    color: var(--grafite);
+}
+
+.last__title {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--blue-900);
+}
+
+.last__text-role {
+    margin: 0;
+    padding: 0;
+    margin-top: auto;
+    color: var(--newGray);
+}
+
+.last__btn {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 8px;
+    width: 100%;
+    color: #fff;
+    background-color: var(--blue-900);
+    border-radius: 6px;
+    transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+.last__btn-img {
+    width: 40px;
+    height: 40px;
+    color: var(--blue-900);
+    background-color: #fff;
+    border-radius: 50%;
+    transition: color 0.5s ease;
+}
+
+.future__block-top {
+    display: flex;
+    width: 100%;
+    gap: 16px;
+    height: 116px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: var(--lightBlue);
+}
+
+.future__block-img {
+    border-top-left-radius: 8px;
+}
+
+.future__img {
+    border-top-left-radius: 8px;
+    height: 116px;
+    min-width: 160px;
+}
+
+.future__block-date {
+    margin-bottom: auto;
+    margin-top: auto;
+    padding: 8px;
+    color: var(--grafite);
+}
+
+.future__text-date {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.future__text-place {
+    padding: 0;
+    margin: 0;
+}
+
+.future__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 32px;
+}
+
+.future__description {
+    margin-bottom: 48px;
+}
+
+.future__title {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 16px;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--blue-900);
+    transition: color 0.5s ease;
+}
+
+.future__subtitle {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 16px;
+    color: var(--dark);
+}
+
+.future__text {
+    padding: 0;
+    margin: 0;
+    color: var(--newGray);
+}
+
+.future__button-title {
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.future__button-subtitle {
+    font-size: 12px;
+    color: var(--sub-text-color);
+    margin-bottom: 16px;
+}
+
+.future__btn {
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid var(--grey);
+    background: #fff;
+    color: var(--grey);
+    cursor: pointer;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    font-size: 12px;
+    transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+.future__button {
+    height: 40px;
+    border: none;
+    background: var(--blue-900);
+    color: #fff;
+    border-radius: 6px;
+}
+
+.future__block-button {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.future__btn-img {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    color: var(--blue-900);
+    background-color: #fff;
+}
+
+.future__link,
+.future__btn,
+.last__link,
+.last__btn,
+.banner__button,
+.event__link,
+.event__button,
+.event__btn {
+    outline: none;
+}
+
+@media (max-width: 1199px) {
+    .content {
+        gap: 40px;
+    }
+
+    .main {
+        margin-bottom: 48px;
+    }
+
+    .new__title-main,
+    .last__title-main,
+    .future__title-main {
+        margin: 0 0 0 0;
+        font-size: 32px;
+    }
+
+    .new__block-info {
+        padding: 24px;
+        padding-left: 160px;
+        height: 100%;
+        background-image: url(../img/звездаФон1024.jpg);
+        background-position: center;
+    }
+
+    .new__block-tel {
+        padding: 24px;
+        height: 100%;
+        background-image: url(../img/телФон2.jpg);
+    }
+
+    .event__block {
+        padding: 16px;
+    }
+
+    .event__img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .event__span {
+        display: block;
+    }
+
+    .event__block-title,
+    .event__block-role {
+        margin-left: 0;
+    }
+
+    .event__button {
+        padding: 8px;
+        height: 100%;
+    }
+
+    .event__button-img {
+        text-align: left;
+    }
+
+    .event__button-img img {
+        width: 96px;
+        border-radius: 6px;
+    }
+
+    .event__btn-img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .event__btn {
+        height: 100%;
+    }
+
+    .last__item {
+        width: calc((100% - 32px) / 2);
+    }
+
+    .last__item:nth-child(3) {
+        display: none;
+    }
+
+    .future__item {
+        width: 100%;
+    }
+
+    .event__btn-text {
+        display: none;
+    }
+
+    .event__btn {
+        justify-content: center;
+        width: 72px;
+        height: 48px;
+    }
+
+    .event__btn-img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (max-width: 1020px) {
+    .content {
+        gap: 32px;
+        z-index: -1;
+    }
+
+    .new__title-main,
+    .last__title-main,
+    .future__title-main {
+        margin: 0 0 0 0;
+    }
+
+    .event__btn-text {
+        display: block;
+    }
+
+    .new__block-info {
+        background-image: url(../img/звездаФон1020.png);
+    }
+
+    .container {
+        padding: 0 32px 0 96px;
+    }
+
+    .main .container {
+        padding: 0 32px 0 64px;
+    }
+
+    .event__button {
+        padding: 0;
+        padding-right: 16px;
+        gap: 8px;
+        height: 64px;
+        background-color: var(--lightBlue);
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 0;
+    }
+
+    .event__button-img img {
+        border-radius: 0;
+        width: 100%;
+        height: 64px;
+        border-bottom-left-radius: 8px;
+    }
+
+    .event__button-img {
+        width: 128px;
+    }
+
+    .event__btn-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .event__btn {
+        height: 48px;
+    }
+
+    .new__block-tel {
+        background-image: url(../img/телФон\ копия.jpg);
+    }
+
+    .last__list {
+        gap: 16px;
+    }
+
+    .last__item {
+        width: calc((100% - 48px) / 3);
+    }
+
+    .last__item:nth-child(3) {
+        display: flex;
+    }
+
+    .last__btn-img {
+        width: 32px;
+        height: 22px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        padding: 0 16px 0 80px;
+    }
+
+    .main .container {
+        padding: 0 16px 0 64px;
+    }
+
+    .main {
+        margin-bottom: 32px;
+    }
+
+    .future__btn {
+        width: calc(50% - 11.2px);
+        padding: 8px 16px;
+    }
+
+    .future__button {
+        width: 100%;
+    }
+
+    .future__block-button {
+        gap: 12.8px;
+    }
+
+    .last__item {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .last__block-img {
+        width: 30%;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 8px;
+        background-color: var(--blue-900);
+    }
+
+    .last__btn-img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .last__img {
+        border-top-right-radius: 0;
+    }
+
+    .new__block-info {
+        padding-left: 24px;
+        background-image: none;
+        background-color: var(--lightBlue);
+    }
+
+    .event__item {
+        width: 100%;
+    }
+
+    .event__block-title,
+    .event__block-role {
+        margin-left: 48px;
+    }
+
+    .event__btn-img {
+        height: 32px;
+    }
+
+    .new__block-tel {
+        background-image: url(../img/телФон3.jpg);
+    }
+
+    .new__title-main,
+    .last__title-main,
+    .future__title-main {
+        line-height: 32px;
+    }
+}
+
+@media (max-width: 430px) {
+    .container {
+        padding: 0 16px 0 64px;
+    }
+
+    .future__block-top {
+        flex-direction: column;
+        height: 100%;
+        background-color: transparent;
+    }
+
+    .future__block-img {
+        min-width: 100%;
+    }
+
+    .future__img {
+        min-width: 100%;
+        height: 100%;
+        border-top-right-radius: 8px;
+    }
+
+    .future__block-date {
+        display: none;
+    }
+
+    .last__item {
+        flex-direction: column;
+    }
+
+    .last__block-img {
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .last__img {
+        width: 100%;
+        border-top-right-radius: 8px;
+    }
+
+    .event__block-title,
+    .event__block-role {
+        margin-left: 0;
+    }
+
+    .event__button {
+        padding: 8px;
+        height: 100%;
+    }
+
+    .event__button-img img {
+        border-radius: 8px;
+        height: 100%;
+    }
+
+    .new__block-tel p {
+        width: 100%;
+    }
+
+    .new__block-tel {
+        background-image: url(../img/телФон4.jpg);
+    }
+
+    .event__btn-text {
+        display: none;
+    }
+
+    .event__btn {
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .event__btn-img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media (any-hover: hover) {
+    .event__button:hover {
+        color: #fff;
+        background-color: var(--blue-900);
+        border-color: var(--darkBlue);
+    }
+
+    .future__btn:hover,
+    .banner__button:hover .new__img,
+    .last__btn:hover {
+        color: var(--blue-900);
+        background-color: var(--darkBlue);
+        border-color: var(--darkBlue);
+    }
+
+    .last__title:focus-visible,
+    .last__title:hover,
+    .event__link:hover .event__btn-img,
+    .event__link:hover .event__title {
+        color: var(--blue-900);
+    }
+
+    .future__btn:focus-visible,
+    .future__link:focus-visible .future__title,
+    .event__link:focus-visible .event__title,
+    .last__link:focus-visible .last__btn,
+    .last__link:focus-visible .last__title,
+    .banner__button:focus-visible,
+    .event__link:focus-visible,
+    .event__link:focus-visible .event__btn,
+    .event__link:focus-visible .event__btn-img {
+        color: var(--base-color-1);
+        background-color: var(--blue-900);
+    }
+
+    .last__btn:hover .last__btn-img {
+        color: var(--blue-900);
+    }
+
+    .event__btn:hover {
+        color: #fff;
+        background-color: var(--darkBlue);
+        border-color: var(--darkBlue);
+    }
+
+    .future__btn:hover,
+    .last__btn:hover {
+        color: #fff;
+        background: var(--darkBlue);
+    }
+
+    .last__link:hover {
+        color: var(--blue-900);
+    }
+
+    .last__item:hover,
+    .future__item:hover,
+    .event__item:hover,
+    .future__btn:hover,
+    .last__btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .future__button:hover {
+        color: #fff;
+        background: var(--blue-hover);
+    }
+
+    .event__btn:hover .event__btn-img {
+        background-color: #fff;
+    }
+}

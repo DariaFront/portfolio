@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Сейл Трекер | Счета и оплата</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/supp.css">
+  <link rel="stylesheet" href="css/bill.css">
+</head>
+
+<body>
+  <div class="app">
+    <!-- TOP BAR -->
+    <header class="header">
+      <div class="header__left">
+        <img class="brand" aria-label="Сейл Трекер" src="img/Сейл Трекер_горизонт_синий_Sk.svg" alt="Sale Tracker">
+
+        <div class="header__subtitle">Кабинет закупщика</div>
+      </div>
+
+      <div class="header__right">
+        <form class="search" action="#" role="search">
+          <input class="search__input" type="search" placeholder="" aria-label="Поиск">
+          <button class="search__btn" type="button" aria-label="Искать">
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M10.5 18.5a8 8 0 1 1 0-16 8 8 0 0 1 0 16Z" fill="none" stroke="currentColor" stroke-width="2">
+              </path>
+              <path d="M16.5 16.5 21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              </path>
+            </svg>
+          </button>
+        </form>
+
+        <div class="header__icons" aria-label="Уведомления">
+          <button class="icon-btn" type="button" aria-label="Почта">
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4 6h16v12H4z" fill="none" stroke="currentColor" stroke-width="2"></path>
+              <path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"></path>
+            </svg>
+            <span class="badge badge--red">4</span>
+          </button>
+
+          <button class="icon-btn" type="button" aria-label="Уведомления">
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 22a2.2 2.2 0 0 0 2-2H10a2.2 2.2 0 0 0 2 2Z" fill="currentColor"></path>
+              <path d="M18 16V11a6 6 0 1 0-12 0v5l-2 2h16l-2-2Z" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linejoin="round"></path>
+            </svg>
+            <span class="badge badge--red">5</span>
+          </button>
+        </div>
+
+        <div class="header__user">
+          <span class="header__user-name">И.О. Посетительный</span>
+          <span class="header__user-avatar" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24">
+              <path d="M12 12a4 4 0 1 0-4-4 4 4 0 0 0 4 4Z" fill="currentColor"></path>
+              <path d="M4 20a8 8 0 0 1 16 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              </path>
+            </svg>
+          </span>
+          <a class="header__logout" href="#" aria-label="Выход">
+            Выход
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="header-line" aria-hidden="true"></div>
+
+    <!-- MAIN LAYOUT -->
+    <div class="layout">
+      <!-- SIDEBAR -->
+      <aside class="sidebar" aria-label="Навигация">
+        <div class="sidebar__company">
+          <div class="sidebar__company-title">КомпанияИма</div>
+          <div class="">
+            <img src="img/logoCZS-c-w.png">
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a class="nav__item" href="index.html">
+            <span class="nav__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 36 36" fill="none">
+                <path
+                  d="M12 0C12.5523 0 13 0.447715 13 1V20C13 20.5523 12.5523 21 12 21H1C0.447715 21 1.00666e-08 20.5523 0 20V4C0 1.79086 1.79086 8.0532e-08 4 0H12ZM6 3.15039C4.34315 3.15039 3 4.49354 3 6.15039V16.8496C3 17.4019 3.44772 17.8496 4 17.8496H9C9.55228 17.8496 10 17.4019 10 16.8496V4.15039C10 3.59811 9.55228 3.15039 9 3.15039H6Z"
+                  fill="currentcolor" />
+                <path
+                  d="M32 0C34.2091 0 36 1.79086 36 4V9H35.9131C35.9685 9.15653 36 9.3245 36 9.5C36 10.3284 35.3284 11 34.5 11C33.6716 11 33 10.3284 33 9.5C33 9.3245 33.0315 9.15653 33.0869 9H33.0762V5C33.0762 3.89543 32.1807 3 31.0762 3H20.0762C19.5241 3.00022 19.0762 3.44785 19.0762 4V17C19.0762 17.5522 19.5241 17.9998 20.0762 18H32.0762C32.6285 18 33.0762 17.5523 33.0762 17V14H33.0869C33.0315 13.8435 33 13.6755 33 13.5C33 12.6716 33.6716 12 34.5 12C35.3284 12 36 12.6716 36 13.5C36 13.6755 35.9685 13.8435 35.9131 14H36V20C36 20.5523 35.5523 21 35 21H17C16.4477 21 16 20.5523 16 20V1C16 0.447715 16.4477 0 17 0H32Z"
+                  fill="currentcolor" />
+                <path
+                  d="M36 32C36 34.2091 34.2091 36 32 36L26 36L26 35.9131C25.4177 35.707 25 35.1529 25 34.5C25 33.8471 25.4177 33.293 26 33.0869L26 33.0498L26.1221 33.0498C26.2429 33.0184 26.3693 33 26.5 33C26.631 33 26.7578 33.0182 26.8789 33.0498L31 33.0498C32.1044 33.0498 32.9998 32.1542 33 31.0498L33 27.0498C32.9998 26.4977 32.5522 26.0498 32 26.0498L4 26.0498C3.44784 26.0498 3.00021 26.4977 3 27.0498L3 31.0498C3.00021 32.1542 3.89556 33.0498 5 33.0498L19.1221 33.0498C19.2429 33.0184 19.3693 33 19.5 33C19.631 33 19.7578 33.0182 19.8789 33.0498L20 33.0498L20 33.0869C20.5823 33.293 21 33.8471 21 34.5C21 35.1529 20.5823 35.707 20 35.9131L20 36L0.999999 36C0.447715 36 -5.48676e-07 35.5523 -5.24535e-07 35L-4.37114e-08 24C0.000207483 23.4479 0.447844 23 1 23L35 23C35.5522 23 35.9998 23.4479 36 24L36 32Z"
+                  fill="currentcolor" />
+              </svg>
+            </span>
+            <span class="nav__text">Дашборд</span>
+          </a>
+
+          <a class="nav__item" href="vit.html">
+            <span class="nav__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 38 30" fill="none">
+                <path
+                  d="M34 3.72266L38 8.78906V13H35V30H4V13H0V9L4 3.5V0H34V3.72266ZM7 22H33V13H7V22ZM5.44434 6L3.11133 9H34.6221L32.0889 6H5.44434Z"
+                  fill="currentcolor" />
+              </svg>
+            </span>
+            <span class="nav__text">Витрина</span>
+          </a>
+
+          <a class="nav__item" href="buy.html">
+            <span class="nav__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <path d="M7 6h14l-2 10H8L7 6Z" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linejoin="round"></path>
+                <path d="M7 6 6 4H3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                <path d="M9 20a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM18 20a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
+                  fill="none" stroke="currentColor" stroke-width="2"></path>
+              </svg>
+            </span>
+            <span class="nav__text">Закупки</span>
+            <span class="nav__badge">3</span>
+          </a>
+
+          <a class="nav__item" href="bid.html">
+            <span class="nav__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 40 35" fill="none">
+                <path
+                  d="M33.5 7L34.9593 11.4914H39.6819L35.8613 14.2672L37.3206 18.7586L33.5 15.9828L29.6794 18.7586L31.1387 14.2672L27.3181 11.4914H32.0407L33.5 7Z"
+                  fill="currentcolor" />
+                <rect x="29" y="20" width="9" height="15" fill="currentcolor" />
+                <path
+                  d="M20.5 0L21.9593 4.49139H26.6819L22.8613 7.26722L24.3206 11.7586L20.5 8.98278L16.6794 11.7586L18.1387 7.26722L14.3181 4.49139H19.0407L20.5 0Z"
+                  fill="currentcolor" />
+                <rect x="16" y="13" width="9" height="22" fill="currentcolor" />
+                <path
+                  d="M6.5 7L7.95934 11.4914H12.6819L8.86126 14.2672L10.3206 18.7586L6.5 15.9828L2.6794 18.7586L4.13874 14.2672L0.318133 11.4914H5.04066L6.5 7Z"
+                  fill="currentcolor" />
+                <rect x="2" y="20" width="9" height="15" fill="currentcolor" />
+              </svg>
+            </span>
+            <span class="nav__text">Заявки</span>
+            <span class="nav__badge">4</span>
+          </a>
+
+          <a class="nav__item" href="events.html">
+            <span class="nav__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 28 28" fill="none">
+                <path
+                  d="M19 0C20.1046 0 21 0.895431 21 2V3H25C26.6569 3 28 4.34315 28 6V25C28 26.6569 26.6569 28 25 28H3C1.34315 28 0 26.6569 0 25V6C6.44266e-08 4.34315 1.34315 3 3 3H6V2C6 0.895431 6.89543 0 8 0C9.10457 0 10 0.895431 10 2V3H17V2C17 0.895431 17.8954 0 19 0ZM12.8164 16.4912H7.36719L11.7754 19.2676L10.0918 23.7588L14.5 20.9824L18.9082 23.7588L17.2246 19.2676L21.6328 16.4912H16.1836L14.5 12L12.8164 16.4912ZM5 6C3.89543 6 3 6.89543 3 8V10H25V8C25 6.89543 24.1046 6 23 6H20.7305C20.3845 6.59733 19.7399 7 19 7C18.2601 7 17.6155 6.59733 17.2695 6H9.73047C9.38454 6.59733 8.73993 7 8 7C7.26007 7 6.61546 6.59733 6.26953 6H5Z"
+                  fill="currentcolor" />
+              </svg>
+            </span>
+            <span class="nav__text">События</span>
+            <span class="nav__badge">2</span>
+          </a>
+
+          <a class="nav__item" href="supplier.html">
+            <span class="nav__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 40 40" fill="none">
+                <path
+                  d="M38 0C39.1046 0 40 0.895431 40 2V3C40 4.10457 39.1046 5 38 5H32C31.2601 5 30.6155 4.59733 30.2695 4H27.7305C27.5551 4.30282 27.3028 4.55405 27 4.72949V26C30.866 26 34 29.134 34 33C34 36.866 30.866 40 27 40C24.6087 40 22.4981 38.8004 21.2354 36.9707C21.1598 36.989 21.0812 37 21 37H1C0.447715 37 8.05326e-09 36.5523 0 36V33C0 32.4477 0.447715 32 1 32H20.0723C20.4098 29.6406 21.9227 27.6607 24 26.6738V3C24 1.89543 24.8954 1 26 1H30.2695C30.6155 0.402669 31.2601 1.07894e-08 32 0H38ZM27 29C24.7909 29 23 30.7909 23 33C23 35.2091 24.7909 37 27 37C29.2091 37 31 35.2091 31 33C31 30.7909 29.2091 29 27 29ZM19 23C19.5523 23 20 23.4477 20 24V29C20 29.5523 19.5523 30 19 30H5C4.44772 30 4 29.5523 4 29V24C4 23.4477 4.44772 23 5 23H19ZM19 14C19.5523 14 20 14.4477 20 15V20C20 20.5523 19.5523 21 19 21H5C4.44772 21 4 20.5523 4 20V15C4 14.4477 4.44772 14 5 14H19ZM19 5C19.5523 5 20 5.44772 20 6V11C20 11.5523 19.5523 12 19 12H5C4.44772 12 4 11.5523 4 11V6C4 5.44772 4.44772 5 5 5H19Z"
+                  fill="currentcolor" />
+              </svg>
+            </span>
+            <span class="nav__text">Каталог поставщиков</span>
+            <span class="nav__badge">5</span>
+          </a>
+
+          <a class="nav__item" href="#">
+            <span class="nav__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <path d="M4 18V6m0 12h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                </path>
+                <path d="M7 14l3-4 3 3 5-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+              </svg>
+            </span>
+            <span class="nav__text">Аналитика</span>
+          </a>
+
+          <a class="nav__item nav__item--active" href="bills.html">
+            <span class="nav__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24">
+                <path d="M6 4h12v16H6z" fill="none" stroke="currentColor" stroke-width="2"></path>
+                <path d="M8 8h8M8 12h8M8 16h5" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round"></path>
+              </svg>
+            </span>
+            <span class="nav__text">Счета и оплата</span>
+          </a>
+        </nav>
+
+        <div class="sidebar__actions">
+          <button class="side-action" type="button">
+            <span class="side-action__icon" aria-hidden="true">+</span>
+            <span class="side-action__text">Разместить заявку</span>
+          </button>
+
+          <button class="side-action" type="button">
+            <span class="side-action__icon side-action__icon--grid" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 42 38" fill="none">
+                <path
+                  d="M15 20.5C16.1046 20.5 17 21.3954 17 22.5V35.5C17 36.6046 16.1046 37.5 15 37.5H2C0.895431 37.5 4.02666e-09 36.6046 0 35.5V22.5C0 21.3954 0.895431 20.5 2 20.5H15ZM34 20.5C35.1046 20.5 36 21.3954 36 22.5V35.5C36 36.6046 35.1046 37.5 34 37.5H21C19.8954 37.5 19 36.6046 19 35.5V22.5C19 21.3954 19.8954 20.5 21 20.5H34ZM15 1.5C16.1046 1.5 17 2.39543 17 3.5V16.5C17 17.6046 16.1046 18.5 15 18.5H2C0.895431 18.5 4.02666e-09 17.6046 0 16.5V3.5C0 2.39543 0.895431 1.5 2 1.5H15ZM34 1.5C34.6093 1.5 35.1537 1.77345 35.5205 2.20312L33.4346 4.1084C33.0711 3.73376 32.5632 3.5 32 3.5H23C21.8954 3.5 21 4.39543 21 5.5V14.5C21 15.6046 21.8954 16.5 23 16.5H32C33.1046 16.5 34 15.6046 34 14.5V10.3633L36 8.53711V16.5C36 17.6046 35.1046 18.5 34 18.5H21C19.8954 18.5 19 17.6046 19 16.5V3.5C19 2.39543 19.8954 1.5 21 1.5H34ZM38.9883 0.392578C39.6 -0.165906 40.5488 -0.123191 41.1074 0.488281C41.6659 1.09995 41.6232 2.0488 41.0117 2.60742L29.5117 13.1074L28.4531 14.0742L22.9395 8.56055C22.3537 7.97476 22.3537 7.02524 22.9395 6.43945C23.5252 5.85367 24.4748 5.85367 25.0605 6.43945L28.5469 9.92578L38.9883 0.392578Z"
+                  fill="currentcolor" />
+              </svg>
+            </span>
+            <span class="side-action__text">Спрос в категории</span>
+          </button>
+        </div>
+
+        <div class="sidebar__fill" aria-hidden="true"></div>
+      </aside>
+
+      <!-- CONTENT -->
+      <main class="content">
+        <h1 class="page-title">Счета и оплата</h1>
+
+        <div class="requests-filter">
+          <a href="#" class="requests-filter__link requests-filter__link--active">Все счета</a>
+          <a href="#" class="requests-filter__link">Не оплаченые</a>
+          <a href="#" class="requests-filter__link">Оплаченые</a>
+        </div>
+
+        <div class="tariff-block">
+          <div class="current-tariff">
+            <div class="tariff-info">
+              <div class="tariff-header">
+                <div class="tariff-header--title">
+                  <h3 class="tariff-subtitle">Текущий тариф</h3>
+                  <h2 class="tariff-title">Стандарт <span>Активен</span></h2>
+                </div>
+                <div class="tariff-header--more"><i class="fas fa-info-circle"></i>
+                  Начало действия | 29.06.2026
+                </div>
+              </div>
+
+              <div class="tariff-detail-item-time"><span class="tariff-detail-label">Действует до</span><span
+                  class="tariff-detail-value">30.06.2026</span></div>
+
+              <div class="tariff-progress-line">
+                <div class="tariff-progress-line__bg">
+                  <div class="tariff-progress-line__fill" style="width: 75%;"></div>
+                </div>
+                <span class="tariff-progress-line__text">Осталось 15 дней</span>
+              </div>
+
+              <div class="tariff-details">
+                <div class="tariff-detail-block">
+                  <div class="tariff-detail-item"><span class="tariff-detail-label tariff-detail-label-title">Включено
+                      мест</span><span class="tariff-detail-value">5</span></div>
+                  <div class="tariff-detail-item"><span class="tariff-detail-label">Количество мест</span><span
+                      class="tariff-detail-value">15</span></div>
+                </div>
+                <div class="tariff-detail-block">
+                  <div class="tariff-detail-item"><span
+                      class="tariff-detail-label tariff-detail-label-title">Занято</span><span
+                      class="tariff-detail-value">3</span></div>
+                  <div class="tariff-detail-item"><span class="tariff-detail-label">Токенный баланс</span><span
+                      class="tariff-detail-value">110</span></div>
+                </div>
+
+              </div>
+            </div>
+            <div class="tariff-actions">
+              <button class="btn btn--primary ">Продлить</button>
+              <button class="btn btn-outline">Сменить тариф</button>
+            </div>
+          </div>
+          <!-- Блок баланса токенов -->
+
+          <div class="token-balance token-balance-block">
+            <div class="token-row">
+              <p class="token-badge">Баланс токенов :</p>
+              <p class="token-badge-Num">120</p>
+              <div class="token-desc"><i class="fas fa-info-circle"></i> <span>Токены используются для:</span>
+                <ul>
+                  <li>Дополнительных отчетов</li>
+                  <li>Рассчетов предложений</li>
+                  <li>Аналитики</li>
+                </ul>
+              </div>
+              <button class="btn btn--outline btn-token"><i class="fas fa-chart-line"></i> История операций</button>
+            </div>
+          </div>
+        </div>
+        <!-- Второй блок баланса токенов с пакетами (как в эскизе) -->
+        <div class="token-balance token-tariff">
+          <div class="section-title">Пакеты токенов</div>
+          <div class="token-packages">
+            <div class="package-item">10 токенов <div class="package-price">10 000 ₽</div>
+              <ul>
+                <li>Дополнительных отчетов</li>
+                <li>Рассчетов предложений</li>
+                <li>Аналитики</li>
+              </ul>
+              <button class="btn btn--primary">Купить</button>
+            </div>
+            <div class="package-item">50 токенов <div class="package-price">45 000 ₽</div>
+              <ul>
+                <li>Дополнительных отчетов</li>
+                <li>Рассчетов предложений</li>
+                <li>Аналитики</li>
+              </ul>
+              <button class="btn btn--primary">Купить</button>
+            </div>
+            <div class="package-item">100 токенов <div class="package-price">80 000 ₽</div>
+              <ul>
+                <li>Дополнительных отчетов</li>
+                <li>Рассчетов предложений</li>
+                <li>Аналитики</li>
+              </ul>
+              <button class=" btn btn--primary">Купить</button>
+            </div>
+
+            <div class="package-item">
+              <div class="token-counter">
+                <span class="token-counter__label">Укажите количество токенов</span>
+                <div class="token-counter__controls">
+                  <button class="token-counter__btn token-counter__btn--minus" onclick="decrementToken(this)">−</button>
+                  <span class="token-counter__value">1</span>
+                  <button class="token-counter__btn token-counter__btn--plus" onclick="incrementToken(this)">+</button>
+                </div>
+              </div>
+              <div class="package-price">1 токен — 1 000 ₽</div>
+              <button class="btn btn--outline">Запросить</button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Заголовок "Все счета" -->
+        <h2 class="section-title">Все счета</h2>
+
+        <!-- первая таблица (апрельские даты) -->
+        <div class="table-wrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Дата</th>
+                <th>Продукт</th>
+                <th>Период</th>
+                <th>Сумма</th>
+                <th>Статус</th>
+                <th>Действие</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>20.04.2026</td>
+                <td>Тариф-Стандарт<br>Апрель, 2026</td>
+                <td>Апрель 2026</td>
+                <td>9 900 ₽</td>
+                <td><span class="status-badge orange">Оплатить</span></td>
+                <td><a href="#" class="action-link">Скачать счет</a></td>
+              </tr>
+              <tr>
+                <td>20.05.2026</td>
+                <td>100 токенов</td>
+                <td>20.05.2026</td>
+                <td>5 000 ₽</td>
+                <td><span class="status-badge blue">Ожидает оплаты</span></td>
+                <td><a href="#" class="action-link">Скачать счет</a></td>
+              </tr>
+              <tr>
+                <td>12.05.2026</td>
+                <td>Дополнительно-место</td>
+                <td>12.05.2026</td>
+                <td>2 000 ₽</td>
+                <td><span class="status-badge blue">Ожидает оплаты</span></td>
+                <td><a href="#" class="action-link">Скачать счет</a></td>
+              </tr>
+              <tr>
+                <td>01.05.2026</td>
+                <td>Слот ЦЗС</td>
+                <td>01.05.2026</td>
+                <td>1 310.25 ₽</td>
+                <td><span class="status-badge blue">Ожидает оплаты</span></td>
+                <td><a href="#" class="action-link">Скачать счет</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+      </main>
+
+      <aside class="banners">
+        <img class="banner" src="img/neva-560.png" alt="Баннер">
+        <img class="banner" src="img/piterfood-560.png" alt="Баннер">
+      </aside>
+
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__left">
+        <img class="footer__img" aria-label="Сейл Трекер" src="img/Сейл Трекер_горизонт_белый_Sk.png"
+          alt="Sale Tracker">
+        <p class="footer-text">ООО "Сейл трекер", 2025</p>
+      </div>
+
+      <div class="footer__center">
+        <p class="footer-text">офис: Санкт‑Петербург, Магнитогорская 23к1</p>
+        <p class="footer-text">тел.: +7 800 000‑00‑00</p>
+      </div>
+
+      <div class="footer__right">
+        <div class="footer__icons" aria-label="Соцсети">
+          <span class="footer__icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+              <path fill="currentColor"
+                d="M25,2c12.703,0,23,10.297,23,23S37.703,48,25,48S2,37.703,2,25S12.297,2,25,2z M32.934,34.375 c0.423-1.298,2.405-14.234,2.65-16.783c0.074-0.772-0.17-1.285-0.648-1.514c-0.578-0.278-1.434-0.139-2.427,0.219 c-1.362,0.491-18.774,7.884-19.78,8.312c-0.954,0.405-1.856,0.847-1.856,1.487c0,0.45,0.267,0.703,1.003,0.966 c0.766,0.273,2.695,0.858,3.834,1.172c1.097,0.303,2.346,0.04,3.046-0.395c0.742-0.461,9.305-6.191,9.92-6.693 c0.614-0.502,1.104,0.141,0.602,0.644c-0.502,0.502-6.38,6.207-7.155,6.997c-0.941,0.959-0.273,1.953,0.358,2.351 c0.721,0.454,5.906,3.932,6.687,4.49c0.781,0.558,1.573,0.811,2.298,0.811C32.191,36.439,32.573,35.484,32.934,34.375z" />
+            </svg>
+          </span>
+          <span class="footer__icon footer__icon--bg" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="50px" height="50px">
+              <!-- Без фона в SVG, фон будет через CSS -->
+              <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"
+                d="M512.0947266,308.1917419c-99.421875-5.2137451-177.0074768,63.7746277-194.1162109,171.7529297  c-14.1681519,89.4194031,10.9517212,198.377655,32.4380493,203.8618469  c9.1132812,2.3260498,31.0438538-14.447998,46.9994507-29.4939575c2.9996643-2.8286133,7.5354309-3.3046265,11.0531616-1.1536255  c24.8721313,15.2089233,53.0321655,26.6383667,84.07724,28.2663574  c102.068512,5.352417,192.52005-74.5308838,197.8663025-176.6076965  C695.7590332,402.7408142,614.163208,313.5441895,512.0947266,308.1917419z M345.6054993,826.5784302  c-3.8494568-2.7254639-9.1531067-1.9857788-12.3791809,1.4550171  c-43.119812,45.9900513-153.4740906,78.2501221-158.5290833,15.4796143c0-49.1799927-11.0461426-90.6229248-23.2081757-136.2524414  c-14.8953705-55.8845825-31.4645691-118.0489502-31.4645691-208.3983765  c0-215.4476624,176.6943207-377.4747925,386.1940918-377.4747925S879.975708,291.3253784,879.975708,500.9545898  S710.4901733,876.3369751,508.2009583,876.3369751C436.4336243,876.3369751,401.6072693,866.2283936,345.6054993,826.5784302z" />
+            </svg>
+          </span>
+        </div>
+        <a class="footer__policy" href="#">Политика конфиденциальности</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+
+    function incrementToken(btn) {
+      const counter = btn.closest('.token-counter__controls').querySelector('.token-counter__value');
+      let value = parseInt(counter.textContent);
+      value++;
+      counter.textContent = value;
+      updatePrice(btn, value);
+    }
+
+    function decrementToken(btn) {
+      const counter = btn.closest('.token-counter__controls').querySelector('.token-counter__value');
+      let value = parseInt(counter.textContent);
+      if (value > 1) {
+        value--;
+        counter.textContent = value;
+        updatePrice(btn, value);
+      }
+    }
+
+    function updatePrice(btn, tokens) {
+      const packageItem = btn.closest('.package-item');
+      const priceElement = packageItem.querySelector('.package-price');
+      const pricePerToken = 1000; // 1000 ₽ за токен
+      const totalPrice = tokens * pricePerToken;
+      priceElement.textContent = `${tokens} токен${tokens > 1 ? 'ов' : ''} — ${totalPrice.toLocaleString()} ₽`;
+    }
+  </script>
+
+</body>
+
+</html>
