@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма сбора данных о продукте</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-box-open"></i> Форма сбора данных о продукте</h1>
+            <p class="header-subtitle">Заполните все поля для добавления новых продуктов в каталог</p>
+        </header>
+
+        <form id="productForm" class="full-width">
+            <div class="form-section">
+                <div class="form-group">
+                    <label for="company" class="required">Компания (плательщик)</label>
+                    <input type="text" id="company" name="company" placeholder="Введите название компании участника">
+                    <div class="error-message" id="company-error">Поле "Компания" обязательно для заполнения
+                    </div>
+                </div>
+            </div>
+
+            <!-- Контейнер для форм продуктов -->
+            <div id="productFormsContainer">
+                <!-- Форма Продукт 1 (базовая) -->
+                <div class="product-form-section" data-product-index="1">
+                    <h2 class="product-title">
+                        <i class="fas fa-box"></i> Продукт 1
+                        <button type="button" class="btn-remove-product" data-product-index="1" style="display: none;">
+                            <i class="fas fa-trash"></i> Удалить
+                        </button>
+                    </h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="manufacturer1" class="required">Производитель</label>
+                            <input type="text" id="manufacturer1" name="manufacturer1"
+                                placeholder="Введите название производителя">
+                            <div class="error-message" id="manufacturer1-error">Поле "Производитель" обязательно для заполнения
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="country1" class="required">Страна</label>
+                            <input type="text" id="country1" name="country1" placeholder="Страна производства">
+                            <div class="error-message" id="country1-error">Поле "Страна" обязательно для заполнения</div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city1" class="required">Город</label>
+                            <input type="text" id="city1" name="city1" placeholder="Город производства">
+                            <div class="error-message" id="city1-error">Поле "Город" обязательно для заполнения</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="brand1" class="required">Бренд</label>
+                            <input type="text" id="brand1" name="brand1" placeholder="Торговая марка продукта">
+                            <div class="error-message" id="brand1-error">Поле "Бренд" обязательно для заполнения</div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="category1" class="required">Категория продукта</label>
+                            <input type="text" id="category1" name="category1" placeholder="Введите категорию">
+                            <div class="error-message" id="category1-error">Пожалуйста, выберите категорию продукта</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="productName1" class="required">Название продукта полностью</label>
+                            <input type="text" id="productName1" name="productName1" placeholder="Полное наименование продукта">
+                            <div class="error-message" id="productName1-error">Поле "Название продукта" обязательно для
+                                заполнения</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description1" class="required">Описание продукта</label>
+                        <textarea id="description1" name="description1"
+                            placeholder="Подробное описание продукта, его характеристик и особенностей"></textarea>
+                        <div class="error-message" id="description1-error">Поле "Описание продукта" обязательно для
+                            заполнения</div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="price1" class="required">Цена на полке за 1 шт (руб.)</label>
+                            <input type="number" id="price1" name="price1" min="0" step="0.01" placeholder="0.00">
+                            <div class="error-message" id="price1-error">Пожалуйста, введите корректную цену</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="packaging1" class="required">Фасовка, упаковка</label>
+                            <input type="text" id="packaging1" name="packaging1"
+                                placeholder="Например: пластиковая бутылка, картонная коробка">
+                            <div class="error-message" id="packaging1-error">Поле "Фасовка, упаковка" обязательно для заполнения
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="weight1" class="required">Вес/Объем</label>
+                            <input type="text" id="weight1" name="weight1" placeholder="Например: 500 г, 1 л, 250 мл">
+                            <div class="error-message" id="weight1-error">Поле "Вес/Объем" обязательно для заполнения</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="website1">Сайт</label>
+                            <input type="text" id="website1" name="website1" placeholder="https://example.com">
+                            <div class="error-message" id="website1-error">Введите название сайта</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="composition1" class="required">Состав</label>
+                        <textarea id="composition1" name="composition1"
+                            placeholder="Ингредиенты или компоненты продукта"></textarea>
+                        <div class="error-message" id="composition1-error">Поле "Состав" обязательно для заполнения</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="photo1">Фото продукта</label>
+                        <div class="photo-upload" id="photoUpload1">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Нажмите для загрузки фотографии продукта</p>
+                            <p><small>Поддерживаемые форматы: JPG, PNG, GIF (макс. размер: 5MB)</small></p>
+                            <input type="file" id="photo1" name="photo1" accept="image/*" style="display: none;">
+                        </div>
+                        <div class="photo-preview" id="photoPreview1">
+                            <img src="" alt="Предпросмотр фото продукта" id="previewImage1">
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-buttons">
+                <button type="button" class="btn btn-add-product" id="addProductButton">
+                    <i class="fas fa-plus-circle"></i> Добавить продукт
+                </button>               
+            </div>
+
+            <div class="success-message" id="successMessage">
+                <i class="fas fa-check-circle"></i> Данные о продукте успешно сохранены!
+            </div>
+        </form>
+
+        <div class="submit-section">
+            <button type="button" class="btn btn-submit-db" id="submitToDatabase">
+                <i class="fas fa-database"></i> Загрузить в базу данных
+            </button>
+            <div class="form-info">
+                <p><span style="color: #e74c3c;">*</span> - обязательные поля для заполнения</p>
+                <p>Максимальное количество продуктов на одну компанию: 6</p>
+            </div>
+        </div>
+
+        <div id="companyTableContainer"></div>
+
+        <div class="form-footer">
+            <p>© 2026 Система сбора данных о продуктах</p>
+        </div>
+    </div>
+
+    <script defer src="script.js"></script>
+</body>
+
+</html>

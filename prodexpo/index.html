@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карточка товара</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Анкета эксперта конкурса "ВЫБОР СЕТЕЙ" на Продэкспо 2026</h1>
+        </header>
+        <p class="header-subtitle">Просим Вас оценить представленные продукты с точки зрения их привлекательности для
+            реализации в ваших магазинах.</p>
+        <p class="header-subtitle">У каждой компании просьба отметить ОДИН или ДВА продукта, которые Вам наиболее
+            понравились.</p>
+        <div id="topPagination">
+            <!-- Пагинация будет загружена здесь -->
+        </div>
+
+        <div class="products-wrapper">
+            <div class="productsContainer" id="productsContainer">
+                <!-- Карточки товаров будут загружены здесь -->
+            </div>
+
+            <!-- Контейнер для линейного скролла -->
+            <div class="scroll-line-container" id="scrollLineContainer">
+                <div class="scroll-line-track">
+                    <div class="scroll-line-thumb" id="scrollLineThumb"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="bottomPagination">
+            <!-- Пагинация будет загружена здесь -->
+        </div>
+        <p class="bottom-subtitle">Благодарим Вас за участие в нашем опросе!</p>
+
+        <div class="footer">
+            <p>© 2026 Система оценки продуктов. Всего товаров в базе: <span id="totalProductsCount">0</span></p>
+        </div>
+    </div>
+
+    <script src="product-card-script.js"></script>
+</body>
+
+</html>

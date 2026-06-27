@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма сбора данных о продукте</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/loginStyle.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Конкурс ВЫБОР СЕТЕЙ на выставке Prodexpo 2026</h1>
+            <p class="header-subtitle">Анкета эксперта</p>
+        </header>
+        <h2 class="login-title">Уважаемый эксперт!</h2>
+        <p class="login-text">Просим Вас оценить представленные продукты с точки зрения их привлекательности для
+            реализации в розничных сетях.</p>
+        <h2 class="login-subtitle">Рекомендуемые критерии оценки товара:</h2>
+        <ol class="login-list">
+            <li class="login-item">Соответствие цены</li>
+            <li class="login-item">Упаковка продукта, внешний вид</li>
+            <li class="login-item">Состав продукта</li>
+        </ol>
+
+        <p class="login-text">У каждой компании просьба отметить ОДИН или ДВА продукта, которые Вам наиболее
+            понравились.</p>
+
+        <h2 class="login-subtitle">Внимание! Участие в опросе - анонимное.</h2>
+
+        <p class="login-text">Чтобы приступить к голосованию, пожалуйста, заполните поля.
+            Благодарим за участие в опросе!</p>
+        <form id="loginForm" class="login-form">
+            <div id="loginFormsContainer" class="login-form-container">
+                <div class="login-form-section" data-login-index="1">
+                    <div class="form-group">
+                        <label for="manufacturer1">Название компании (розничной сети)</label>
+                        <input type="text" id="manufacturer1" name="manufacturer1"
+                            placeholder="Введите название компании или розничной сети">
+                        <div class="error-message" id="manufacturer1-error">Поле "Название" обязательно для
+                            заполнения
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="country1">Город</label>
+                        <input type="text" id="country1" name="country1" placeholder="Введите ваш город">
+                        <div class="error-message" id="country1-error">Поле "Город" обязательно для заполнения
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="position1">Должность</label>
+                        <select id="position1" name="position1">
+                            <option value="Владелец/Генеральный/Коммерческий директор">Владелец/Генеральный/Коммерческий
+                                директор</option>
+                            <option value="Директор по закупкам / Руководитель отдела закупок">Директор по закупкам /
+                                Руководитель отдела закупок</option>
+                            <option value="Руководитель категории / Категорийный менеджер">Руководитель категории /
+                                Категорийный менеджер
+                            </option>
+                            <option value="Менеджер по закупкам">Менеджер по закупкам</option>
+                            <option value="other">Иное:</option>
+                            <input type="text" id="other-position-input" name="other_position_input"
+                                placeholder="Укажите должность" style="display: none; margin-top: 10px;">
+                        </select>
+                        <div class="error-message" id="position1-error">Поле "Должность" обязательно для заполнения
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-submit-login" id="submitlogin">
+                <i class="fas fa-database"></i> Приступить к голосованию
+            </button>
+        </form>
+        <div id="companyTableContainer"></div>
+        <div class="form-footer">
+            <p>© 2026 Центр Закупок Сетей™</p>
+        </div>
+    </div>
+
+</body>
+<script>
+    document.getElementById('position1').addEventListener('change', function () {
+        const otherInput = document.getElementById('other-position-input');
+
+        if (this.value === 'other') {
+            otherInput.style.display = 'inline-block';
+            otherInput.required = true;
+            otherInput.focus();
+        } else {
+            otherInput.style.display = 'none';
+            otherInput.required = false;
+            otherInput.value = '';
+        }
+    });
+
+    // Для серверной обработки можно использовать скрытое поле
+    function prepareFormData() {
+        const select = document.getElementById('position1');
+        const otherInput = document.getElementById('other-position-input');
+
+        if (select.value === 'other') {
+            // Можно создать скрытое поле или обработать на сервере
+            const finalPosition = otherInput.value;
+            // ... отправка данных
+        }
+    }
+</script>
+
+</html>

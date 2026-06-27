@@ -19,7 +19,8 @@
     flex: 1;
     overflow: hidden;
     border-radius: var(--radius-sm, 8px);
-    min-width: 0; /* критично для flexbox */
+    min-width: 0;
+    /* критично для flexbox */
 }
 
 .carousel-track {
@@ -132,13 +133,16 @@
         --carousel-gap: 12px;
         gap: 8px;
     }
+
     .carousel-slide {
         aspect-ratio: 16 / 9;
     }
+
     .carousel-btn {
         width: 40px;
         height: 40px;
     }
+
     .carousel-btn svg {
         width: 20px;
         height: 20px;
@@ -239,12 +243,32 @@
     transform: translateY(-50%) scale(1.1);
 }
 
-.lightbox-prev { left: 20px; }
-.lightbox-next { right: 20px; }
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
 
 @media (max-width: 640px) {
-    .lightbox-close { width: 40px; height: 40px; top: 12px; right: 12px; }
-    .lightbox-nav { width: 44px; height: 44px; }
-    .lightbox-prev { left: 8px; }
-    .lightbox-next { right: 8px; }
+    .lightbox-close {
+        width: 40px;
+        height: 40px;
+        top: 12px;
+        right: 12px;
+    }
+
+    .lightbox-nav {
+        width: 44px;
+        height: 44px;
+    }
+
+    .lightbox-prev {
+        left: 8px;
+    }
+
+    .lightbox-next {
+        right: 8px;
+    }
 }
